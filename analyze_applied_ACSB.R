@@ -245,21 +245,19 @@ summary(ols)
 # get E-value for each of several values of the sens parameter RD_0
 rd_0_vec = c(0, -0.10)
 
-#bm: use the lambda thing in eq (2) instead
-# you got this! :)
 
 for ( .rd_0 in rd_0_vec ) {
   
-  alpha = get_alpha(pr = pr,
+  lambda = get_lambda(pr = pr,
                     rd_0 = .rd_0,
                     true = 0)
   
-  evalue0 = evalues.RD( n11 = n1.retained*p1,
-                        n10 = n1.retained*(1-p1),
-                        n01 = n0.retained*p0,
-                        n00 = n0.retained*(1-p0),
-                        #*note that equivalence arises when we set true = alpha:
-                        true = alpha )
+  # M-value paper, Eq (2)
+  evalue0 = evalues.RD( n11 = round( n1.retained*p1 ),
+                        n10 = round( n1.retained*(1-p1) ),
+                        n01 = round( n0.retained*p0 ),
+                        n00 = round( n0.retained*(1-p0) ),
+                        true = lambda )
   
   update_result_csv( name = paste( analysis, " Evalue est rd_0=", round(.rd_0, 2), sep = "" ),
                      value = round(evalue0$est.Evalue, 2) )
@@ -269,8 +267,8 @@ for ( .rd_0 in rd_0_vec ) {
   
 }
 
-
-# ~ Louisa's expression -------------------------------------------------
+# E-values for point estimate: 1.29 for RD0 = 0; 1.15 for RD0 = -0.1
+# E-values for CI: both 1
 
 
 

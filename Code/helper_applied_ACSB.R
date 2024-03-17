@@ -367,6 +367,6 @@ stat_CI = function(est, lo, hi){
 
 
 # from NMAR (M-value paper)
-get_alpha = function(pr, rd_0, true = 0){
+get_lambda = function(pr, rd_0, true = 0){
   (1 - 1/pr)*rd_0 + true/pr
 }
