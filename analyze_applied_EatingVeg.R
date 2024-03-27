@@ -2,6 +2,8 @@
 
 # PRELIMINARIES ---------------------------------------------------------------
 
+# rm(list=ls())
+
 # This script uses renv to preserve the R environment specs (e.g., package versions.)
 library(renv)
 # run this if you want to reproduce results using the R environment we had:
