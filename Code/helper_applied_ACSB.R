@@ -12,6 +12,7 @@
 
 # uses a lot of global vars, like study
 # missMethod: "MI" or "CC"
+# control_covars: should we control for covariates listed in demo.raw (global var)?
 analyze_all_outcomes = function(missMethod,
                                 control_covars = FALSE,
                                 drop_inattentives = FALSE ) {
@@ -55,9 +56,12 @@ analyze_all_outcomes = function(missMethod,
           ols = lm( eval( parse(text = string) ), data = .d )
           
 
-          mi.res = my_ols_hc0( coefName = "treat",
+          mi.res = my_ols_hc0( ols = ols,
+                               coefName = "treat",
+                               
+                               # for SMDs:
                                dat = .d,
-                               ols = ols,
+                               xName = "treat",
                                yName = i )
     
           
@@ -302,14 +306,16 @@ my_ttest = function( yName, dat ){
     g.hi = summ$ci.ub ) )
 }
 
-
+# ols: the OLS model
 # coefName: which coefficient to report
-# dat: dataset (needed to calculate Hedges' g)
-# ols: the OLS model with all the effect modifiers
+
+# dat: dataset (only needed to calculate Hedges' g)
 # yName: outcome
-my_ols_hc0 = function( coefName, dat, ols, yName ){
-  
-  dat$Y = dat[[yName]]
+# xName: names of the coefficient in d (may differ from coefName for categorical variables)
+my_ols_hc0 = function( ols, coefName,
+                       # these ones are only needed if you want Hedges' g
+                       dat = NULL, yName = NULL, xName = NULL,
+                       show_SMD = TRUE){
   
   ( se.ols = sqrt( vcov(ols)[coefName, coefName] ) )
   ( bhat.ols = coef(ols)[coefName] )
@@ -320,40 +326,60 @@ my_ols_hc0 = function( coefName, dat, ols, yName ){
   tcrit = qt(.975, df = ols$df.residual)
   t = as.numeric( abs(bhat.ols / se.hc0) )
   
-  # standardized mean difference
-  # **note for paper: standardizing by SD(Y|X) rather than SD(Y|X,Z) where
-  #  Z is the effect modifiers because former is more directly comparable
-  #  to the effect sizes in main analysis
-  # note also that we need to calculate sd.pooled for each MI dataset rather than 
-  #  just transforming the final pooled estimate to an SMD, because SD(Y|X) differs 
-  #  in each imputed dataset
-  tab = suppressMessages( dat %>% group_by(treat) %>%
-                            summarise( m = mean(Y, na.rm = TRUE),
-                                       sd = sd(Y, na.rm = TRUE),
-                                       n = n() ) )
-  num = (tab$n[1] - 1) * tab$sd[1]^2 + (tab$n[2] - 1) * tab$sd[2]^2
-  denom = (tab$n[1] - 1) + (tab$n[2] - 1)
-  sd.pooled = sqrt(num/denom)
-  # adjustment factor for Hedges' g
-  # https://www.statisticshowto.com/hedges-g/#:~:text=Hedges'%20g%20is%20a%20measure,of%20up%20to%20about%204%25.
-  N = sum(tab$n)
-  J = ( (N-3) / (N-2.25) ) * sqrt( (N-2) / N )
-  # factor to multiply with the raw mean difference to get Hedges' g
-  term = J / sd.pooled
+  if ( show_SMD == FALSE ) {
+    return( data.frame(
+      est = bhat.ols,
+      se = se.hc0,
+      lo = bhat.ols - tcrit * se.hc0,
+      hi = bhat.ols + tcrit * se.hc0,
+      pval =  2 * ( 1 - pt(t, df = ols$df.residual ) ),
+      nobs = nobs(ols) ) ) # number of observations in model
+  }
   
-  return( data.frame(
-    est = bhat.ols,
-    se = se.hc0,
-    lo = bhat.ols - tcrit * se.hc0,
-    hi = bhat.ols + tcrit * se.hc0,
-    pval =  2 * ( 1 - pt(t, df = ols$df.residual ) ),
-    nobs = nobs(ols),  # number of observations in model
+  if ( show_SMD == TRUE) {
     
-    # standardized mean difference (Hedges' g)
-    g = bhat.ols * term,
-    g.se = se.hc0 * term,
-    g.lo = (bhat.ols - tcrit * se.hc0) * term,
-    g.hi = (bhat.ols + tcrit * se.hc0) * term ) )
+    if ( is.null(dat) | is.null(yName) | is.null(xName) ) stop("Need to provide dat, yName, and xName if you want SMD")
+    
+    dat$Y = dat[[yName]]
+    dat$X = dat[[xName]]
+    
+    # standardized mean difference
+    # **note for paper: standardizing by SD(Y|X) rather than SD(Y|X,Z) where
+    #  Z is the effect modifiers because former is more directly comparable
+    #  to the effect sizes in main analysis
+    # note also that we need to calculate sd.pooled for each MI dataset rather than 
+    #  just transforming the final pooled estimate to an SMD, because SD(Y|X) differs 
+    #  in each imputed dataset
+    tab = suppressMessages( dat %>% group_by(X) %>%
+                              summarise( m = mean(Y, na.rm = TRUE),
+                                         sd = sd(Y, na.rm = TRUE),
+                                         n = n() ) )
+    num = (tab$n[1] - 1) * tab$sd[1]^2 + (tab$n[2] - 1) * tab$sd[2]^2
+    denom = (tab$n[1] - 1) + (tab$n[2] - 1)
+    sd.pooled = sqrt(num/denom)
+    # adjustment factor for Hedges' g
+    # https://www.statisticshowto.com/hedges-g/#:~:text=Hedges'%20g%20is%20a%20measure,of%20up%20to%20about%204%25.
+    N = sum(tab$n)
+    J = ( (N-3) / (N-2.25) ) * sqrt( (N-2) / N )
+    # factor to multiply with the raw mean difference to get Hedges' g
+    term = J / sd.pooled
+    
+    return( data.frame(
+      est = bhat.ols,
+      se = se.hc0,
+      lo = bhat.ols - tcrit * se.hc0,
+      hi = bhat.ols + tcrit * se.hc0,
+      pval =  2 * ( 1 - pt(t, df = ols$df.residual ) ),
+      nobs = nobs(ols),  # number of observations in model
+      
+      # standardized mean difference (Hedges' g)
+      g = bhat.ols * term,
+      g.se = se.hc0 * term,
+      g.lo = (bhat.ols - tcrit * se.hc0) * term,
+      g.hi = (bhat.ols + tcrit * se.hc0) * term ) )
+  }
+  
+
 }
 
 
@@ -366,7 +392,93 @@ stat_CI = function(est, lo, hi){
 
 
 
-# from NMAR (M-value paper)
-get_lambda = function(pr, rd_0, true = 0){
-  (1 - 1/pr)*rd_0 + true/pr
+
+
+# MISC  -------------------------------------------------
+
+# for reproducible manuscript-writing
+# adds a row to the file "stats_for_paper" with a new statistic or value for the manuscript
+# optionally, "section" describes the section of code producing a given result
+# expects "study" to be a global var
+# for reproducible manuscript-writing
+# adds a row to the file "stats_for_paper" with a new statistic or value for the manuscript
+# optionally, "section" describes the section of code producing a given result
+# expects "study" to be a global var
+update_result_csv = function( name,
+                              .section = NA,
+                              .results.dir = results.dir,
+                              .overleaf.dir = overleaf.dir.stats,
+                              value = NA,
+                              print = FALSE ) {
+  
+  # if either is NULL, it just won't be included in this vector
+  dirs = c(.results.dir, .overleaf.dir)
+  
+  
+  new.rows = data.frame( name,
+                         value = as.character(value),
+                         section = as.character(.section) )
+  
+  # to avoid issues with variable types when overwriting
+  new.rows$name = as.character(new.rows$name)
+  new.rows$value = as.character(new.rows$value)
+  new.rows$section = as.character(new.rows$section)
+  
+  
+  for (.dir in dirs) {
+    
+    setwd(.dir)
+    
+    if ( "stats_for_paper.csv" %in% list.files() ) {
+      res = read.csv( "stats_for_paper.csv",
+                        stringsAsFactors = FALSE,
+                        colClasses = rep("character", 3 ) )
+      
+      # if this entry is already in the results file, overwrite the
+      #  old one
+      if ( all(name %in% res$name) ) res[ res$name %in% name, ] = new.rows
+      else res = rbind(res, new.rows)
+    }
+    
+    if ( ! "stats_for_paper.csv" %in% list.files() ) {
+      res = new.rows
+    }
+    
+    write.csv( res, 
+               "stats_for_paper.csv",
+               row.names = FALSE,
+               quote = FALSE )
+    
+  }  # end "for (.dir in dirs)"
+  
+  
+  if ( print == TRUE ) {
+    View(res)
+  }
+  
 }
+
+# stands for "wipe results"
+wr = function(){
+  setwd(results.dir)
+  if( "stats_for_paper.csv" %in% list.files() ) system("rm stats_for_paper.csv")
+  setwd(overleaf.dir)
+  if( "stats_for_paper.csv" %in% list.files() ) system("rm stats_for_paper.csv")
+}
+
+# stands for "view results"
+vr = function(){
+  setwd(results.dir)
+  View( read.csv("stats_for_paper.csv") )
+}
+
+
+
+# quick_ci = function( est, var ) {
+#   c( est - qnorm(.975) * sqrt(var),
+#      est + qnorm(.975) * sqrt(var) )
+# }
+# 
+# quick_pval = function( est, var ) {
+#   2 * ( 1 - pnorm( abs( est / sqrt(var) ) ) )
+# }

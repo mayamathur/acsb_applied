@@ -1,0 +1,143 @@
+name,value,section
+Mean diff for mainY (Intercept),65.2710343180199,NA
+Mean diff for mainY femaleTRUE,-12.1664138429753,NA
+Mean diff for mainY age10y,1.30309858747183,NA
+Mean diff for mainY educc.2yr,0.0274002693414837,NA
+Mean diff for mainY educd.4yr,-0.461993378053895,NA
+Mean diff for mainY educe.post,0.631437317162796,NA
+Mean diff for mainY cauc,0.749214697407463,NA
+Mean diff for mainY hisp,0.436649988588909,NA
+Mean diff for mainY black,-5.3784440119254,NA
+Mean diff for mainY midEast,-7.8279251139725,NA
+Mean diff for mainY pacIsl,-19.3812917194474,NA
+Mean diff for mainY natAm,-14.0315972739442,NA
+Mean diff for mainY SAsian,3.27322028915131,NA
+Mean diff for mainY EAsian,-9.45114224847768,NA
+Mean diff for mainY SEAsian,12.0952214315307,NA
+Mean diff for mainY partyIndependent,3.43565226542047,NA
+Mean diff for mainY partyOther/I don't know,10.0287470168191,NA
+Mean diff for mainY partyRepublican,5.34034671335159,NA
+Mean diff for mainY pDem10,-1.63339588219507,NA
+Mean diff lo for mainY (Intercept),39.9442301010802,NA
+Mean diff lo for mainY femaleTRUE,-20.1388157582626,NA
+Mean diff lo for mainY age10y,-1.56943469125546,NA
+Mean diff lo for mainY educc.2yr,-13.1178297962505,NA
+Mean diff lo for mainY educd.4yr,-10.5341848612291,NA
+Mean diff lo for mainY educe.post,-11.3099766401003,NA
+Mean diff lo for mainY cauc,-16.0679618591637,NA
+Mean diff lo for mainY hisp,-23.4446291782585,NA
+Mean diff lo for mainY black,-24.2051965583361,NA
+Mean diff lo for mainY midEast,-36.9409929716071,NA
+Mean diff lo for mainY pacIsl,-70.1109315700582,NA
+Mean diff lo for mainY natAm,-31.2366520067709,NA
+Mean diff lo for mainY SAsian,-20.3117625913375,NA
+Mean diff lo for mainY EAsian,-26.3391465311328,NA
+Mean diff lo for mainY SEAsian,-9.75487338225416,NA
+Mean diff lo for mainY partyIndependent,-5.86201869589687,NA
+Mean diff lo for mainY partyOther/I don't know,-13.7534123399867,NA
+Mean diff lo for mainY partyRepublican,-6.2836655284084,NA
+Mean diff lo for mainY pDem10,-4.01907331496955,NA
+Mean diff hi for mainY (Intercept),90.5978385349597,NA
+Mean diff hi for mainY femaleTRUE,-4.19401192768797,NA
+Mean diff hi for mainY age10y,4.17563186619912,NA
+Mean diff hi for mainY educc.2yr,13.1726303349335,NA
+Mean diff hi for mainY educd.4yr,9.61019810512133,NA
+Mean diff hi for mainY educe.post,12.5728512744259,NA
+Mean diff hi for mainY cauc,17.5663912539786,NA
+Mean diff hi for mainY hisp,24.3179291554363,NA
+Mean diff hi for mainY black,13.4483085344853,NA
+Mean diff hi for mainY midEast,21.2851427436621,NA
+Mean diff hi for mainY pacIsl,31.3483481311634,NA
+Mean diff hi for mainY natAm,3.17345745888247,NA
+Mean diff hi for mainY SAsian,26.8582031696401,NA
+Mean diff hi for mainY EAsian,7.43686203417743,NA
+Mean diff hi for mainY SEAsian,33.9453162453156,NA
+Mean diff hi for mainY partyIndependent,12.7333232267378,NA
+Mean diff hi for mainY partyOther/I don't know,33.8109063736248,NA
+Mean diff hi for mainY partyRepublican,16.9643589551116,NA
+Mean diff hi for mainY pDem10,0.752281550579415,NA
+Applied analyzed n Excluding inattentive; adjusted,509,NA
+Applied analyzed n No exclusion; unadjusted,574,NA
+Applied analyzed n No exclusion; adjusted,574,NA
+Applied analyzed n Excluding inattentive; unadjusted,509,NA
+Applied n inattentive,65,NA
+Perc n inattentive,0.113240418118467,NA
+OR for attentiveness (Intercept),0.282816858514435,NA
+OR for attentiveness femaleTRUE,2.4259623541401,NA
+OR for attentiveness age10y,1.34357073524166,NA
+OR for attentiveness educc.2yr,1.05729666409083,NA
+OR for attentiveness educd.4yr,1.32141883663042,NA
+OR for attentiveness educe.post,0.483951025376499,NA
+OR for attentiveness cauc,2.65451470723638,NA
+OR for attentiveness hisp,1.8422571194972,NA
+OR for attentiveness black,5.2199625261349,NA
+OR for attentiveness midEast,10425644.8332869,NA
+OR for attentiveness pacIsl,5092269.04998283,NA
+OR for attentiveness natAm,2.03531147077554,NA
+OR for attentiveness SAsian,2.56063475553503,NA
+OR for attentiveness EAsian,2.35846851753087,NA
+OR for attentiveness SEAsian,3.71785956733295,NA
+OR for attentiveness partyIndependent,1.29458753653022,NA
+OR for attentiveness partyOther/I don't know,1.3595891434961,NA
+OR for attentiveness partyRepublican,1.10640737193832,NA
+OR for attentiveness pDem10,1.00989212731059,NA
+OR pval for attentiveness (Intercept),0.247212318939219,NA
+OR pval for attentiveness femaleTRUE,0.00512485370756556,NA
+OR pval for attentiveness age10y,0.0372307447277734,NA
+OR pval for attentiveness educc.2yr,0.919565250514505,NA
+OR pval for attentiveness educd.4yr,0.47418637459392,NA
+OR pval for attentiveness educe.post,0.0923724004737357,NA
+OR pval for attentiveness cauc,0.195768252160835,NA
+OR pval for attentiveness hisp,0.421110399342726,NA
+OR pval for attentiveness black,0.0746821805755818,NA
+OR pval for attentiveness midEast,0.991886773853367,NA
+OR pval for attentiveness pacIsl,0.989740111041063,NA
+OR pval for attentiveness natAm,0.539964483649312,NA
+OR pval for attentiveness SAsian,0.344016819920425,NA
+OR pval for attentiveness EAsian,0.342473344973434,NA
+OR pval for attentiveness SEAsian,0.316249656329012,NA
+OR pval for attentiveness partyIndependent,0.502501349012809,NA
+OR pval for attentiveness partyOther/I don't know,0.678593223163872,NA
+OR pval for attentiveness partyRepublican,0.795734495275818,NA
+OR pval for attentiveness pDem10,0.915920440067814,NA
+OR lo for attentiveness (Intercept),0.029981277304956,NA
+OR lo for attentiveness femaleTRUE,1.31798189297955,NA
+OR lo for attentiveness age10y,1.03072251478434,NA
+OR lo for attentiveness educc.2yr,0.372003031373202,NA
+OR lo for attentiveness educd.4yr,0.616048578901909,NA
+OR lo for attentiveness educe.post,0.205315615792975,NA
+OR lo for attentiveness cauc,0.676118876337051,NA
+OR lo for attentiveness hisp,0.471942916895553,NA
+OR lo for attentiveness black,0.979866236384652,NA
+OR lo for attentiveness midEast,0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000256045332635795,NA
+OR lo for attentiveness pacIsl,0.0000000000000000000000000000000000000000000000000000000000000000000000000000863965564923328,NA
+OR lo for attentiveness natAm,0.287320424320289,NA
+OR lo for attentiveness SAsian,0.417776207188686,NA
+OR lo for attentiveness EAsian,0.446532650338786,NA
+OR lo for attentiveness SEAsian,0.399336325213154,NA
+OR lo for attentiveness partyIndependent,0.616027378490686,NA
+OR lo for attentiveness partyOther/I don't know,0.346011901757915,NA
+OR lo for attentiveness partyRepublican,0.518779142517202,NA
+OR lo for attentiveness pDem10,0.840582741446529,NA
+OR hi for attentiveness (Intercept),2.2616792146586,NA
+OR hi for attentiveness femaleTRUE,4.58155419058507,NA
+OR hi for attentiveness age10y,1.8033974457731,NA
+OR hi for attentiveness educc.2yr,3.3329311636376,NA
+OR hi for attentiveness educd.4yr,2.85764737122971,NA
+OR hi for attentiveness educe.post,1.12178925419609,NA
+OR hi for attentiveness cauc,14.0785509719988,NA
+OR hi for attentiveness hisp,9.99093061767694,NA
+OR hi for attentiveness black,38.7632066469709,NA
+OR hi for attentiveness midEast,NA,NA
+OR hi for attentiveness pacIsl,NA,NA
+OR hi for attentiveness natAm,42.0369816673721,NA
+OR hi for attentiveness SAsian,21.9341739361409,NA
+OR hi for attentiveness EAsian,16.4353414690047,NA
+OR hi for attentiveness SEAsian,94.6965344029163,NA
+OR hi for attentiveness partyIndependent,2.80860395452627,NA
+OR hi for attentiveness partyOther/I don't know,6.87629854806564,NA
+OR hi for attentiveness partyRepublican,2.41547462406498,NA
+OR hi for attentiveness pDem10,1.21315284727088,NA
+maxUY to explain away mainY CC,10.95,NA
+maxUY to explain away totalMeat CC,15.14,NA
+maxUY to explain away totalAnimProd CC,4.19,NA

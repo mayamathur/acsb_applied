@@ -1,4 +1,5 @@
 
+# can use wr() to wipe results file and vr() to view it
 
 # PRELIMINARIES ---------------------------------------------------------------
 
@@ -59,6 +60,10 @@ results.dir = here("Results")
 setwd(results.dir)
 
 
+overleaf.dir = "/Users/mmathur/Dropbox/Apps/Overleaf/Attention checks selection bias (ACSB) Overleaf/R_objects"
+setwd(overleaf.dir)
+
+
 # get helper fns
 setwd(code.dir)
 source("helper_applied_ACSB.R")
@@ -75,10 +80,20 @@ options(scipen=999)
 setwd(data.dir)
 d = read.csv("prepped_merged_data.csv")
 
+# complete-case dataset
+# attrition is the only reason for missing data
+d = d %>% filter(!is.na(mainY))
+expect_equal( nrow(d), 574 )
+
 # I think no one is missing baseline demographics because we required answers:
 any(is.na(d$hisp))
 any(is.na(d$sex))
 # so conducting CC analyses with covariates vs. without shouldn't cause more observations to be dropped
+
+# rescale or recode for interpretability
+d$age10y = d$age/10
+d$pDem10 = d$pDem/.10
+d$female = d$sex == "a.Female"
 
 # ~ Lists of variables  -------------------------------------------------
 
@@ -111,25 +126,46 @@ secFoodY <<- c("totalMeat",
                "totalGood")
 
 # raw demographics, prior to collapsing categories for effect modification analyses
-demo.raw <<- c("sex",
-               "age",
-               "educ",
-               "cauc",
-               "hisp",
-               "black",
-               "midEast",
-               "pacIsl",
-               "natAm",
-               "SAsian",
-               "EAsian",
-               "SEAsian",
-               "party",
-               "pDem")
+if ( FALSE ) {
+  demo.raw <<- c("female",
+                 "age10y",
+                 "educ",
+                 "cauc",
+                 "hisp",
+                 "black",
+                 "midEast",
+                 "pacIsl",
+                 "natAm",
+                 "SAsian",
+                 "EAsian",
+                 "SEAsian",
+                 "party",
+                 "pDem10")
+}
+
+
+# old
+if ( FALSE ) {
+  demo.raw <<- c("sex",
+                 "age",
+                 "educ",
+                 "cauc",
+                 "hisp",
+                 "black",
+                 "midEast",
+                 "pacIsl",
+                 "natAm",
+                 "SAsian",
+                 "EAsian",
+                 "SEAsian",
+                 "party",
+                 "pDem")
+}
 
 
 
 
-# FOUR ANALYSES: [RETAIN INATTNETIVE] X [CONTROL COVARIATES] ---------------------------------------------------------------
+# FOUR ANALYSES: [RETAIN INATTENTIVE] X [CONTROL COVARIATES] ---------------------------------------------------------------
 
 
 # ~ Retaining inattentive subjects  -------------------------------------------------
@@ -154,7 +190,8 @@ demo.raw <<- c("sex",
 ### run all outcomes
 
 # reproduce results in manuscript (retain all participants; don't control covars)
-x1 = analyze_all_outcomes(missMethod = "CC")
+x1 = analyze_all_outcomes(missMethod = "CC",
+                          control_covars = FALSE)
 View(x1$res.nice)
 
 # control for demographics, but still retain all participants
@@ -172,25 +209,6 @@ d$passCheck[ d$treat == 1 & d$videoContent == "The ways we raise animals for hum
 d$passCheck[ d$treat == 0 ] = 1  # ***doing this because no one checked zero answers, which would have been correct for the control group
 mean(d$passCheck) # 87% by this definition
 
-
-# drop inattentives; don't control covariates
-x3 = analyze_all_outcomes(missMethod = "CC", drop_inattentives = TRUE)
-View(x3$res.nice)
-
-
-# drop inattentives; control covariates
-x4 = analyze_all_outcomes(missMethod = "CC", drop_inattentives = TRUE, control_covars = TRUE)
-View(x4$res.nice)
-
-
-
-# ### what if we only control gender?
-# # similar to controlling all covariates
-# demo.raw = "sex"
-# x2 = analyze_all_outcomes(missMethod = "CC", drop_inattentives = TRUE, control_covars = TRUE)
-# View(x2$res.nice)
-
-
 # ~ Tables for paper -------------------------------------------------
 
 # three outcomes to display in paper
@@ -199,8 +217,13 @@ keepers = c("mainY CC", "totalMeat CC", "totalAnimProd CC")
 
 for ( .drop in c(FALSE, TRUE) ) {
   for ( .covars in c(FALSE, TRUE) ) {
+
     
-    x = analyze_all_outcomes(missMethod = "CC", drop_inattentives = .drop, control_covars = .covars)
+    x = analyze_all_outcomes(missMethod = "CC",
+                             drop_inattentives = .drop,
+                             control_covars = .covars)
+    
+
     
     x2 = x$res.nice %>%
       filter(analysis %in% keepers) %>%
@@ -215,29 +238,37 @@ for ( .drop in c(FALSE, TRUE) ) {
     if ( .drop == TRUE & .covars == FALSE ) string = "Excluding inattentive; unadjusted"
     if ( .drop == TRUE & .covars == TRUE ) string = "Excluding inattentive; adjusted"
     
+    cat( paste( "\n\n******* Analysis:", string ) )
+    cat("Analyzed n = ", x$res.nice$nobs[1])
+    
+    # save the sample size separately
+    update_result_csv(name = paste( "Applied analyzed n", string ),
+                      value = x$res.nice$nobs[1],
+                      .results.dir = results.dir,
+                      .overleaf.dir = overleaf.dir)
+    
     x2 = x2 %>% add_row(.before = 1,
                         analysis = string )
     
     # add spacer row for prettiness
     x2 = x2 %>% add_row(.after = 4)
     
-    if (.drop == FALSE & .covars == FALSE) res = x2 else res = bind_rows(res, x2)
+    if (.drop == FALSE & .covars == FALSE) rs = x2 else rs = bind_rows(rs, x2)
   
   }
 }
 
 
 # prettify
-res[res == "mainY CC"] = "Meat and animal products"
-res[res == "totalMeat CC"] = "Meat"
-res[res == "totalAnimProd CC"] = "Animal products"
+rs[rs == "mainY CC"] = "Meat and animal products"
+rs[rs == "totalMeat CC"] = "Meat"
+rs[rs == "totalAnimProd CC"] = "Animal products"
 
 
-print( xtable(res),
+rs
+
+print( xtable(rs),
        include.rownames = FALSE )
-
-
-
 
 
 # xtable of CC results, for pasting into TeX supplement
@@ -248,92 +279,162 @@ write.table( print( xtable( short,
              file = "4_table_trt_effect_all_outcomes_cc_pretty_tex.txt"
 )
 
+### Sanity checks
+# simple exclusion
+# drop inattentives; don't control covariates
+x3 = analyze_all_outcomes(missMethod = "CC",
+                          drop_inattentives = TRUE)
+View(x3$res.nice)
+
+
+# drop inattentives; control covariates
+x4 = analyze_all_outcomes(missMethod = "CC",
+                          drop_inattentives = TRUE,
+                          control_covars = TRUE)
+View(x4$res.nice)
 
 
 
-# PREDICTORS OF ATTENTION ---------------------------------------------------------------
+# ~ One-off stats for paper  -------------------------------------------------
 
-# X ~ C
+# sensitivity analysis on SMD scale
+x5 = x4$res.raw %>% filter(analysis %in% keepers) %>% select(analysis, est)
+
+pR = mean(d$passCheck)
+
+
+update_result_csv(name = paste( "maxUY to explain away", x5$analysis ),
+                  value = abs( round(x5$est / (2 * (1-pR)), 2) ),
+                  .results.dir = results.dir,
+                  .overleaf.dir = overleaf.dir)
+
+
+
+# ~ One-off stats for paper  -------------------------------------------------
+
+# number inattentive
+update_result_csv(name = paste( "Applied n inattentive" ),
+                  value = sum(d$passCheck == 0),
+                  .results.dir = results.dir,
+                  .overleaf.dir = overleaf.dir)
+
+# number inattentive
+update_result_csv(name = paste( "Perc n inattentive" ),
+                  value = mean(d$passCheck == 0, na.rm = TRUE),
+                  .results.dir = results.dir,
+                  .overleaf.dir = overleaf.dir)
+
+
+
+
+
+# PREDICTORS OF R AND OF Y ---------------------------------------------------------------
+
+# ~ R ~ C -------------------------------------------------
 # fit model to treatment group only since control group were all set to attention = 1
 # as in previous studies, females and older people were more attentive
 ( string = paste( c("passCheck ~ 1", demo.raw), collapse = " + " ) )
-m = lm( eval( parse(text = string) ), data = d %>% filter(treat == 1) )
+m = glm( eval( parse(text = string) ),
+         data = d %>% filter(treat == 1),
+         family = "binomial"(link = "logit") )
 summary(m)
 
-# Y ~ C
+# save results
+x = tidy(m)
+x$OR = exp(x$estimate)
+
+CIs = as.data.frame( confint(m) )
+CIs = exp(CIs)
+names(CIs) = c("lo", "hi")
+
+# for a merged table
+col1 = stat_CI( round(x$OR, 2), round(CIs$lo, 2), round(CIs$hi, 2) )
+
+update_result_csv( name = paste("OR for attentiveness ", x$term, sep = ""),
+                   value = x$OR,
+                  .results.dir = results.dir,
+                  .overleaf.dir = overleaf.dir,
+                  print = TRUE)
+
+update_result_csv( name = paste("OR pval for attentiveness ", x$term, sep = ""),
+                   value = x$p.value,
+                   .results.dir = results.dir,
+                   .overleaf.dir = overleaf.dir,
+                   print = FALSE)
+
+
+update_result_csv( name = paste("OR lo for attentiveness ", x$term, sep = ""),
+                   value = CIs$lo,
+                   .results.dir = results.dir,
+                   .overleaf.dir = overleaf.dir,
+                   print = TRUE)
+
+
+update_result_csv( name = paste("OR hi for attentiveness ", x$term, sep = ""),
+                   value = CIs$hi,
+                   .results.dir = results.dir,
+                   .overleaf.dir = overleaf.dir,
+                   print = TRUE)
+
+
+
+
+# ~ Y ~ C -------------------------------------------------
+
 # ** great example because male also strongly predicts meat consumption
 ( string = paste( c("mainY ~ 1", demo.raw), collapse = " + " ) )
 m = lm( eval( parse(text = string) ), data = d %>% filter(treat == 1) )
 summary(m)
 
-
-
-
-# SENSIIVITY ANALYSES ---------------------------------------------------------------
-
-# need to dichotomize Y for this
-# above vs. below the control group median
-d$mainYbin = d$mainY > median( d$mainY[d$treat == 0], na.rm = TRUE )
-d %>% group_by(treat) %>% summarise(mean(mainYbin, na.rm = TRUE) )
-
-
-# ~ M-value -------------------------------------------------
-
-# attentives only
-da = d %>% filter(passCheck == TRUE)
-
-# single outcome
-( string = paste( c("mainYbin ~ treat", demo.raw), collapse = " + ") )
-ols = lm( eval( parse(text = string) ), data = d )
-summary(ols)
-
-#m = my_ols_hc0(dat = d, coefName = "treat", yName = "mainYbin", ols = ols )
-
-( n1.retained = sum(da$treat == 1) )
-( n0.retained = sum(da$treat == 0) )
-( pr = mean(d$passCheck) )
-
-
-#bm: set this up for a single outcome to test it out 
-# :)
-# P(Y=1 | A=1, R=1)
-( p1 = ols$coefficients[ "(Intercept)" ] + ols$coefficients[ "treat" ] )
-
-# P(Y=1 | A=0, R=1)
-( p0 = ols$coefficients[ "(Intercept)" ] )
-
-
-# from NMAR:
-# get E-value for each of several values of the sens parameter RD_0
-rd_0_vec = c(0, -0.10)
-
-
-for ( .rd_0 in rd_0_vec ) {
-  
-  lambda = get_lambda(pr = pr,
-                      rd_0 = .rd_0,
-                      true = 0)
-  
-  # M-value paper, Eq (2)
-  evalue0 = evalues.RD( n11 = round( n1.retained*p1 ),
-                        n10 = round( n1.retained*(1-p1) ),
-                        n01 = round( n0.retained*p0 ),
-                        n00 = round( n0.retained*(1-p0) ),
-                        true = lambda )
-  
-  update_result_csv( name = paste( analysis, " Evalue est rd_0=", round(.rd_0, 2), sep = "" ),
-                     value = round(evalue0$est.Evalue, 2) )
-  
-  update_result_csv( name = paste( analysis, " Evalue lo rd_0=", round(.rd_0, 2), sep = "" ),
-                     value = round(evalue0$lower.Evalue, 2) )
-  
+# get HC0 inference for all coefficients
+for ( .coefName in names(m$coefficients) ){
+  row = my_ols_hc0(coefName = .coefName,
+                   ols = m,
+                   show_SMD = FALSE)
+  print(row)
+  if ( .coefName == names(m$coefficients)[1] ) {
+    rs = row
+  } else {
+    rs = bind_rows(rs, row)
+  }
 }
 
-# E-values for point estimate: 1.29 for RD0 = 0; 1.15 for RD0 = -0.1
-# E-values for CI: both 1
+rs
+
+# for a merged table
+col2 = stat_CI( round(rs$est, 2), round(rs$lo, 2), round(rs$hi, 2) )
+
+# one-off stats
+update_result_csv( name = paste("Mean diff for mainY ", row.names(rs), sep = ""),
+                   value = rs$est,
+                   .results.dir = results.dir,
+                   .overleaf.dir = overleaf.dir,
+                   print = FALSE)
+
+update_result_csv( name = paste("Mean diff lo for mainY ", row.names(rs), sep = ""),
+                   value = rs$lo,
+                   .results.dir = results.dir,
+                   .overleaf.dir = overleaf.dir,
+                   print = FALSE)
 
 
+update_result_csv( name = paste("Mean diff hi for mainY ", row.names(rs), sep = ""),
+                   value = rs$hi,
+                   .results.dir = results.dir,
+                   .overleaf.dir = overleaf.dir,
+                   print = FALSE)
 
+# ~ Merged table: covariate associations with both R and Y  -------------------------------------------------
+
+rs2 = dplyr::bind_cols(col1, col2)
+
+rs2 = rs2 %>%
+  add_column(.before = 1, row.names(rs))
+
+names(rs2) = c("Covariate", "Association with attentiveness (OR)", "Association with MAP consumption (mean diff.)")
+
+print( xtable(rs2),
+       include.rownames = FALSE )
 
 
 
