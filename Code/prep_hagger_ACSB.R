@@ -106,102 +106,15 @@ rma.uni(yi = `Hedges's g`,
         method = "REML",
         knha = TRUE )
 
-# MANUALLY ENTER HAGGER DATA (EFFECT OF X ON Y) ---------------------------------------------------------------
 
-# https://osf.io/jymhe/
 
-# reported: 0.04 [-0.07, 0.14]
 
-# from Table 1
-est = c(.31,
-        .44,
-        -0.09,
-        .40,
-        -0.27,
-        -0.18,
-        0,
-        .20,
-        .36,
-        -0.04,
-        .50,
-        -0.11,
-        0.04,
-        0.04,
-        -0.23,
-        -0.51,
-        -0.41,
-        -0.18,
-        0,
-        -0.12,
-        0.09,
-        0.6,
-        0.22) 
 
-hi = c(.83,
-       .9,
-       .26,
-       .86,
-       .15,
-       .37,
-       .39,
-       .60,
-       .80,
-       .41,
-       .98,
-       .28,
-       .33,
-       .46,
-       .15,
-       -0.05,
-       0.09,
-       .21,
-       .44,
-       .29,
-       .48,
-       .89,
-       .53)
-
-name = c("birt", "calvillo", "carruth", "crowell", "evans", "francis", "hagger",
-         "lau", "lynch", "philipp", "ringos", "brandt", "cheung", "elson", "lange",
-         "muller", "otgaar", "rentzsch", "schlinkert", "stamos", "ullrich", "wolff",
-         "yusainy")
-
-# replication dataset
-d1 = scrape_meta( type = "raw",
-                  est = est,
-                  hi = hi )
 
 names(d1) = c("yi_XY", "vi_XY")
 
 d1 = d1 %>% add_column(.before = 1, name = name)
 
-# sanity check: reproduce their meta-analysis
-# reported in abstract: 0.04 [-0.07, 0.15]
-#@@@ A LITTLE OFF, EVEN POINT ESTIMATE. LOOK INTO THIS.
-
-# c.f. one of their analysis files: https://osf.io/zg8ur
-# they didn't use knha, but still, the point estimates should agree
-rma.uni(yi = yi_XY,
-        vi = vi_XY,
-        data = d1,
-        method = "REML",
-        knha = TRUE )
-
-# should I try going from RTV_incl.csv instead?
-# bm
-### their code:
-RTVdat<- read.csv("RTV_incl.csv")
-RTVdat<- RTVdat[order(RTVdat$study),]
-### random-effects model meta-analysis 
-# modeled after http://www.metafor-project.org/doku.php/tips:assembling_data_smd
-effectSizesAll<- escalc(measure="SMD", #standardized mean difference
-                        m1i= Ego.Depletion.Mean, m2i= Control.Mean,
-                        sd1i=Ego.Depletion.Std.Dev, sd2i= Control.Std.Dev,
-                        n1i=Ego.Depletion.Sample.size, n2i=Control.Sample.size,
-                        data= RTVdat)
-#(RTVdat$Ego.Depletion.Mean - RTVdat$Control.Mean) / RTVdat$Ego.Depletion.Std.Dev
-
-res <- rma(data=effectSizesAll, yi,vi,  method="REML", slab=paste(Study.name))
 
 
 # ALL MANIPULATION CHECKS ---------------------------------------------------------------
