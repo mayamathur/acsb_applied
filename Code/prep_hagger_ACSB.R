@@ -1,15 +1,7 @@
 
-# Hagger's repo:  https://osf.io/jymhe/
+# Hagger's OSF repo:  https://osf.io/jymhe/
 
 # Manipulation check datasets come from Supplementary Analyses / Data and results files for analysis including all 24 laboratories
-
-
-
-# think about: is it okay to use standardized effects here? 
-# A: Yes. since numerator is effect of X on standardized-Y and denom is effect of X on standardized-R,
-# resulting ATE is effect of 1-SD increase in R on standardized-Y
-
-
 
 
 # PRELIMINARIES ---------------------------------------------------------------
@@ -80,7 +72,8 @@ source("helper_applied_ACSB.R")
 # no sci notation
 options(scipen=999)
 
-# TRY TO REPRODUCE THEIR ANALYSIS  -------------------------------------------------
+
+# SANITY CHECK: REPRODUCE THEIR ANALYSIS  -------------------------------------------------
 
 setwd(data.dir)
 setwd("Hagger/Dependent variable")
@@ -125,15 +118,14 @@ rma.uni(yi = `Hedges's g`,
 d1 = d1 %>% rename( yi_XY = `Hedges's g`,
                     vi_XY = `Std Err g` )
 
-
-# make a short ID string comparable to that in dataset d
+# make a short ID string for later merging joy
 d1$name = sapply(strsplit(d1$`Study name`, "\\s+|,"),
                    function(x) tolower(gsub(",", "", x[1])))
 
 d1 = d1 %>% select(name, yi_XY, vi_XY)
 
 
-# ALL MANIPULATION CHECKS ---------------------------------------------------------------
+# WRANGLE MANIPULATION CHECK DATA ---------------------------------------------------------------
 
 # ~ Make long dataset of all the manipulation checks  -------------------------------------------------
 
@@ -141,7 +133,7 @@ setwd(data.dir)
 setwd("Hagger/Manipulation check items")
 
 
-# the manuscript seems to describe only these as manipulation checks (pg 550),
+# the manuscript seems to describe only these four self-reported measures as manipulation checks (pg 550),
 #  not "LetterE" (task accuracy)
 check_names = c("difficulty", "effort", "fatigue", "frustration")
 
@@ -177,6 +169,12 @@ length(unique(d2$name))
 
 # ~ Make composite scale of the 4 manipulation checks  -------------------------------------------------
 
+# approach: within each study, make composite using fixed-effects meta-analysis,
+# but adjusting the usual inference to account for the (approximate) correlations between
+#  the estimates for different checks
+
+### Estimate the pairwise correlations
+
 # get IPD data to estimate correlations between the manipulation checks
 # will use this as a proxy for correlation between the XR effects on each of these
 setwd(data.dir)
@@ -191,9 +189,7 @@ pairwise_corrs = unique( as.vector(cormat) )
 pairwise_corrs = pairwise_corrs[ !pairwise_corrs == 1 ]
 expect_equal( length(pairwise_corrs), 6 )  # 6 = (4 variables choose 2)
 
-# make composite variable using FE meta-analysis, but 
-#  adjusting the usual inference to account for the
-#  (approximate) correlations between the measures
+### Make composite variable for each study
 d2$yi_XR_agg = NA
 d2$sei_XR_agg = NA
 d2$sei_XR_agg_usualFE = NA
@@ -258,25 +254,28 @@ for ( .name in d2$name ){
 # sanity check
 View(d2 %>% arrange(name))
 
+
 # remove unnecessary rows
-d3 = d2 %>% filter( !duplicated(name) ) %>%
-  select(name, yi_XR_agg, sei_XR_agg, sei_XR_agg_usualFE)
+# filtering on fatigue because for the main analysis using yi_XR_agg, we only need 1 row per study anyway,
+#  and specifically we'll filter on fatigue for the fatigue-only analysis
+d3 = d2 %>% filter( check_name == "fatigue" ) %>%
+  select(name, yi_XR, sei_XR, yi_XR_agg, sei_XR_agg, sei_XR_agg_usualFE)
 
 
+d3 = d3 %>% rename(yi_XR_fatigue = yi_XR,
+                   sei_XR_fatigue = sei_XR)
 
-
-
-# ~ Merge with X-Y effect data  -------------------------------------------------
+# CALCULATE IV ESTIMATOR -------------------------------------------------
 
 # merge with X-Y effect data
 d = d1 %>% left_join(y = d3,
                      by = "name")
 
+expect_equal(nrow(d), 23)
+
 d$vi_XR_agg = d$sei_XR_agg^2
 
-
-# ~ Calculate IV Wald estimator  -------------------------------------------------
-
+# calculate IV Wald estimator (composite manipulation check)
 d = d %>% rowwise() %>%
   mutate( IV_est = yi_XY / yi_XR_agg,
           IV_var = ratio_var( num_est = yi_XY,
@@ -284,85 +283,30 @@ d = d %>% rowwise() %>%
                               num_var = vi_XY,
                               denom_var = sei_XR_agg^2) )
 
-# meta-analyze the IV estimates
-mod = rma.uni(yi = IV_est,
-        vi = IV_var,
-        method = "REML",
-        data = d,
-        knha = TRUE)
 
-# wow, super similar to original estimate!! very interesting
-mean(d$yi_XY)
-mean(d$IV_est)
+# calculate IV Wald estimator (fatigue only)
+d = d %>% rowwise() %>%
+mutate( IV_est_fatigue = yi_XY / yi_XR_fatigue,
+        IV_var_fatigue = ratio_var( num_est = yi_XY,
+                                    denom_est = yi_XR_fatigue,
+                                    num_var = vi_XY,
+                                    denom_var = sei_XR_fatigue^2) )
 
-
-# ~ What if we assume fatigue (the one that didn't change) is the only one that matters? -------------------------------------------------
-
-# maximally charitable toward Baumeister's critique
-
-temp = d %>% left_join(d2 %>% filter(check_name == "fatigue"),
-                       by = "name")
-  
-temp = temp %>% rowwise() %>%
-  mutate( IV_est = yi_XY / yi_XR,
-          IV_var = ratio_var( num_est = yi_XY,
-                              denom_est = yi_XR,
-                              num_var = vi_XY,
-                              denom_var = sei_XR^2) )
-
-# sanity check: should reproduce their reported 0.09 [-0.03, 0.20] 
-# for effect of X on fatigue (pg 555)
-# since I'm not using KNHA
+# sanity check: 
+# reproduce their reported effect of X on fatigue: 0.09 [-0.03, 0.20] (pg 555)
+# not using KNHA here to match their code
 # yes :)
-rma.uni( yi = yi_XR,
-         vi = sei_XR^2,
+rma.uni( yi = yi_XR_fatigue,
+         vi = sei_XR_fatigue^2,
          method = "REML",
-         data = temp,
+         data = d,
          knha = FALSE)
 
-# meta-analyze the IV estimates
-( modf = rma.uni(yi = IV_est,
-              vi = IV_var,
-              method = "REML",
-              data = temp,
-              knha = TRUE) )
+# SAVE DATASET -------------------------------------------------
 
-# c.f. simple mean - very different!
-# however, this makes sense given the plots below, since the 
-mean(temp$IV_est)
+setwd(data.dir)
+setwd("Hagger")
 
+fwrite(d, "prepped_hagger_data_ACSB.csv")
 
-# ~ Plots (sanity checks)  -------------------------------------------------
-
-# ITT estimate vs. various IV estimates
-
-# aggregated IV measure
-# some increase as a result of IV estimate, but others decrease (become more negative)
-ggplot( data = d, 
-        aes(x = yi_XY,
-            y = yi_XY / yi_XR_agg,
-            size = 1/vi_XR_agg) ) +
-  geom_abline(intercept = 0, slope = 1) +
-  
-  # line for IV estimate = 0
-  geom_hline(yintercept = 0, lty = 2) +
-  geom_point() 
-
-mean(d$yi_XY / d$yi_XR_agg)
-
-
-# only fatigue (the one with weakest XR relationship)
-temp = d %>% left_join(d2, by = "name") %>%
-  filter(check_name == "fatigue")
-
-ggplot( data = temp, 
-        aes(x = yi_XY,
-            y = yi_XY / yi_XR,
-            size = 1/sei_XR^2) ) +
-  # line for IV estimate = 0
-  geom_hline(yintercept = 0, lty = 2) +
-  geom_abline(intercept = 0, slope = 1) +
-  geom_point() 
-
-mean(temp$yi_XY / temp$yi_XR)
 
