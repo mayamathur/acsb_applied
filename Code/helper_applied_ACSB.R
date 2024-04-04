@@ -258,12 +258,18 @@ analyze_all_outcomes = function(missMethod,
 
 
 
+# delta-method variance approximation for a ratio
+# assumes Cov(num_est, denom_est) is close to 0
+# https://www.jepusto.com/delta-method-and-2sls-ses/
+ratio_var = function(num_est, denom_est, num_var, denom_var) {
+  ratio = num_est/denom_est
+  (1 / denom_est^2) * ( num_var + ratio^2 * denom_var)
+}
 
 
 
 
-
-##### Fn: Nicely Organize Welch t-test Results #####
+# nicely organize Welch t-test results
 my_ttest = function( yName, dat ){
   
   tres = t.test( dat[[yName]] ~ treat,
