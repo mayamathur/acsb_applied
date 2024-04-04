@@ -259,14 +259,20 @@ analyze_all_outcomes = function(missMethod,
 
 
 # delta-method variance approximation for a ratio
-# assumes Cov(num_est, denom_est) is close to 0
 # https://www.jepusto.com/delta-method-and-2sls-ses/
-ratio_var = function(num_est, denom_est, num_var, denom_var) {
+# by default, assumes Cov(num_est, denom_est) is 0
+# if it's actually >0, then ratio_var output will be conservatively large
+ratio_var = function(num_est,
+                     denom_est,
+                     num_var,
+                     denom_var,
+                     cov_num_denom = 0 ) {
   ratio = num_est/denom_est
-  (1 / denom_est^2) * ( num_var + ratio^2 * denom_var)
+  (1 / denom_est^2) * ( num_var + ratio^2*denom_var - 2*ratio*cov_num_denom)
 }
 
-
+# example
+# ratio_var(.5, .5, 1, 1, 0)
 
 
 # nicely organize Welch t-test results
