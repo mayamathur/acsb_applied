@@ -12,7 +12,7 @@ library(renv)
 
 to.load = c("data.table",
             "purrr",
-            "dplyr"
+            "dplyr",
             "tidyverse",
             "stringr",
             "tibble",
@@ -69,15 +69,48 @@ source("helper_applied_ACSB.R")
 # no sci notation
 options(scipen=999)
 
+# TRY TO REPRODUCE THEIR ANALYSIS  -------------------------------------------------
+
+setwd(data.dir)
+setwd("Hagger/Dependent variable")
+
+# they must have used this file rather than RTV_incl for main analyses, because 
+# RTV.csv agrees with the study estimates in Fig 1
+d = fread("RTV.csv")
+
+# their code; I updated variable names:
+# RTVdat<- d
+# RTVdat<- RTVdat[order(RTVdat$study),]
+# ### random-effects model meta-analysis 
+# # modeled after http://www.metafor-project.org/doku.php/tips:assembling_data_smd
+# effectSizesAll<- escalc(measure="SMD", #standardized mean difference
+#                         m1i= `Ego Depletion Mean`, m2i= `Control Mean`,
+#                         sd1i=`Ego Depletion Std Dev`, sd2i= `Control Std-Dev`,
+#                         n1i=`Ego Depletion Sample size`, n2i=`Control Sample size`,
+#                         data= RTVdat)
+# res <- rma(data=effectSizesAll, yi,vi,  method="REML", slab=paste(Study.name))
+
+
+# using their yi, vi
+rma.uni(yi = `Hedges's g`,
+        sei = `Std Err g`,
+        data = d,
+        method = "REML",
+        knha = FALSE )
+# yes, agrees :)
+
+# slightly wider with KNHA, but not that much so
+rma.uni(yi = `Hedges's g`,
+        sei = `Std Err g`,
+        data = d,
+        method = "REML",
+        knha = TRUE )
 
 # MANUALLY ENTER HAGGER DATA (EFFECT OF X ON Y) ---------------------------------------------------------------
 
 # https://osf.io/jymhe/
 
-# data are in a very raw format
-# instead hand-enter effect sizes from Fig 1 forest plot
-# @@note they had two outcomes: RTV and RT, with very similar estimates and CIs
-#  for now just using RTV 
+# reported: 0.04 [-0.07, 0.14]
 
 # from Table 1
 est = c(.31,
@@ -145,11 +178,30 @@ d1 = d1 %>% add_column(.before = 1, name = name)
 # sanity check: reproduce their meta-analysis
 # reported in abstract: 0.04 [-0.07, 0.15]
 #@@@ A LITTLE OFF, EVEN POINT ESTIMATE. LOOK INTO THIS.
+
+# c.f. one of their analysis files: https://osf.io/zg8ur
+# they didn't use knha, but still, the point estimates should agree
 rma.uni(yi = yi_XY,
         vi = vi_XY,
         data = d1,
         method = "REML",
         knha = TRUE )
+
+# should I try going from RTV_incl.csv instead?
+# bm
+### their code:
+RTVdat<- read.csv("RTV_incl.csv")
+RTVdat<- RTVdat[order(RTVdat$study),]
+### random-effects model meta-analysis 
+# modeled after http://www.metafor-project.org/doku.php/tips:assembling_data_smd
+effectSizesAll<- escalc(measure="SMD", #standardized mean difference
+                        m1i= Ego.Depletion.Mean, m2i= Control.Mean,
+                        sd1i=Ego.Depletion.Std.Dev, sd2i= Control.Std.Dev,
+                        n1i=Ego.Depletion.Sample.size, n2i=Control.Sample.size,
+                        data= RTVdat)
+#(RTVdat$Ego.Depletion.Mean - RTVdat$Control.Mean) / RTVdat$Ego.Depletion.Std.Dev
+
+res <- rma(data=effectSizesAll, yi,vi,  method="REML", slab=paste(Study.name))
 
 
 # ALL MANIPULATION CHECKS ---------------------------------------------------------------
@@ -255,7 +307,8 @@ mean(d$IV_est)
 # A: Yes. since numerator is effect of X on standardized-Y and denom is effect of X on standardized-R,
 # resulting ATE is effect of 1-SD increase in R on standardized-Y
 
-
+#bm: check all of this! also look into the disagreement between my replication of their meta-analysis. 
+#  Is it just rounding error?
 
 
 
