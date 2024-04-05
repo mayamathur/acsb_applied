@@ -405,6 +405,23 @@ stat_CI = function(est, lo, hi){
 
 # MISC  -------------------------------------------------
 
+my_ggsave = function(name,
+                     width,
+                     height,
+                     .results.dir = results.dir,
+                     .overleaf.dir = overleaf.dir) {
+  setwd(.results.dir)
+  ggsave( name,
+          width = width, 
+          height = height)
+  
+  setwd(.overleaf.dir)
+  ggsave( name,
+          width = width, 
+          height = height)
+}
+
+
 # for reproducible manuscript-writing
 # adds a row to the file "stats_for_paper" with a new statistic or value for the manuscript
 # optionally, "section" describes the section of code producing a given result
