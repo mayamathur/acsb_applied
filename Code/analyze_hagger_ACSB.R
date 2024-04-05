@@ -104,6 +104,18 @@ mod = rma.uni(yi = IV_est,
 mean(d$IV_est)
 
 
+# one-off stats for paper
+
+
+
+# ~ Forest plot of ITT estimates vs. IV estimates -------------------------------------------------
+
+# plotting df
+dp = d %>% select( name, yi_XY, vi_XY, IV_est, IV_var)
+
+dpl = dp %>% pivot_longer()
+
+
 
 # IV ANALYSIS USING FATIGUE ONLY -------------------------------------------------
 

@@ -403,9 +403,6 @@ stat_CI = function(est, lo, hi){
 
 
 
-
-
-
 # MISC  -------------------------------------------------
 
 # for reproducible manuscript-writing
@@ -484,13 +481,19 @@ vr = function(){
   View( read.csv("stats_for_paper.csv") )
 }
 
+# capitalize first letter of string
+firstup <- function(x) {
+  substr(x, 1, 1) <- toupper(substr(x, 1, 1))
+  x
+}
 
 
-# quick_ci = function( est, var ) {
-#   c( est - qnorm(.975) * sqrt(var),
-#      est + qnorm(.975) * sqrt(var) )
-# }
-# 
-# quick_pval = function( est, var ) {
-#   2 * ( 1 - pnorm( abs( est / sqrt(var) ) ) )
-# }
+
+quick_ci = function( est, var ) {
+  c( est - qnorm(.975) * sqrt(var),
+     est + qnorm(.975) * sqrt(var) )
+}
+
+quick_pval = function( est, var ) {
+  2 * ( 1 - pnorm( abs( est / sqrt(var) ) ) )
+}

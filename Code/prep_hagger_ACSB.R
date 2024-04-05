@@ -194,6 +194,7 @@ d2$yi_XR_agg = NA
 d2$sei_XR_agg = NA
 d2$sei_XR_agg_usualFE = NA
 
+# loop over studies
 for ( .name in d2$name ){
   temp = d2 %>% filter(name == .name)
   
@@ -230,7 +231,7 @@ for ( .name in d2$name ){
   # sanity checks:
   if ( FALSE ) {
     
-    # c.f. upper bound where all corrs are 1
+    # c.f. upper bound on variance, where all corrs are 1
     term2 = (1/temp[check_name == "effort", "sei_XR"]) * (1/temp[check_name == "frustration", "sei_XR"]) +
       (1/temp[check_name == "effort", "sei_XR"]) * (1/temp[check_name == "difficulty", "sei_XR"]) +
       (1/temp[check_name == "effort", "sei_XR"]) * (1/temp[check_name == "fatigue", "sei_XR"]) + 
@@ -264,6 +265,7 @@ d3 = d2 %>% filter( check_name == "fatigue" ) %>%
 
 d3 = d3 %>% rename(yi_XR_fatigue = yi_XR,
                    sei_XR_fatigue = sei_XR)
+
 
 # CALCULATE IV ESTIMATOR -------------------------------------------------
 
