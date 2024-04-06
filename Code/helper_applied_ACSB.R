@@ -258,10 +258,20 @@ analyze_all_outcomes = function(missMethod,
 
 
 
-# delta-method variance approximation for a ratio
-# https://www.jepusto.com/delta-method-and-2sls-ses/
-# by default, assumes Cov(num_est, denom_est) is 0
+# Delta-method variance approximation for a ratio
+# 
+# - by default, assumes Cov(num_est, denom_est) is 0
 # if it's actually >0, then ratio_var output will be conservatively large
+#
+# - for IV estimation, conservatism makes a lot of sense since
+# num_est E[Y | Z = 1] - E[Y | Z = 0]
+# denom_est is E[A | Z = 1] - E[A | Z = 0]
+# and by excludability, there is no Z -> Y direct effect, so the correlation 
+#  will be positive as long as num_est and denom_est are both positive 
+# 
+# - also for IV estimation, note very interesting equivalence of delta method
+# with HC0 SEs from 2SLS:
+# https://www.jepusto.com/delta-method-and-2sls-ses/
 ratio_var = function(num_est,
                      denom_est,
                      num_var,

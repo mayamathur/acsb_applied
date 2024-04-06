@@ -72,7 +72,6 @@ source("helper_applied_ACSB.R")
 # no sci notation
 options(scipen=999)
 
-
 # SANITY CHECK: REPRODUCE THEIR ANALYSIS  -------------------------------------------------
 
 setwd(data.dir)
@@ -114,6 +113,9 @@ rma.uni(yi = `Hedges's g`,
         method = "REML",
         knha = TRUE )
 
+
+
+# PREP X-Y DATA ---------------------------------------------------------------
 
 d1 = d1 %>% rename( yi_XY = `Hedges's g`,
                     vi_XY = `Std Err g` )
@@ -163,20 +165,20 @@ for ( check_name in check_names ) {
 d2 = d2 %>% rename(yi_XR = `Hedges's g`,
                    sei_XR = `Std Err g`)
 
-# one more name than dataset d1 because Tinghog isn't in Fig 1 forest plot
+# has one more name than dataset d1 because Tinghog isn't in Fig 1 forest plot
 length(unique(d2$name))
 
 
 # ~ Make composite scale of the 4 manipulation checks  -------------------------------------------------
 
-# approach: within each study, make composite using fixed-effects meta-analysis,
+# Approach: within each study, make composite using fixed-effects meta-analysis,
 # but adjusting the usual inference to account for the (approximate) correlations between
 #  the estimates for different checks
 
 ### Estimate the pairwise correlations
 
-# get IPD data to estimate correlations between the manipulation checks
-# will use this as a proxy for correlation between the XR effects on each of these
+# get IPD data to estimate pairwise correlations between the manipulation checks themselves
+# will use this as a proxy for pairwise correlations between the X-R *effects* for each of these
 setwd(data.dir)
 setwd("Hagger/Manipulation check items")
 ipd = fread("RRR-MergedSubjectData.csv")
@@ -189,24 +191,33 @@ pairwise_corrs = unique( as.vector(cormat) )
 pairwise_corrs = pairwise_corrs[ !pairwise_corrs == 1 ]
 expect_equal( length(pairwise_corrs), 6 )  # 6 = (4 variables choose 2)
 
-### Make composite variable for each study
+### Make composite manipulation check (R) for each study
+
+# interpretation of R: the inverse-variance-weighted average of standardized effects of X on each check item
+
 d2$yi_XR_agg = NA
 d2$sei_XR_agg = NA
 d2$sei_XR_agg_usualFE = NA
 
-# loop over studies
+# loop over replication studies
 for ( .name in d2$name ){
   temp = d2 %>% filter(name == .name)
   
-  # FE estimate by hand
+  # FE point estimate by hand
   wi = 1 / temp$sei_XR^2
   ( FE_est = (1 / sum(wi) ) * sum( wi * temp$yi_XR ) )
   
+  # sanity check: c.f. simple mean
+  # mean(temp$yi_XR)
+  
   d2$yi_XR_agg[ d2$name == .name ] = FE_est
   
-  # term inside second summation, which would be 0 if no correlations:
-  # sum_{i<j}{ Corr(thetahat_i, thetahat_j) * 1/SE_i * 1/SE_j }
-  # corr = covariance because R is standardized
+  # following my derivation for conservative internal meta-analysis ("Meta-analysis cheat sheet")
+  #
+  # "term" is the term inside second summation, which would be 0 if everything were uncorrelated:
+  #   sum_{i<j}{ Corr(thetahat_i, thetahat_j) * 1/SE_i * 1/SE_j }
+  #
+  # note that corr = covariance because R is standardized
   term = (1/temp[check_name == "effort", "sei_XR"]) * (1/temp[check_name == "frustration", "sei_XR"]) * cormat["Effort", "Frustration"] +
     (1/temp[check_name == "effort", "sei_XR"]) * (1/temp[check_name == "difficulty", "sei_XR"]) * cormat["Effort", "Difficulty"] +
   (1/temp[check_name == "effort", "sei_XR"]) * (1/temp[check_name == "fatigue", "sei_XR"]) * cormat["Effort", "Tiredness"] + 
@@ -225,7 +236,7 @@ for ( .name in d2$name ){
   sqrt(1 / sum(wi) ); sqrt(FE_var_adjusted)
   
   d2$sei_XR_agg[ d2$name == .name ] = sqrt(FE_var_adjusted)
-  # just for comparison:
+  # just for comparison, also save the usual FE variance that assumes ||:
   d2$sei_XR_agg_usualFE[ d2$name == .name ] = sqrt(1 / sum(wi) )
   
   # sanity checks:
@@ -241,6 +252,7 @@ for ( .name in d2$name ){
       
       (1/temp[check_name == "difficulty", "sei_XR"]) * (1/temp[check_name == "fatigue", "sei_XR"])
     
+    # should be > FE_var_adjusted
     sqrt( (1 / sum(wi) ) + (1 / sum(wi) )^2 * 2 * term2 )
     
     
