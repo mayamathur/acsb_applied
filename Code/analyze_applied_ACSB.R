@@ -258,7 +258,7 @@ setwd(results.dir)
 
 write.table( print( xtable( rs,
                             include.rownames = FALSE ) ),
-             file = "4_table_trt_effect_all_outcomes_cc_pretty_tex.txt"
+             file = "xtable_ate_estimates.txt"
 )
 
 ### Sanity checks
@@ -425,6 +425,6 @@ setwd(results.dir)
 
 write.table( print( xtable( rs2,
                             include.rownames = FALSE ) ),
-             file = "table_predictors_attentiveness.txt"
+             file = "xtable_predictors_attentiveness.txt"
 )
 
