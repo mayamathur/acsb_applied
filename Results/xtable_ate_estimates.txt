@@ -1,0 +1,33 @@
+"x"
+"1" "% latex table generated in R 4.3.3 by xtable 1.8-4 package
+% Tue Apr 23 05:58:05 2024
+\begin{table}[ht]
+\centering
+\begin{tabular}{rlllr}
+  \hline
+ & analysis & est & g.est & pval \\ 
+  \hline
+1 & No exclusion; unadjusted &  &  &  \\ 
+  2 & Meat and animal products & -0.37 [-6.38, 5.64] & -0.01 [-0.17, 0.15] & 0.90 \\ 
+  3 & Meat & -1.03 [-5.34, 3.27] & -0.04 [-0.2, 0.12] & 0.64 \\ 
+  4 & Animal products & 0.66 [-2.54, 3.86] & 0.03 [-0.13, 0.2] & 0.68 \\ 
+  5 &  &  &  &  \\ 
+  6 & No exclusion; adjusted &  &  &  \\ 
+  7 & Meat and animal products & -0.49 [-6.78, 5.79] & -0.01 [-0.18, 0.16] & 0.88 \\ 
+  8 & Meat & -0.93 [-5.41, 3.55] & -0.04 [-0.21, 0.13] & 0.68 \\ 
+  9 & Animal products & 0.44 [-2.83, 3.72] & 0.02 [-0.14, 0.19] & 0.79 \\ 
+  10 &  &  &  &  \\ 
+  11 & Excluding inattentive; unadjusted &  &  &  \\ 
+  12 & Meat and animal products & -3.33 [-9.34, 2.68] & -0.1 [-0.27, 0.08] & 0.28 \\ 
+  13 & Meat & -4.23 [-8.37, -0.08] & -0.17 [-0.35, 0] & 0.05 \\ 
+  14 & Animal products & 0.9 [-2.54, 4.33] & 0.05 [-0.13, 0.22] & 0.61 \\ 
+  15 &  &  &  &  \\ 
+  16 & Excluding inattentive; adjusted &  &  &  \\ 
+  17 & Meat and animal products & -2.48 [-8.86, 3.89] & -0.07 [-0.25, 0.11] & 0.44 \\ 
+  18 & Meat & -3.43 [-7.8, 0.94] & -0.14 [-0.32, 0.04] & 0.12 \\ 
+  19 & Animal products & 0.95 [-2.58, 4.48] & 0.05 [-0.13, 0.23] & 0.60 \\ 
+  20 &  &  &  &  \\ 
+   \hline
+\end{tabular}
+\end{table}
+"

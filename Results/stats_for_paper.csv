@@ -1,65 +1,11 @@
 name,value,section
-Mean diff for mainY (Intercept),65.2710343180199,NA
-Mean diff for mainY femaleTRUE,-12.1664138429753,NA
-Mean diff for mainY age10y,1.30309858747183,NA
-Mean diff for mainY educc.2yr,0.0274002693414837,NA
-Mean diff for mainY educd.4yr,-0.461993378053895,NA
-Mean diff for mainY educe.post,0.631437317162796,NA
-Mean diff for mainY cauc,0.749214697407463,NA
-Mean diff for mainY hisp,0.436649988588909,NA
-Mean diff for mainY black,-5.3784440119254,NA
-Mean diff for mainY midEast,-7.8279251139725,NA
-Mean diff for mainY pacIsl,-19.3812917194474,NA
-Mean diff for mainY natAm,-14.0315972739442,NA
-Mean diff for mainY SAsian,3.27322028915131,NA
-Mean diff for mainY EAsian,-9.45114224847768,NA
-Mean diff for mainY SEAsian,12.0952214315307,NA
-Mean diff for mainY partyIndependent,3.43565226542047,NA
-Mean diff for mainY partyOther/I don't know,10.0287470168191,NA
-Mean diff for mainY partyRepublican,5.34034671335159,NA
-Mean diff for mainY pDem10,-1.63339588219507,NA
-Mean diff lo for mainY (Intercept),39.9442301010802,NA
-Mean diff lo for mainY femaleTRUE,-20.1388157582626,NA
-Mean diff lo for mainY age10y,-1.56943469125546,NA
-Mean diff lo for mainY educc.2yr,-13.1178297962505,NA
-Mean diff lo for mainY educd.4yr,-10.5341848612291,NA
-Mean diff lo for mainY educe.post,-11.3099766401003,NA
-Mean diff lo for mainY cauc,-16.0679618591637,NA
-Mean diff lo for mainY hisp,-23.4446291782585,NA
-Mean diff lo for mainY black,-24.2051965583361,NA
-Mean diff lo for mainY midEast,-36.9409929716071,NA
-Mean diff lo for mainY pacIsl,-70.1109315700582,NA
-Mean diff lo for mainY natAm,-31.2366520067709,NA
-Mean diff lo for mainY SAsian,-20.3117625913375,NA
-Mean diff lo for mainY EAsian,-26.3391465311328,NA
-Mean diff lo for mainY SEAsian,-9.75487338225416,NA
-Mean diff lo for mainY partyIndependent,-5.86201869589687,NA
-Mean diff lo for mainY partyOther/I don't know,-13.7534123399867,NA
-Mean diff lo for mainY partyRepublican,-6.2836655284084,NA
-Mean diff lo for mainY pDem10,-4.01907331496955,NA
-Mean diff hi for mainY (Intercept),90.5978385349597,NA
-Mean diff hi for mainY femaleTRUE,-4.19401192768797,NA
-Mean diff hi for mainY age10y,4.17563186619912,NA
-Mean diff hi for mainY educc.2yr,13.1726303349335,NA
-Mean diff hi for mainY educd.4yr,9.61019810512133,NA
-Mean diff hi for mainY educe.post,12.5728512744259,NA
-Mean diff hi for mainY cauc,17.5663912539786,NA
-Mean diff hi for mainY hisp,24.3179291554363,NA
-Mean diff hi for mainY black,13.4483085344853,NA
-Mean diff hi for mainY midEast,21.2851427436621,NA
-Mean diff hi for mainY pacIsl,31.3483481311634,NA
-Mean diff hi for mainY natAm,3.17345745888247,NA
-Mean diff hi for mainY SAsian,26.8582031696401,NA
-Mean diff hi for mainY EAsian,7.43686203417743,NA
-Mean diff hi for mainY SEAsian,33.9453162453156,NA
-Mean diff hi for mainY partyIndependent,12.7333232267378,NA
-Mean diff hi for mainY partyOther/I don't know,33.8109063736248,NA
-Mean diff hi for mainY partyRepublican,16.9643589551116,NA
-Mean diff hi for mainY pDem10,0.752281550579415,NA
-Applied analyzed n Excluding inattentive; adjusted,509,NA
 Applied analyzed n No exclusion; unadjusted,574,NA
 Applied analyzed n No exclusion; adjusted,574,NA
 Applied analyzed n Excluding inattentive; unadjusted,509,NA
+Applied analyzed n Excluding inattentive; adjusted,509,NA
+maxUY to explain away mainY CC,36.5,NA
+maxUY to explain away totalMeat CC,50.48,NA
+maxUY to explain away totalAnimProd CC,13.98,NA
 Applied n inattentive,65,NA
 Perc n inattentive,0.113240418118467,NA
 OR for attentiveness (Intercept),0.282816858514435,NA
@@ -138,16 +84,60 @@ OR hi for attentiveness partyIndependent,2.80860395452627,NA
 OR hi for attentiveness partyOther/I don't know,6.87629854806564,NA
 OR hi for attentiveness partyRepublican,2.41547462406498,NA
 OR hi for attentiveness pDem10,1.21315284727088,NA
-maxUY to explain away mainY CC,10.95,NA
-maxUY to explain away totalMeat CC,15.14,NA
-maxUY to explain away totalAnimProd CC,4.19,NA
-ITT_est Hagger,0.155278816928169,NA
-ITT lo Hagger,-0.0795343548780083,NA
-ITT est Hagger,0.0378722310250801,NA
-ITT hi Hagger,0.155278816928169,NA
-IV est Hagger,0.0566250940521523,NA
-IV lo Hagger,-0.0862271497711563,NA
-IV hi Hagger,0.199477337875461,NA
-IV est fatigue Hagger,0.0628735049511485,NA
-IV lo fatigue Hagger,-0.253823499462674,NA
-IV hi fatigue Hagger,0.37957050936497,NA
+Mean diff for mainY (Intercept),65.2710343180199,NA
+Mean diff for mainY femaleTRUE,-12.1664138429753,NA
+Mean diff for mainY age10y,1.30309858747183,NA
+Mean diff for mainY educc.2yr,0.0274002693414837,NA
+Mean diff for mainY educd.4yr,-0.461993378053895,NA
+Mean diff for mainY educe.post,0.631437317162796,NA
+Mean diff for mainY cauc,0.749214697407463,NA
+Mean diff for mainY hisp,0.436649988588909,NA
+Mean diff for mainY black,-5.3784440119254,NA
+Mean diff for mainY midEast,-7.8279251139725,NA
+Mean diff for mainY pacIsl,-19.3812917194474,NA
+Mean diff for mainY natAm,-14.0315972739442,NA
+Mean diff for mainY SAsian,3.27322028915131,NA
+Mean diff for mainY EAsian,-9.45114224847768,NA
+Mean diff for mainY SEAsian,12.0952214315307,NA
+Mean diff for mainY partyIndependent,3.43565226542047,NA
+Mean diff for mainY partyOther/I don't know,10.0287470168191,NA
+Mean diff for mainY partyRepublican,5.34034671335159,NA
+Mean diff for mainY pDem10,-1.63339588219507,NA
+Mean diff lo for mainY (Intercept),39.9442301010802,NA
+Mean diff lo for mainY femaleTRUE,-20.1388157582626,NA
+Mean diff lo for mainY age10y,-1.56943469125546,NA
+Mean diff lo for mainY educc.2yr,-13.1178297962505,NA
+Mean diff lo for mainY educd.4yr,-10.5341848612291,NA
+Mean diff lo for mainY educe.post,-11.3099766401003,NA
+Mean diff lo for mainY cauc,-16.0679618591637,NA
+Mean diff lo for mainY hisp,-23.4446291782585,NA
+Mean diff lo for mainY black,-24.2051965583361,NA
+Mean diff lo for mainY midEast,-36.9409929716071,NA
+Mean diff lo for mainY pacIsl,-70.1109315700582,NA
+Mean diff lo for mainY natAm,-31.2366520067709,NA
+Mean diff lo for mainY SAsian,-20.3117625913375,NA
+Mean diff lo for mainY EAsian,-26.3391465311328,NA
+Mean diff lo for mainY SEAsian,-9.75487338225416,NA
+Mean diff lo for mainY partyIndependent,-5.86201869589687,NA
+Mean diff lo for mainY partyOther/I don't know,-13.7534123399867,NA
+Mean diff lo for mainY partyRepublican,-6.2836655284084,NA
+Mean diff lo for mainY pDem10,-4.01907331496955,NA
+Mean diff hi for mainY (Intercept),90.5978385349597,NA
+Mean diff hi for mainY femaleTRUE,-4.19401192768797,NA
+Mean diff hi for mainY age10y,4.17563186619912,NA
+Mean diff hi for mainY educc.2yr,13.1726303349335,NA
+Mean diff hi for mainY educd.4yr,9.61019810512133,NA
+Mean diff hi for mainY educe.post,12.5728512744259,NA
+Mean diff hi for mainY cauc,17.5663912539786,NA
+Mean diff hi for mainY hisp,24.3179291554363,NA
+Mean diff hi for mainY black,13.4483085344853,NA
+Mean diff hi for mainY midEast,21.2851427436621,NA
+Mean diff hi for mainY pacIsl,31.3483481311634,NA
+Mean diff hi for mainY natAm,3.17345745888247,NA
+Mean diff hi for mainY SAsian,26.8582031696401,NA
+Mean diff hi for mainY EAsian,7.43686203417743,NA
+Mean diff hi for mainY SEAsian,33.9453162453156,NA
+Mean diff hi for mainY partyIndependent,12.7333232267378,NA
+Mean diff hi for mainY partyOther/I don't know,33.8109063736248,NA
+Mean diff hi for mainY partyRepublican,16.9643589551116,NA
+Mean diff hi for mainY pDem10,0.752281550579415,NA

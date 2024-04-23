@@ -1,5 +1,5 @@
 
-# can use wr() to wipe results file and vr() to view it
+# Can use wr() to wipe results file and vr() to view it
 
 # PRELIMINARIES ---------------------------------------------------------------
 
@@ -24,7 +24,8 @@ to.load = c("dplyr",
             "metafor",
             "sandwich",
             "EValue",
-            "xtable")
+            "xtable",
+            "tidymodels")
 
 # load within installation if needed
 for (pkg in to.load) {
@@ -42,6 +43,7 @@ for (pkg in to.load) {
 }
 
 # run this only if you want to update the R environment specs
+# setwd(here())
 # renv::snapshot()
 
 
@@ -51,7 +53,7 @@ code.dir = here("Code")
 setwd(code.dir)
 
 # if you need to go up a level in parent directory
-data.dir = here("Data")
+data.dir = here("Data/Mathur documentary")
 # check that it's set correctly
 setwd(data.dir)
 
@@ -125,42 +127,22 @@ secFoodY <<- c("totalMeat",
                animProds,
                "totalGood")
 
-# raw demographics, prior to collapsing categories for effect modification analyses
-if ( FALSE ) {
-  demo.raw <<- c("female",
-                 "age10y",
-                 "educ",
-                 "cauc",
-                 "hisp",
-                 "black",
-                 "midEast",
-                 "pacIsl",
-                 "natAm",
-                 "SAsian",
-                 "EAsian",
-                 "SEAsian",
-                 "party",
-                 "pDem10")
-}
 
+demo.raw <<- c("female",
+               "age10y",
+               "educ",
+               "cauc",
+               "hisp",
+               "black",
+               "midEast",
+               "pacIsl",
+               "natAm",
+               "SAsian",
+               "EAsian",
+               "SEAsian",
+               "party",
+               "pDem10")
 
-# old
-if ( FALSE ) {
-  demo.raw <<- c("sex",
-                 "age",
-                 "educ",
-                 "cauc",
-                 "hisp",
-                 "black",
-                 "midEast",
-                 "pacIsl",
-                 "natAm",
-                 "SAsian",
-                 "EAsian",
-                 "SEAsian",
-                 "party",
-                 "pDem")
-}
 
 
 
@@ -206,7 +188,7 @@ View(x2$res.nice)
 # for the present analysis, "attentive" depends on which treatment group you are in
 d$passCheck = 0
 d$passCheck[ d$treat == 1 & d$videoContent == "The ways we raise animals for human consumption causes the animals to suffer."] = 1
-d$passCheck[ d$treat == 0 ] = 1  # ***doing this because no one checked zero answers, which would have been correct for the control group
+d$passCheck[ d$treat == 0 ] = 1  # control group is attentive by definition
 mean(d$passCheck) # 87% by this definition
 
 # ~ Tables for paper -------------------------------------------------
@@ -217,13 +199,13 @@ keepers = c("mainY CC", "totalMeat CC", "totalAnimProd CC")
 
 for ( .drop in c(FALSE, TRUE) ) {
   for ( .covars in c(FALSE, TRUE) ) {
-
+    
     
     x = analyze_all_outcomes(missMethod = "CC",
                              drop_inattentives = .drop,
                              control_covars = .covars)
     
-
+    
     
     x2 = x$res.nice %>%
       filter(analysis %in% keepers) %>%
@@ -254,7 +236,7 @@ for ( .drop in c(FALSE, TRUE) ) {
     x2 = x2 %>% add_row(.after = 4)
     
     if (.drop == FALSE & .covars == FALSE) rs = x2 else rs = bind_rows(rs, x2)
-  
+    
   }
 }
 
@@ -271,10 +253,10 @@ print( xtable(rs),
        include.rownames = FALSE )
 
 
-# xtable of CC results, for pasting into TeX supplement
+# xtable of results, for pasting into manuscript
 setwd(results.dir)
 
-write.table( print( xtable( short,
+write.table( print( xtable( rs,
                             include.rownames = FALSE ) ),
              file = "4_table_trt_effect_all_outcomes_cc_pretty_tex.txt"
 )
@@ -297,14 +279,16 @@ View(x4$res.nice)
 
 # ~ One-off stats for paper  -------------------------------------------------
 
-# sensitivity analysis on SMD scale
+# sensitivity analysis on raw mean difference scale
+# note that estimate for AP consumption was already in the "wrong" direction (positive) 
 x5 = x4$res.raw %>% filter(analysis %in% keepers) %>% select(analysis, est)
 
 pR = mean(d$passCheck)
 
+maxRU = .3
 
 update_result_csv(name = paste( "maxUY to explain away", x5$analysis ),
-                  value = abs( round(x5$est / (2 * (1-pR)), 2) ),
+                  value = round( abs(x5$est)/(2 * (1-pR) * maxRU), 2),
                   .results.dir = results.dir,
                   .overleaf.dir = overleaf.dir)
 
@@ -352,9 +336,9 @@ col1 = stat_CI( round(x$OR, 2), round(CIs$lo, 2), round(CIs$hi, 2) )
 
 update_result_csv( name = paste("OR for attentiveness ", x$term, sep = ""),
                    value = x$OR,
-                  .results.dir = results.dir,
-                  .overleaf.dir = overleaf.dir,
-                  print = TRUE)
+                   .results.dir = results.dir,
+                   .overleaf.dir = overleaf.dir,
+                   print = TRUE)
 
 update_result_csv( name = paste("OR pval for attentiveness ", x$term, sep = ""),
                    value = x$p.value,
@@ -436,5 +420,11 @@ names(rs2) = c("Covariate", "Association with attentiveness (OR)", "Association 
 print( xtable(rs2),
        include.rownames = FALSE )
 
+# xtable of results, for pasting into manuscript
+setwd(results.dir)
 
+write.table( print( xtable( rs2,
+                            include.rownames = FALSE ) ),
+             file = "table_predictors_attentiveness.txt"
+)
 
