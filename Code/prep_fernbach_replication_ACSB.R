@@ -3,11 +3,6 @@
 # Using Qualtrics test responses
 
 
-
-
-
-
-
 # Can use wr() to wipe results file and vr() to view it
 
 # PRELIMINARIES ---------------------------------------------------------------
@@ -219,91 +214,50 @@ expect_equal(nrow(dl), nrow(d)*(6+2)) # they only rate 6 issues (pre) + 2 issues
 dat = dl
 
 # simulate data because models below don't fit with real data
-n=100
-condition = rbinom(n = n, size = 1, prob = 0.5)
-# generate subject random intercepts
-# **THIS IS THE KEY. IF SD=0 (I.E., NO RANDOM EFFECTS), THEN LMM IS SINGULAR.
-gamma_wide = rnorm(n = n, sd = 1)
-dat = data.frame( id = rep( c(1:n), each = 4 ),
-                  condition_expl = rep(condition, each = 4),
-                  gamma = rep(gamma_wide, each = 4),
-                  time_post = rep( c(1:2), each = 2),
-                  issue_num = rep( c(1:2), 2 ) )
-dat$rating = rnorm(n = nrow(dat), mean = dat$gamma)
-## END OF SIMULATING DATA
+if ( FALSE ){
+  n=100
+  condition = rbinom(n = n, size = 1, prob = 0.5)
+  # generate subject random intercepts
+  # **THIS IS THE KEY. IF SD=0 (I.E., NO RANDOM EFFECTS), THEN LMM IS SINGULAR.
+  gamma_wide = rnorm(n = n, sd = .5)
+  dat = data.frame( id = rep( c(1:n), each = 4 ),
+                    condition_expl = rep(condition, each = 4),
+                    gamma = rep(gamma_wide, each = 4),
+                    time_post = rep( c(1:2), each = 2),
+                    issue_num = rep( c(1:2), 2 ) )
+  dat$rating = rnorm(n = nrow(dat), mean = dat$gamma)
+  ## END OF SIMULATING DATA
+}
 
 
-m = lmer(rating ~ condition_expl + (1|id), data = dat) # doesn't fit??
-m = lmer(rating ~ (1|id), data = dat) # even this doesn't fit??
-
-#m = lmer(rating ~ condition_expl + (time_post|id), data = dl)
-
-# ***I think this is the model we ultimately want?
-m = lmer(rating ~ condition_expl * time_post * issue_num + (1|id), data = dat) # doesn't fit??
-
+# ~ Model 1: LMM :/ -------------------------------------------------
+m1 = lmer(rating ~ condition_expl * time_post * issue_num + (1|id), data = dat) 
+summary(m1)
 
 # sanity check: OLS
 lm(rating ~ condition_expl * time_post * issue_num, data = dat)
 
 
+# ~ Model 2: ANOVA :(  -------------------------------------------------
 
 # try using rstatix::anova_test
 # https://www.r-bloggers.com/2021/04/repeated-measures-of-anova-in-r-complete-tutorial/
-# this works (need issue_name in wid for spread to work, I guess?)
-m1 = anova_test(dv = rating,
-           wid = c(id, issue_name),
-           within = c(time),
-           #between = condition_expl,
-           data = dat)
-
-# but this doesn't
-m1 = anova_test(dv = rating,
-                wid = c(id, issue_name),
-                within = c(time),
-                between = condition_expl,
-                data = dat.besson2016)
-
-
 # the model I think we actually want
-m1 = anova_test(dv = rating,
-                wid = c(id, issue_name),
-                within = c(time, issue_num),
-                between = condition_expl,
-                data = dat)
-
-
-#bm: keep trying to debug anova, I guess?
-# should probably run debug(anova_test)
-
-
-anova_test(dv = rating,
+m2 = anova_test(dv = rating,
            wid = c(id),
            within = c(time_post, issue_num),
            between = condition_expl,
            data = dat)
+# quite different from LMM due to the "annoying and dangerous" decomposition property of ANOVA
 
 
-#### So annoying
-# ~ Try GEE instead  -------------------------------------------------
 
-
-# # critical: because of the silly way GEE.var.md handles the id variable (visible if you
-# #  run it in debug mode, in the very first step), the id variable must ALSO be put in the dataframe
-# #  like this, as a factor, to avoid the initial part of GEE.var.md that puts the id variable back in the dataframe
-# dat$id = as.factor(dat$site)
-
-# # this fn ONLY returns the variance estimate, not the coeffs
-# SEs.only = GEE.var.md( rating ~ condition_expl * time_post * issue_num, 
-#                        data = dl,  
-#                        id = id,  
-#                        corstr = "independence")
-# se = sqrt(SEs.only$cov.beta)
+# ~ Model 3: GEE :) -------------------------------------------------
 
 # other reasons to prefer GEE:
 # "annoying and dangerous thing about ANOVA" is very relevant due to interactions
 # outcome is a 7-point scale, so normality is questionable
-
-m = report_gee_table(dat = dat,
+m3 = report_gee_table(dat = dat,
                  formulaString = "rating ~ condition_expl * time_post * issue_num",
                  idString = "as.factor(id)",
                  subsetString = NA,  # should we subset the data?
@@ -316,8 +270,8 @@ m = report_gee_table(dat = dat,
                  write.dir = NA)
 
 
-View(m$res)
-# makes perfect sense.
+View(m3$res)
+# makes perfect sense
 
 
 
