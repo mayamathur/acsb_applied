@@ -384,8 +384,212 @@ stat_CI = function(est, lo, hi){
 # stat_CI( c(.5, -.1), c(.3, -.2), c(.7, .0) )
 
 
+# DATA PREP FNS FOR FERNBACH REPLICATION  -------------------------------------------------
+
+# recodes position ("_pos_") variable to numeric (1-7) and makes extremity variable
+make_extremity_var = function(dat, varname){
+
+  x = tolower(dat[[varname]])
+  x2 = NA
+  
+  x2[x == "strongly against"] = 1
+  x2[x == "against"] = 2
+  x2[x == "somewhat against"] = 3
+  x2[x == "neither in favor nor against"] = 4
+  x2[x == "somewhat in favor"] = 5
+  x2[x == "in favor"] = 6
+  x2[x == "strongly in favor"] = 7
+  
+  # replace the position variable
+  dat[[varname]] = x2
+  
+  # make extremity variable
+  string = str_replace(string = varname, pattern = "_pos_", replacement = "_extr_")
+  dat[[string]] = abs(x2 - 4)
+  
+  # sanity check
+  # table(x, dat[[string]])
+  
+  return(dat)
+}
+
+
+# this fn definitely needs sanity checks!!
+make_merged_var = function(name_string, dat) {
+  
+  vars = names_with(name_string, dat)
+  
+  message( cat("\n\nFor name_string", name_string, "found variables: ", vars) )
+  
+  if ( length(vars) != 2 ) stop("Wrong number of variables")
+  
+  x1 = dat[[vars[1]]]
+  x2 = dat[[vars[2]]]
+  
+  x1[ !is.na(x2) ] = x2[ !is.na(x2) ]
+  
+  # overwrite vars[1] and remove vars[2]
+  dat[[name_string]] = x1
+  dat = dat %>% select(-vars[[2]])
+  
+  message( cat("\nPercent missing in merged var (expect about 67%): ", 100*mean(is.na(x1))))
+  
+  return(dat)
+}
+
+
+# ANALYSIS FNS FOR FERNBACH  -------------------------------------------------
+
+# from REACH helper
+
+# fit GEE with a given model formula and organize results nicely
+report_gee_table = function(dat,
+                            formulaString,
+                            idString = "as.factor(id)",  # default is for main analysis, but change change to participant ID for long GEE sensitivity analysis
+                            subsetString = NA,  # should we subset the data?
+                            analysisVarNames,  # for excluding missing data
+                            analysisLabel,  # will become an identifer column in dataset
+                            corstr = "exchangeable",
+                            se.type = "model",  # "model" or "mancl"
+                            
+                            return.gee.model = FALSE,
+                            write.dir = NA){
+  
+  # ~ Exclude missing data to please gee() --------------------------
+  # demonstration of how this fn works:
+  # df <- tibble(x = c(1, 2, NA), y = c("a", NA, "b"))
+  # df %>% drop_na(x)
+  dat = dat %>% drop_na(analysisVarNames)
+  
+  if ( !is.na(subsetString) ) {
+    dat = dat %>% filter( eval( parse(text = subsetString) ) )
+    message( paste("\n**** For analysis ", analysisLabel, ", made subset of size ", nrow(dat), sep = "" ) )
+  }
+  
+  
+  # ~ Fit GEE (without Mancl correction to SEs) to get coefs  --------------------------
+  mod  = suppressMessages( gee( eval( parse(text = formulaString) ),
+                                id = eval( parse(text = idString) ),  
+                                corstr = corstr,
+                                data = dat ) )
+  
+  est = coef(mod)
+  # "error" doesn't actually trigger an error, but is basically a warning
+  gee.error.code = mod$error
+  corstr.final = corstr  # will be changed below if there was a warning
+  
+  # ~ If there was a warning, try a different corstr --------------------------
+  if ( gee.error.code != 0 ) {
+    
+    # possible correlation structures to try
+    corstrs = c("exchangeable", "independence")
+    # switch to whichever we haven't tried yet
+    new.corstr = corstrs[ corstrs != corstr ]
+    
+    mod  = suppressMessges( gee( eval( parse(text = formulaString) ),
+                                 id = eval( parse(text = idString) ),  
+                                 corstr = new.corstr,
+                                 data = dat ) )
+    
+    est = coef(mod)
+    gee.error.code = mod$error
+    corstr.final = new.corstr
+  }
+  
+  # ~ Get Mancl-corrected SEs --------------------------
+  # critical: because of the silly way GEE.var.md handles the id variable (visible if you
+  #  run it in debug mode, in the very first step), the id variable must ALSO be put in the dataframe
+  #  like this, as a factor, to avoid the initial part of GEE.var.md that puts the id variable back in the dataframe
+  if ( se.type == "mancl" ) {
+    if ( idString == "as.factor(id)" ){
+      dat$id = as.factor(dat$id)
+    } else {
+      stop("idString not recognized in part of code that does Mancl SEs")
+    }
+    
+    
+    # this is prone to being computationally singular
+    tryCatch({
+      message("Trying Mancl SEs")
+      
+      # this fn ONLY returns the variance estimate, not the coeffs
+      SEs.only = GEE.var.md( eval( parse(text = formulaString) ), 
+                             data = dat,  
+                             id = id,  # DON'T CHANGE TO ANOTHER VARIABLE NAME; SEE NOTE ABOVE
+                             corstr = corstr)
+      se = sqrt(SEs.only$cov.beta)
+      lo = est - qnorm(.975) * se
+      hi = est + qnorm(.975) * se
+      Z = abs( est / se )
+      pval = 2 * ( c(1) - pnorm(as.numeric(Z)) )
+    }, error = function(err) {
+      
+      warning("**There was a problem with GEE.var.md!")
+      se <<- NA
+      lo <<- NA
+      hi <<- NA
+      Z <<- NA
+      pval <<- NA
+    })
+  }
+  
+  # ~ Get model-based robust SEs --------------------------
+  if ( se.type == "model" ) {
+    summ = summary(mod)
+    est = coef(mod)
+    se = summ$coefficients[,"Robust S.E."]
+    lo = coef(mod) - qnorm(.975) * se
+    hi = coef(mod) + qnorm(.975) * se
+    Z = as.numeric( summ$coefficients[,"Robust z"] )
+    pval = 2 * ( c(1) - pnorm(abs(Z)) )
+  }
+  
+  # ~ Sanity check --------------------------
+  
+  # # compare naive model-based SEs to the main ones (which are either Mancl or robust)
+  # se.naive = summ$coefficients[,"Naive S.E."]
+  # diff = abs( as.numeric(se) - as.numeric(se.naive) )
+  # 
+  # if ( max(diff) > 0.01 ) {
+  #   warning( paste("\n***Some SEs differed by more than 0.01 from robust ones. Biggest abs difference was ", round(max(diff), digits ) ) )
+  #   #browser()
+  # }
+  
+  # ~ Organize results --------------------------
+  res = data.frame( analysis = analysisLabel,
+                    variable = names(est),
+                    est = est, 
+                    se = se,  # robust one
+                    lo = lo,
+                    hi = hi,
+                    pval = pval,
+                    n.analyzed = nrow(dat),
+                    geeErrorCode = gee.error.code,
+                    corstrFinal = corstr.final,
+                    formulaString = formulaString )
+  
+  if ( !is.na(write.dir) ) {
+    setwd(write.dir)
+    write.csv( res, paste(analysisLabel, "_gee_estimates.csv") )
+  }
+  
+  
+  if ( return.gee.model == FALSE ) return(res) else return( list(res = res, mod = mod) )
+  
+  
+}
+
+
 
 # MISC  -------------------------------------------------
+
+
+# get names of dataframe containing a string
+names_with = function(pattern, dat){
+  names(dat)[ grepl(pattern = pattern, x = names(dat) ) ]
+}
+
+
 
 my_ggsave = function(name,
                      width,
@@ -489,3 +693,5 @@ quick_ci = function( est, var ) {
 quick_pval = function( est, var ) {
   2 * ( 1 - pnorm( abs( est / sqrt(var) ) ) )
 }
+
+nuni = function(x) length(unique(x))
