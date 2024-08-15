@@ -1,0 +1,1097 @@
+id,condition_expl,female,age10y,educ2,party,interest_politics2,interest_voted_2020_2,interest_news2,time,var,issue_name,rating,issue_num,time_post
+1,0,b.Female,3.5,a.High school or less,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,nuc,7,1,FALSE
+1,0,b.Female,3.5,a.High school or less,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,ss,3,2,FALSE
+1,0,b.Female,3.5,a.High school or less,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,health,6,1,FALSE
+1,0,b.Female,3.5,a.High school or less,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,cap,1,1,FALSE
+1,0,b.Female,3.5,a.High school or less,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,tax,3,2,FALSE
+1,0,b.Female,3.5,a.High school or less,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,teach,5,2,FALSE
+1,0,b.Female,3.5,a.High school or less,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,nuc,5,1,TRUE
+1,0,b.Female,3.5,a.High school or less,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,teach,3,2,TRUE
+2,1,b.Female,2.9,c.Master's or doctoral degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,nuc,6,1,FALSE
+2,1,b.Female,2.9,c.Master's or doctoral degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,ss,7,2,FALSE
+2,1,b.Female,2.9,c.Master's or doctoral degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,health,7,1,FALSE
+2,1,b.Female,2.9,c.Master's or doctoral degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,cap,2,1,FALSE
+2,1,b.Female,2.9,c.Master's or doctoral degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,tax,1,2,FALSE
+2,1,b.Female,2.9,c.Master's or doctoral degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,teach,5,2,FALSE
+2,1,b.Female,2.9,c.Master's or doctoral degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,post,pos,cap,1,1,TRUE
+2,1,b.Female,2.9,c.Master's or doctoral degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,post,pos,tax,4,2,TRUE
+3,0,b.Female,3.4,c.Bachelor's degree,c.Independent,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,nuc,3,1,FALSE
+3,0,b.Female,3.4,c.Bachelor's degree,c.Independent,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,ss,1,2,FALSE
+3,0,b.Female,3.4,c.Bachelor's degree,c.Independent,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,health,3,1,FALSE
+3,0,b.Female,3.4,c.Bachelor's degree,c.Independent,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,cap,6,1,FALSE
+3,0,b.Female,3.4,c.Bachelor's degree,c.Independent,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,tax,4,2,FALSE
+3,0,b.Female,3.4,c.Bachelor's degree,c.Independent,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,teach,3,2,FALSE
+3,0,b.Female,3.4,c.Bachelor's degree,c.Independent,-0.664950008395122,b.No or don't remember,-1.2803097116638,post,pos,health,3,1,TRUE
+3,0,b.Female,3.4,c.Bachelor's degree,c.Independent,-0.664950008395122,b.No or don't remember,-1.2803097116638,post,pos,ss,7,2,TRUE
+4,0,a.Male,1.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+4,0,a.Male,1.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,ss,5,2,FALSE
+4,0,a.Male,1.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,health,1,1,FALSE
+4,0,a.Male,1.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,cap,4,1,FALSE
+4,0,a.Male,1.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,tax,6,2,FALSE
+4,0,a.Male,1.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,teach,7,2,FALSE
+4,0,a.Male,1.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,post,pos,cap,2,1,TRUE
+4,0,a.Male,1.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,post,pos,tax,2,2,TRUE
+5,1,a.Male,2,a.High school or less,c.Independent,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,nuc,6,1,FALSE
+5,1,a.Male,2,a.High school or less,c.Independent,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,ss,7,2,FALSE
+5,1,a.Male,2,a.High school or less,c.Independent,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,health,4,1,FALSE
+5,1,a.Male,2,a.High school or less,c.Independent,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,cap,4,1,FALSE
+5,1,a.Male,2,a.High school or less,c.Independent,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,tax,6,2,FALSE
+5,1,a.Male,2,a.High school or less,c.Independent,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,teach,3,2,FALSE
+5,1,a.Male,2,a.High school or less,c.Independent,0.704947001381295,a.Yes,-0.0363208428840793,post,pos,nuc,1,1,TRUE
+5,1,a.Male,2,a.High school or less,c.Independent,0.704947001381295,a.Yes,-0.0363208428840793,post,pos,teach,7,2,TRUE
+6,0,a.Male,4,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,a.Yes,1.20766802589564,pre,pos,nuc,4,1,FALSE
+6,0,a.Male,4,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,a.Yes,1.20766802589564,pre,pos,ss,6,2,FALSE
+6,0,a.Male,4,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,a.Yes,1.20766802589564,pre,pos,health,7,1,FALSE
+6,0,a.Male,4,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,a.Yes,1.20766802589564,pre,pos,cap,1,1,FALSE
+6,0,a.Male,4,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,a.Yes,1.20766802589564,pre,pos,tax,6,2,FALSE
+6,0,a.Male,4,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,a.Yes,1.20766802589564,pre,pos,teach,3,2,FALSE
+6,0,a.Male,4,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,a.Yes,1.20766802589564,post,pos,nuc,5,1,TRUE
+6,0,a.Male,4,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,a.Yes,1.20766802589564,post,pos,teach,6,2,TRUE
+7,0,b.Female,3,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,a.Yes,-1.2803097116638,pre,pos,nuc,1,1,FALSE
+7,0,b.Female,3,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,a.Yes,-1.2803097116638,pre,pos,ss,6,2,FALSE
+7,0,b.Female,3,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,a.Yes,-1.2803097116638,pre,pos,health,3,1,FALSE
+7,0,b.Female,3,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,a.Yes,-1.2803097116638,pre,pos,cap,1,1,FALSE
+7,0,b.Female,3,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,a.Yes,-1.2803097116638,pre,pos,tax,4,2,FALSE
+7,0,b.Female,3,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,a.Yes,-1.2803097116638,pre,pos,teach,7,2,FALSE
+7,0,b.Female,3,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,a.Yes,-1.2803097116638,post,pos,cap,6,1,TRUE
+7,0,b.Female,3,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,a.Yes,-1.2803097116638,post,pos,tax,6,2,TRUE
+8,1,b.Female,4.4,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,4,1,FALSE
+8,1,b.Female,4.4,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,ss,4,2,FALSE
+8,1,b.Female,4.4,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,health,6,1,FALSE
+8,1,b.Female,4.4,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,cap,2,1,FALSE
+8,1,b.Female,4.4,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,tax,7,2,FALSE
+8,1,b.Female,4.4,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,teach,3,2,FALSE
+8,1,b.Female,4.4,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,health,4,1,TRUE
+8,1,b.Female,4.4,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,ss,3,2,TRUE
+9,0,b.Female,3,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,nuc,5,1,FALSE
+9,0,b.Female,3,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,ss,7,2,FALSE
+9,0,b.Female,3,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,health,7,1,FALSE
+9,0,b.Female,3,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,cap,7,1,FALSE
+9,0,b.Female,3,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,tax,5,2,FALSE
+9,0,b.Female,3,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,teach,4,2,FALSE
+9,0,b.Female,3,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,post,pos,nuc,5,1,TRUE
+9,0,b.Female,3,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,post,pos,teach,7,2,TRUE
+10,0,b.Female,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,nuc,3,1,FALSE
+10,0,b.Female,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,ss,5,2,FALSE
+10,0,b.Female,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,health,1,1,FALSE
+10,0,b.Female,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,cap,1,1,FALSE
+10,0,b.Female,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,tax,5,2,FALSE
+10,0,b.Female,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,teach,3,2,FALSE
+10,0,b.Female,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,health,6,1,TRUE
+10,0,b.Female,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,ss,7,2,TRUE
+11,1,a.Male,4.8,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+11,1,a.Male,4.8,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,ss,2,2,FALSE
+11,1,a.Male,4.8,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,health,6,1,FALSE
+11,1,a.Male,4.8,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+11,1,a.Male,4.8,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,tax,7,2,FALSE
+11,1,a.Male,4.8,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,teach,7,2,FALSE
+11,1,a.Male,4.8,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,-0.0363208428840793,post,pos,cap,7,1,TRUE
+11,1,a.Male,4.8,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,-0.0363208428840793,post,pos,tax,4,2,TRUE
+12,0,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,nuc,6,1,FALSE
+12,0,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,ss,7,2,FALSE
+12,0,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,health,2,1,FALSE
+12,0,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,cap,4,1,FALSE
+12,0,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,tax,3,2,FALSE
+12,0,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,teach,6,2,FALSE
+12,0,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,cap,4,1,TRUE
+12,0,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,tax,2,2,TRUE
+13,0,a.Male,4,a.High school or less,a.Democrat,0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,nuc,5,1,FALSE
+13,0,a.Male,4,a.High school or less,a.Democrat,0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,ss,1,2,FALSE
+13,0,a.Male,4,a.High school or less,a.Democrat,0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,health,6,1,FALSE
+13,0,a.Male,4,a.High school or less,a.Democrat,0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,cap,2,1,FALSE
+13,0,a.Male,4,a.High school or less,a.Democrat,0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,tax,2,2,FALSE
+13,0,a.Male,4,a.High school or less,a.Democrat,0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,teach,7,2,FALSE
+13,0,a.Male,4,a.High school or less,a.Democrat,0.0199984964930867,a.Yes,-1.2803097116638,post,pos,nuc,4,1,TRUE
+13,0,a.Male,4,a.High school or less,a.Democrat,0.0199984964930867,a.Yes,-1.2803097116638,post,pos,teach,7,2,TRUE
+14,0,b.Female,1.9,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,7,1,FALSE
+14,0,b.Female,1.9,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,ss,2,2,FALSE
+14,0,b.Female,1.9,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,health,7,1,FALSE
+14,0,b.Female,1.9,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,cap,5,1,FALSE
+14,0,b.Female,1.9,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,tax,6,2,FALSE
+14,0,b.Female,1.9,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,teach,7,2,FALSE
+14,0,b.Female,1.9,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,health,4,1,TRUE
+14,0,b.Female,1.9,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,ss,5,2,TRUE
+15,0,b.Female,4.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,2,1,FALSE
+15,0,b.Female,4.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,ss,6,2,FALSE
+15,0,b.Female,4.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,health,2,1,FALSE
+15,0,b.Female,4.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+15,0,b.Female,4.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,tax,5,2,FALSE
+15,0,b.Female,4.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,teach,5,2,FALSE
+15,0,b.Female,4.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,nuc,7,1,TRUE
+15,0,b.Female,4.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,teach,3,2,TRUE
+16,1,a.Male,2.5,c.Master's or doctoral degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,nuc,2,1,FALSE
+16,1,a.Male,2.5,c.Master's or doctoral degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,ss,6,2,FALSE
+16,1,a.Male,2.5,c.Master's or doctoral degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,health,7,1,FALSE
+16,1,a.Male,2.5,c.Master's or doctoral degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,cap,1,1,FALSE
+16,1,a.Male,2.5,c.Master's or doctoral degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,tax,4,2,FALSE
+16,1,a.Male,2.5,c.Master's or doctoral degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,teach,6,2,FALSE
+16,1,a.Male,2.5,c.Master's or doctoral degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,nuc,1,1,TRUE
+16,1,a.Male,2.5,c.Master's or doctoral degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,teach,3,2,TRUE
+17,1,a.Male,2.3,c.Bachelor's degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,nuc,7,1,FALSE
+17,1,a.Male,2.3,c.Bachelor's degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,ss,4,2,FALSE
+17,1,a.Male,2.3,c.Bachelor's degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,health,6,1,FALSE
+17,1,a.Male,2.3,c.Bachelor's degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,cap,3,1,FALSE
+17,1,a.Male,2.3,c.Bachelor's degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,tax,5,2,FALSE
+17,1,a.Male,2.3,c.Bachelor's degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,teach,3,2,FALSE
+17,1,a.Male,2.3,c.Bachelor's degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,post,pos,nuc,2,1,TRUE
+17,1,a.Male,2.3,c.Bachelor's degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,post,pos,teach,5,2,TRUE
+18,1,a.Male,4.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+18,1,a.Male,4.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,ss,3,2,FALSE
+18,1,a.Male,4.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,health,1,1,FALSE
+18,1,a.Male,4.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,cap,1,1,FALSE
+18,1,a.Male,4.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,tax,4,2,FALSE
+18,1,a.Male,4.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,teach,2,2,FALSE
+18,1,a.Male,4.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,cap,2,1,TRUE
+18,1,a.Male,4.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,tax,4,2,TRUE
+19,0,a.Male,3.3,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,nuc,1,1,FALSE
+19,0,a.Male,3.3,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,ss,2,2,FALSE
+19,0,a.Male,3.3,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,health,2,1,FALSE
+19,0,a.Male,3.3,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,cap,6,1,FALSE
+19,0,a.Male,3.3,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,tax,6,2,FALSE
+19,0,a.Male,3.3,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,teach,1,2,FALSE
+19,0,a.Male,3.3,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-1.2803097116638,post,pos,health,7,1,TRUE
+19,0,a.Male,3.3,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-1.2803097116638,post,pos,ss,4,2,TRUE
+20,1,a.Male,2.7,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,nuc,5,1,FALSE
+20,1,a.Male,2.7,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,ss,3,2,FALSE
+20,1,a.Male,2.7,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,health,1,1,FALSE
+20,1,a.Male,2.7,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,cap,2,1,FALSE
+20,1,a.Male,2.7,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,tax,3,2,FALSE
+20,1,a.Male,2.7,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,-1.2803097116638,pre,pos,teach,1,2,FALSE
+20,1,a.Male,2.7,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,-1.2803097116638,post,pos,health,4,1,TRUE
+20,1,a.Male,2.7,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,-1.2803097116638,post,pos,ss,3,2,TRUE
+21,1,a.Male,3.5,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,nuc,3,1,FALSE
+21,1,a.Male,3.5,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,ss,2,2,FALSE
+21,1,a.Male,3.5,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,health,6,1,FALSE
+21,1,a.Male,3.5,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,cap,2,1,FALSE
+21,1,a.Male,3.5,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,tax,1,2,FALSE
+21,1,a.Male,3.5,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,teach,1,2,FALSE
+21,1,a.Male,3.5,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,post,pos,health,2,1,TRUE
+21,1,a.Male,3.5,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,post,pos,ss,4,2,TRUE
+22,0,a.Male,4.7,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,nuc,4,1,FALSE
+22,0,a.Male,4.7,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,ss,4,2,FALSE
+22,0,a.Male,4.7,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,health,2,1,FALSE
+22,0,a.Male,4.7,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,cap,3,1,FALSE
+22,0,a.Male,4.7,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,tax,3,2,FALSE
+22,0,a.Male,4.7,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,teach,3,2,FALSE
+22,0,a.Male,4.7,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,post,pos,cap,4,1,TRUE
+22,0,a.Male,4.7,c.Master's or doctoral degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,post,pos,tax,5,2,TRUE
+23,1,b.Female,3.1,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,3,1,FALSE
+23,1,b.Female,3.1,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,ss,2,2,FALSE
+23,1,b.Female,3.1,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,health,3,1,FALSE
+23,1,b.Female,3.1,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,cap,4,1,FALSE
+23,1,b.Female,3.1,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,tax,7,2,FALSE
+23,1,b.Female,3.1,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+23,1,b.Female,3.1,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,nuc,2,1,TRUE
+23,1,b.Female,3.1,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,teach,2,2,TRUE
+24,1,a.Male,2.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,5,1,FALSE
+24,1,a.Male,2.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,5,2,FALSE
+24,1,a.Male,2.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,2,1,FALSE
+24,1,a.Male,2.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,6,1,FALSE
+24,1,a.Male,2.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,2,2,FALSE
+24,1,a.Male,2.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,7,2,FALSE
+24,1,a.Male,2.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,cap,7,1,TRUE
+24,1,a.Male,2.1,a.High school or less,b.Republican,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,tax,2,2,TRUE
+25,1,a.Male,3.5,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,3,1,FALSE
+25,1,a.Male,3.5,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,4,2,FALSE
+25,1,a.Male,3.5,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,6,1,FALSE
+25,1,a.Male,3.5,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,4,1,FALSE
+25,1,a.Male,3.5,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,4,2,FALSE
+25,1,a.Male,3.5,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,2,2,FALSE
+25,1,a.Male,3.5,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,nuc,7,1,TRUE
+25,1,a.Male,3.5,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,teach,6,2,TRUE
+26,0,a.Male,4.5,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,6,1,FALSE
+26,0,a.Male,4.5,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,4,2,FALSE
+26,0,a.Male,4.5,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,6,1,FALSE
+26,0,a.Male,4.5,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,1,1,FALSE
+26,0,a.Male,4.5,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,6,2,FALSE
+26,0,a.Male,4.5,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,1,2,FALSE
+26,0,a.Male,4.5,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,health,2,1,TRUE
+26,0,a.Male,4.5,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,ss,6,2,TRUE
+27,0,a.Male,4.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,nuc,2,1,FALSE
+27,0,a.Male,4.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,ss,6,2,FALSE
+27,0,a.Male,4.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,health,6,1,FALSE
+27,0,a.Male,4.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,cap,5,1,FALSE
+27,0,a.Male,4.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,tax,2,2,FALSE
+27,0,a.Male,4.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,teach,6,2,FALSE
+27,0,a.Male,4.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,nuc,6,1,TRUE
+27,0,a.Male,4.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,teach,5,2,TRUE
+28,0,a.Male,2.4,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+28,0,a.Male,2.4,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,ss,4,2,FALSE
+28,0,a.Male,2.4,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,health,2,1,FALSE
+28,0,a.Male,2.4,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,cap,5,1,FALSE
+28,0,a.Male,2.4,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,tax,3,2,FALSE
+28,0,a.Male,2.4,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,teach,5,2,FALSE
+28,0,a.Male,2.4,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,cap,1,1,TRUE
+28,0,a.Male,2.4,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,tax,6,2,TRUE
+29,0,a.Male,4.9,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,4,1,FALSE
+29,0,a.Male,4.9,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,ss,2,2,FALSE
+29,0,a.Male,4.9,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,health,7,1,FALSE
+29,0,a.Male,4.9,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,cap,4,1,FALSE
+29,0,a.Male,4.9,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,tax,2,2,FALSE
+29,0,a.Male,4.9,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,teach,4,2,FALSE
+29,0,a.Male,4.9,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,nuc,7,1,TRUE
+29,0,a.Male,4.9,a.High school or less,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,teach,6,2,TRUE
+30,0,b.Female,4.4,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,nuc,1,1,FALSE
+30,0,b.Female,4.4,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,ss,4,2,FALSE
+30,0,b.Female,4.4,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,health,5,1,FALSE
+30,0,b.Female,4.4,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,cap,2,1,FALSE
+30,0,b.Female,4.4,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,tax,1,2,FALSE
+30,0,b.Female,4.4,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,teach,2,2,FALSE
+30,0,b.Female,4.4,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,cap,3,1,TRUE
+30,0,b.Female,4.4,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,tax,4,2,TRUE
+31,1,a.Male,2.5,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,6,1,FALSE
+31,1,a.Male,2.5,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,ss,1,2,FALSE
+31,1,a.Male,2.5,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,health,4,1,FALSE
+31,1,a.Male,2.5,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,cap,6,1,FALSE
+31,1,a.Male,2.5,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,tax,2,2,FALSE
+31,1,a.Male,2.5,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,teach,3,2,FALSE
+31,1,a.Male,2.5,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,health,2,1,TRUE
+31,1,a.Male,2.5,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,ss,7,2,TRUE
+32,1,a.Male,4.6,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,nuc,7,1,FALSE
+32,1,a.Male,4.6,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,ss,3,2,FALSE
+32,1,a.Male,4.6,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,health,6,1,FALSE
+32,1,a.Male,4.6,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,cap,1,1,FALSE
+32,1,a.Male,4.6,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,tax,3,2,FALSE
+32,1,a.Male,4.6,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,teach,6,2,FALSE
+32,1,a.Male,4.6,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,cap,3,1,TRUE
+32,1,a.Male,4.6,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,tax,7,2,TRUE
+33,1,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,nuc,3,1,FALSE
+33,1,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,ss,1,2,FALSE
+33,1,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,health,2,1,FALSE
+33,1,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,cap,4,1,FALSE
+33,1,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,tax,6,2,FALSE
+33,1,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,teach,3,2,FALSE
+33,1,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,nuc,2,1,TRUE
+33,1,b.Female,3.8,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,teach,1,2,TRUE
+34,0,b.Female,3.4,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+34,0,b.Female,3.4,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,ss,6,2,FALSE
+34,0,b.Female,3.4,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,health,1,1,FALSE
+34,0,b.Female,3.4,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,cap,2,1,FALSE
+34,0,b.Female,3.4,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,tax,2,2,FALSE
+34,0,b.Female,3.4,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,teach,5,2,FALSE
+34,0,b.Female,3.4,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,post,pos,health,2,1,TRUE
+34,0,b.Female,3.4,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,post,pos,ss,2,2,TRUE
+35,0,b.Female,4.6,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,2,1,FALSE
+35,0,b.Female,4.6,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,ss,5,2,FALSE
+35,0,b.Female,4.6,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,health,3,1,FALSE
+35,0,b.Female,4.6,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+35,0,b.Female,4.6,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,tax,7,2,FALSE
+35,0,b.Female,4.6,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,teach,3,2,FALSE
+35,0,b.Female,4.6,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,nuc,6,1,TRUE
+35,0,b.Female,4.6,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,teach,2,2,TRUE
+36,0,a.Male,2.4,a.High school or less,a.Democrat,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,nuc,2,1,FALSE
+36,0,a.Male,2.4,a.High school or less,a.Democrat,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,ss,4,2,FALSE
+36,0,a.Male,2.4,a.High school or less,a.Democrat,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,health,5,1,FALSE
+36,0,a.Male,2.4,a.High school or less,a.Democrat,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,cap,1,1,FALSE
+36,0,a.Male,2.4,a.High school or less,a.Democrat,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,tax,5,2,FALSE
+36,0,a.Male,2.4,a.High school or less,a.Democrat,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,teach,1,2,FALSE
+36,0,a.Male,2.4,a.High school or less,a.Democrat,1.3898955062695,a.Yes,-1.2803097116638,post,pos,cap,6,1,TRUE
+36,0,a.Male,2.4,a.High school or less,a.Democrat,1.3898955062695,a.Yes,-1.2803097116638,post,pos,tax,4,2,TRUE
+37,1,a.Male,2.9,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,7,1,FALSE
+37,1,a.Male,2.9,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,ss,7,2,FALSE
+37,1,a.Male,2.9,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,health,4,1,FALSE
+37,1,a.Male,2.9,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,cap,2,1,FALSE
+37,1,a.Male,2.9,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,tax,7,2,FALSE
+37,1,a.Male,2.9,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,teach,4,2,FALSE
+37,1,a.Male,2.9,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,health,2,1,TRUE
+37,1,a.Male,2.9,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,ss,2,2,TRUE
+38,1,a.Male,3.9,a.High school or less,e.Other (Please Specify),0.704947001381295,a.Yes,1.20766802589564,pre,pos,nuc,3,1,FALSE
+38,1,a.Male,3.9,a.High school or less,e.Other (Please Specify),0.704947001381295,a.Yes,1.20766802589564,pre,pos,ss,7,2,FALSE
+38,1,a.Male,3.9,a.High school or less,e.Other (Please Specify),0.704947001381295,a.Yes,1.20766802589564,pre,pos,health,5,1,FALSE
+38,1,a.Male,3.9,a.High school or less,e.Other (Please Specify),0.704947001381295,a.Yes,1.20766802589564,pre,pos,cap,7,1,FALSE
+38,1,a.Male,3.9,a.High school or less,e.Other (Please Specify),0.704947001381295,a.Yes,1.20766802589564,pre,pos,tax,3,2,FALSE
+38,1,a.Male,3.9,a.High school or less,e.Other (Please Specify),0.704947001381295,a.Yes,1.20766802589564,pre,pos,teach,4,2,FALSE
+38,1,a.Male,3.9,a.High school or less,e.Other (Please Specify),0.704947001381295,a.Yes,1.20766802589564,post,pos,cap,2,1,TRUE
+38,1,a.Male,3.9,a.High school or less,e.Other (Please Specify),0.704947001381295,a.Yes,1.20766802589564,post,pos,tax,1,2,TRUE
+39,1,b.Female,4.9,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,nuc,4,1,FALSE
+39,1,b.Female,4.9,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,ss,1,2,FALSE
+39,1,b.Female,4.9,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,health,6,1,FALSE
+39,1,b.Female,4.9,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,cap,2,1,FALSE
+39,1,b.Female,4.9,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,tax,1,2,FALSE
+39,1,b.Female,4.9,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,a.Yes,-1.2803097116638,pre,pos,teach,3,2,FALSE
+39,1,b.Female,4.9,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,a.Yes,-1.2803097116638,post,pos,health,6,1,TRUE
+39,1,b.Female,4.9,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,a.Yes,-1.2803097116638,post,pos,ss,5,2,TRUE
+40,0,a.Male,4.2,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,nuc,3,1,FALSE
+40,0,a.Male,4.2,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,ss,7,2,FALSE
+40,0,a.Male,4.2,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,health,6,1,FALSE
+40,0,a.Male,4.2,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,cap,1,1,FALSE
+40,0,a.Male,4.2,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,tax,5,2,FALSE
+40,0,a.Male,4.2,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,teach,3,2,FALSE
+40,0,a.Male,4.2,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,1.20766802589564,post,pos,health,1,1,TRUE
+40,0,a.Male,4.2,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,1.20766802589564,post,pos,ss,5,2,TRUE
+41,1,b.Female,2.1,c.Master's or doctoral degree,b.Republican,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,2,1,FALSE
+41,1,b.Female,2.1,c.Master's or doctoral degree,b.Republican,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,ss,6,2,FALSE
+41,1,b.Female,2.1,c.Master's or doctoral degree,b.Republican,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,health,4,1,FALSE
+41,1,b.Female,2.1,c.Master's or doctoral degree,b.Republican,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,cap,6,1,FALSE
+41,1,b.Female,2.1,c.Master's or doctoral degree,b.Republican,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,tax,5,2,FALSE
+41,1,b.Female,2.1,c.Master's or doctoral degree,b.Republican,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,teach,2,2,FALSE
+41,1,b.Female,2.1,c.Master's or doctoral degree,b.Republican,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,cap,4,1,TRUE
+41,1,b.Female,2.1,c.Master's or doctoral degree,b.Republican,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,tax,2,2,TRUE
+42,1,a.Male,2.3,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,7,1,FALSE
+42,1,a.Male,2.3,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,1,2,FALSE
+42,1,a.Male,2.3,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,5,1,FALSE
+42,1,a.Male,2.3,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,4,1,FALSE
+42,1,a.Male,2.3,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,4,2,FALSE
+42,1,a.Male,2.3,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,4,2,FALSE
+42,1,a.Male,2.3,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,nuc,3,1,TRUE
+42,1,a.Male,2.3,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,teach,3,2,TRUE
+43,0,a.Male,1.8,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,2,1,FALSE
+43,0,a.Male,1.8,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,ss,5,2,FALSE
+43,0,a.Male,1.8,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,health,5,1,FALSE
+43,0,a.Male,1.8,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+43,0,a.Male,1.8,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,tax,5,2,FALSE
+43,0,a.Male,1.8,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+43,0,a.Male,1.8,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,nuc,2,1,TRUE
+43,0,a.Male,1.8,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,teach,7,2,TRUE
+44,1,a.Male,2.1,c.Master's or doctoral degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,5,1,FALSE
+44,1,a.Male,2.1,c.Master's or doctoral degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,ss,6,2,FALSE
+44,1,a.Male,2.1,c.Master's or doctoral degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,health,2,1,FALSE
+44,1,a.Male,2.1,c.Master's or doctoral degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,cap,1,1,FALSE
+44,1,a.Male,2.1,c.Master's or doctoral degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,tax,5,2,FALSE
+44,1,a.Male,2.1,c.Master's or doctoral degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,teach,4,2,FALSE
+44,1,a.Male,2.1,c.Master's or doctoral degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,nuc,5,1,TRUE
+44,1,a.Male,2.1,c.Master's or doctoral degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,teach,5,2,TRUE
+45,1,b.Female,3.3,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+45,1,b.Female,3.3,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,ss,7,2,FALSE
+45,1,b.Female,3.3,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,health,4,1,FALSE
+45,1,b.Female,3.3,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+45,1,b.Female,3.3,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,tax,2,2,FALSE
+45,1,b.Female,3.3,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,teach,7,2,FALSE
+45,1,b.Female,3.3,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,health,2,1,TRUE
+45,1,b.Female,3.3,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,ss,3,2,TRUE
+46,0,a.Male,3.5,b.Associate's or professional degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,nuc,2,1,FALSE
+46,0,a.Male,3.5,b.Associate's or professional degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,ss,3,2,FALSE
+46,0,a.Male,3.5,b.Associate's or professional degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,health,5,1,FALSE
+46,0,a.Male,3.5,b.Associate's or professional degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,cap,5,1,FALSE
+46,0,a.Male,3.5,b.Associate's or professional degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,tax,3,2,FALSE
+46,0,a.Male,3.5,b.Associate's or professional degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,teach,6,2,FALSE
+46,0,a.Male,3.5,b.Associate's or professional degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,health,3,1,TRUE
+46,0,a.Male,3.5,b.Associate's or professional degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,ss,4,2,TRUE
+47,0,a.Male,3,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,3,1,FALSE
+47,0,a.Male,3,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,ss,1,2,FALSE
+47,0,a.Male,3,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,health,3,1,FALSE
+47,0,a.Male,3,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,cap,5,1,FALSE
+47,0,a.Male,3,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,tax,3,2,FALSE
+47,0,a.Male,3,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+47,0,a.Male,3,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,cap,1,1,TRUE
+47,0,a.Male,3,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,tax,2,2,TRUE
+48,1,b.Female,2.1,c.Master's or doctoral degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,nuc,3,1,FALSE
+48,1,b.Female,2.1,c.Master's or doctoral degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,ss,4,2,FALSE
+48,1,b.Female,2.1,c.Master's or doctoral degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,health,4,1,FALSE
+48,1,b.Female,2.1,c.Master's or doctoral degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,cap,6,1,FALSE
+48,1,b.Female,2.1,c.Master's or doctoral degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,tax,2,2,FALSE
+48,1,b.Female,2.1,c.Master's or doctoral degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,teach,3,2,FALSE
+48,1,b.Female,2.1,c.Master's or doctoral degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,cap,3,1,TRUE
+48,1,b.Female,2.1,c.Master's or doctoral degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,tax,4,2,TRUE
+49,0,a.Male,4.6,c.Master's or doctoral degree,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,nuc,1,1,FALSE
+49,0,a.Male,4.6,c.Master's or doctoral degree,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,ss,1,2,FALSE
+49,0,a.Male,4.6,c.Master's or doctoral degree,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,health,6,1,FALSE
+49,0,a.Male,4.6,c.Master's or doctoral degree,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,cap,2,1,FALSE
+49,0,a.Male,4.6,c.Master's or doctoral degree,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,tax,1,2,FALSE
+49,0,a.Male,4.6,c.Master's or doctoral degree,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,teach,6,2,FALSE
+49,0,a.Male,4.6,c.Master's or doctoral degree,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,health,6,1,TRUE
+49,0,a.Male,4.6,c.Master's or doctoral degree,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,ss,4,2,TRUE
+50,0,a.Male,4.2,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,7,1,FALSE
+50,0,a.Male,4.2,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,ss,1,2,FALSE
+50,0,a.Male,4.2,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,health,1,1,FALSE
+50,0,a.Male,4.2,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,cap,4,1,FALSE
+50,0,a.Male,4.2,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,tax,2,2,FALSE
+50,0,a.Male,4.2,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,teach,7,2,FALSE
+50,0,a.Male,4.2,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,nuc,2,1,TRUE
+50,0,a.Male,4.2,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,teach,4,2,TRUE
+51,0,a.Male,4.3,c.Master's or doctoral degree,c.Independent,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,7,1,FALSE
+51,0,a.Male,4.3,c.Master's or doctoral degree,c.Independent,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,ss,4,2,FALSE
+51,0,a.Male,4.3,c.Master's or doctoral degree,c.Independent,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,health,5,1,FALSE
+51,0,a.Male,4.3,c.Master's or doctoral degree,c.Independent,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+51,0,a.Male,4.3,c.Master's or doctoral degree,c.Independent,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,tax,2,2,FALSE
+51,0,a.Male,4.3,c.Master's or doctoral degree,c.Independent,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,teach,3,2,FALSE
+51,0,a.Male,4.3,c.Master's or doctoral degree,c.Independent,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,cap,4,1,TRUE
+51,0,a.Male,4.3,c.Master's or doctoral degree,c.Independent,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,tax,7,2,TRUE
+52,0,b.Female,4.2,c.Bachelor's degree,e.Other (Please Specify),-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,nuc,1,1,FALSE
+52,0,b.Female,4.2,c.Bachelor's degree,e.Other (Please Specify),-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,ss,6,2,FALSE
+52,0,b.Female,4.2,c.Bachelor's degree,e.Other (Please Specify),-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,health,6,1,FALSE
+52,0,b.Female,4.2,c.Bachelor's degree,e.Other (Please Specify),-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,cap,5,1,FALSE
+52,0,b.Female,4.2,c.Bachelor's degree,e.Other (Please Specify),-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,tax,6,2,FALSE
+52,0,b.Female,4.2,c.Bachelor's degree,e.Other (Please Specify),-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,teach,1,2,FALSE
+52,0,b.Female,4.2,c.Bachelor's degree,e.Other (Please Specify),-1.34989851328333,a.Yes,-1.2803097116638,post,pos,health,7,1,TRUE
+52,0,b.Female,4.2,c.Bachelor's degree,e.Other (Please Specify),-1.34989851328333,a.Yes,-1.2803097116638,post,pos,ss,5,2,TRUE
+53,1,a.Male,4.5,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,nuc,6,1,FALSE
+53,1,a.Male,4.5,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,ss,6,2,FALSE
+53,1,a.Male,4.5,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,health,1,1,FALSE
+53,1,a.Male,4.5,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,cap,7,1,FALSE
+53,1,a.Male,4.5,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,tax,3,2,FALSE
+53,1,a.Male,4.5,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,teach,2,2,FALSE
+53,1,a.Male,4.5,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-1.2803097116638,post,pos,nuc,3,1,TRUE
+53,1,a.Male,4.5,c.Master's or doctoral degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,-1.2803097116638,post,pos,teach,3,2,TRUE
+54,0,b.Female,4.3,c.Bachelor's degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,7,1,FALSE
+54,0,b.Female,4.3,c.Bachelor's degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,ss,7,2,FALSE
+54,0,b.Female,4.3,c.Bachelor's degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,health,5,1,FALSE
+54,0,b.Female,4.3,c.Bachelor's degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,cap,6,1,FALSE
+54,0,b.Female,4.3,c.Bachelor's degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,tax,5,2,FALSE
+54,0,b.Female,4.3,c.Bachelor's degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,teach,7,2,FALSE
+54,0,b.Female,4.3,c.Bachelor's degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,nuc,6,1,TRUE
+54,0,b.Female,4.3,c.Bachelor's degree,b.Republican,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,teach,3,2,TRUE
+55,0,a.Male,4.1,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,nuc,3,1,FALSE
+55,0,a.Male,4.1,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,ss,2,2,FALSE
+55,0,a.Male,4.1,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,health,3,1,FALSE
+55,0,a.Male,4.1,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,cap,6,1,FALSE
+55,0,a.Male,4.1,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,tax,4,2,FALSE
+55,0,a.Male,4.1,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,a.Yes,-1.2803097116638,pre,pos,teach,6,2,FALSE
+55,0,a.Male,4.1,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,a.Yes,-1.2803097116638,post,pos,cap,5,1,TRUE
+55,0,a.Male,4.1,c.Master's or doctoral degree,a.Democrat,-1.34989851328333,a.Yes,-1.2803097116638,post,pos,tax,5,2,TRUE
+56,0,a.Male,2.4,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,6,1,FALSE
+56,0,a.Male,2.4,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,ss,5,2,FALSE
+56,0,a.Male,2.4,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,health,4,1,FALSE
+56,0,a.Male,2.4,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,cap,7,1,FALSE
+56,0,a.Male,2.4,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,tax,7,2,FALSE
+56,0,a.Male,2.4,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,teach,2,2,FALSE
+56,0,a.Male,2.4,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,nuc,3,1,TRUE
+56,0,a.Male,2.4,c.Bachelor's degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,teach,2,2,TRUE
+57,1,a.Male,4.3,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,3,1,FALSE
+57,1,a.Male,4.3,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,2,2,FALSE
+57,1,a.Male,4.3,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,2,1,FALSE
+57,1,a.Male,4.3,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,7,1,FALSE
+57,1,a.Male,4.3,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,4,2,FALSE
+57,1,a.Male,4.3,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,2,2,FALSE
+57,1,a.Male,4.3,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,cap,7,1,TRUE
+57,1,a.Male,4.3,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,tax,7,2,TRUE
+58,1,a.Male,2.3,c.Bachelor's degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,6,1,FALSE
+58,1,a.Male,2.3,c.Bachelor's degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,4,2,FALSE
+58,1,a.Male,2.3,c.Bachelor's degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,7,1,FALSE
+58,1,a.Male,2.3,c.Bachelor's degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,2,1,FALSE
+58,1,a.Male,2.3,c.Bachelor's degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,4,2,FALSE
+58,1,a.Male,2.3,c.Bachelor's degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,6,2,FALSE
+58,1,a.Male,2.3,c.Bachelor's degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,health,3,1,TRUE
+58,1,a.Male,2.3,c.Bachelor's degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,ss,6,2,TRUE
+59,1,b.Female,3.7,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,nuc,2,1,FALSE
+59,1,b.Female,3.7,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,ss,5,2,FALSE
+59,1,b.Female,3.7,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,health,5,1,FALSE
+59,1,b.Female,3.7,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,cap,3,1,FALSE
+59,1,b.Female,3.7,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,tax,2,2,FALSE
+59,1,b.Female,3.7,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,teach,6,2,FALSE
+59,1,b.Female,3.7,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,1.20766802589564,post,pos,cap,2,1,TRUE
+59,1,b.Female,3.7,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,1.20766802589564,post,pos,tax,4,2,TRUE
+60,0,a.Male,4,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+60,0,a.Male,4,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,ss,5,2,FALSE
+60,0,a.Male,4,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,health,6,1,FALSE
+60,0,a.Male,4,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,cap,6,1,FALSE
+60,0,a.Male,4,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,tax,4,2,FALSE
+60,0,a.Male,4,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+60,0,a.Male,4,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,cap,7,1,TRUE
+60,0,a.Male,4,b.Associate's or professional degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,tax,2,2,TRUE
+61,0,b.Female,4.2,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,4,1,FALSE
+61,0,b.Female,4.2,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,ss,5,2,FALSE
+61,0,b.Female,4.2,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,health,7,1,FALSE
+61,0,b.Female,4.2,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,cap,1,1,FALSE
+61,0,b.Female,4.2,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,tax,2,2,FALSE
+61,0,b.Female,4.2,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,teach,3,2,FALSE
+61,0,b.Female,4.2,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,health,6,1,TRUE
+61,0,b.Female,4.2,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,ss,5,2,TRUE
+62,1,b.Female,2.7,c.Bachelor's degree,a.Democrat,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,nuc,7,1,FALSE
+62,1,b.Female,2.7,c.Bachelor's degree,a.Democrat,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,ss,6,2,FALSE
+62,1,b.Female,2.7,c.Bachelor's degree,a.Democrat,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,health,6,1,FALSE
+62,1,b.Female,2.7,c.Bachelor's degree,a.Democrat,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,cap,4,1,FALSE
+62,1,b.Female,2.7,c.Bachelor's degree,a.Democrat,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,tax,5,2,FALSE
+62,1,b.Female,2.7,c.Bachelor's degree,a.Democrat,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,teach,7,2,FALSE
+62,1,b.Female,2.7,c.Bachelor's degree,a.Democrat,1.3898955062695,a.Yes,-0.0363208428840793,post,pos,nuc,3,1,TRUE
+62,1,b.Female,2.7,c.Bachelor's degree,a.Democrat,1.3898955062695,a.Yes,-0.0363208428840793,post,pos,teach,3,2,TRUE
+63,1,a.Male,4.4,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+63,1,a.Male,4.4,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,ss,7,2,FALSE
+63,1,a.Male,4.4,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,health,7,1,FALSE
+63,1,a.Male,4.4,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,cap,7,1,FALSE
+63,1,a.Male,4.4,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,tax,7,2,FALSE
+63,1,a.Male,4.4,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,pre,pos,teach,4,2,FALSE
+63,1,a.Male,4.4,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,health,3,1,TRUE
+63,1,a.Male,4.4,a.High school or less,c.Independent,1.3898955062695,b.No or don't remember,-0.0363208428840793,post,pos,ss,7,2,TRUE
+64,0,a.Male,2.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,5,1,FALSE
+64,0,a.Male,2.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,ss,5,2,FALSE
+64,0,a.Male,2.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,health,1,1,FALSE
+64,0,a.Male,2.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,cap,2,1,FALSE
+64,0,a.Male,2.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,tax,5,2,FALSE
+64,0,a.Male,2.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,teach,5,2,FALSE
+64,0,a.Male,2.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,nuc,1,1,TRUE
+64,0,a.Male,2.3,a.High school or less,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,teach,3,2,TRUE
+65,1,a.Male,2.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,1,1,FALSE
+65,1,a.Male,2.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,5,2,FALSE
+65,1,a.Male,2.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,4,1,FALSE
+65,1,a.Male,2.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,3,1,FALSE
+65,1,a.Male,2.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,4,2,FALSE
+65,1,a.Male,2.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,6,2,FALSE
+65,1,a.Male,2.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,health,2,1,TRUE
+65,1,a.Male,2.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,ss,4,2,TRUE
+66,0,b.Female,3.6,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,5,1,FALSE
+66,0,b.Female,3.6,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,ss,2,2,FALSE
+66,0,b.Female,3.6,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,health,7,1,FALSE
+66,0,b.Female,3.6,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,cap,5,1,FALSE
+66,0,b.Female,3.6,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,tax,4,2,FALSE
+66,0,b.Female,3.6,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,teach,7,2,FALSE
+66,0,b.Female,3.6,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,cap,2,1,TRUE
+66,0,b.Female,3.6,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,tax,1,2,TRUE
+67,1,a.Male,4.2,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,nuc,5,1,FALSE
+67,1,a.Male,4.2,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,ss,4,2,FALSE
+67,1,a.Male,4.2,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,health,2,1,FALSE
+67,1,a.Male,4.2,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,cap,4,1,FALSE
+67,1,a.Male,4.2,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,tax,4,2,FALSE
+67,1,a.Male,4.2,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,teach,3,2,FALSE
+67,1,a.Male,4.2,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,1.20766802589564,post,pos,cap,7,1,TRUE
+67,1,a.Male,4.2,b.Associate's or professional degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,1.20766802589564,post,pos,tax,5,2,TRUE
+68,1,b.Female,4.3,b.Associate's or professional degree,c.Independent,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,nuc,3,1,FALSE
+68,1,b.Female,4.3,b.Associate's or professional degree,c.Independent,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,ss,1,2,FALSE
+68,1,b.Female,4.3,b.Associate's or professional degree,c.Independent,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,health,6,1,FALSE
+68,1,b.Female,4.3,b.Associate's or professional degree,c.Independent,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+68,1,b.Female,4.3,b.Associate's or professional degree,c.Independent,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,tax,3,2,FALSE
+68,1,b.Female,4.3,b.Associate's or professional degree,c.Independent,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+68,1,b.Female,4.3,b.Associate's or professional degree,c.Independent,1.3898955062695,a.Yes,-0.0363208428840793,post,pos,nuc,7,1,TRUE
+68,1,b.Female,4.3,b.Associate's or professional degree,c.Independent,1.3898955062695,a.Yes,-0.0363208428840793,post,pos,teach,6,2,TRUE
+69,1,b.Female,4.8,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+69,1,b.Female,4.8,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,ss,5,2,FALSE
+69,1,b.Female,4.8,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,health,3,1,FALSE
+69,1,b.Female,4.8,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,cap,6,1,FALSE
+69,1,b.Female,4.8,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,tax,1,2,FALSE
+69,1,b.Female,4.8,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+69,1,b.Female,4.8,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,-0.0363208428840793,post,pos,nuc,4,1,TRUE
+69,1,b.Female,4.8,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,-0.0363208428840793,post,pos,teach,2,2,TRUE
+70,0,a.Male,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,5,1,FALSE
+70,0,a.Male,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,7,2,FALSE
+70,0,a.Male,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,2,1,FALSE
+70,0,a.Male,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,1,1,FALSE
+70,0,a.Male,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,6,2,FALSE
+70,0,a.Male,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,5,2,FALSE
+70,0,a.Male,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,health,3,1,TRUE
+70,0,a.Male,3.2,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,ss,5,2,TRUE
+71,0,a.Male,2.6,a.High school or less,a.Democrat,0.704947001381295,a.Yes,-1.2803097116638,pre,pos,nuc,1,1,FALSE
+71,0,a.Male,2.6,a.High school or less,a.Democrat,0.704947001381295,a.Yes,-1.2803097116638,pre,pos,ss,6,2,FALSE
+71,0,a.Male,2.6,a.High school or less,a.Democrat,0.704947001381295,a.Yes,-1.2803097116638,pre,pos,health,7,1,FALSE
+71,0,a.Male,2.6,a.High school or less,a.Democrat,0.704947001381295,a.Yes,-1.2803097116638,pre,pos,cap,7,1,FALSE
+71,0,a.Male,2.6,a.High school or less,a.Democrat,0.704947001381295,a.Yes,-1.2803097116638,pre,pos,tax,2,2,FALSE
+71,0,a.Male,2.6,a.High school or less,a.Democrat,0.704947001381295,a.Yes,-1.2803097116638,pre,pos,teach,3,2,FALSE
+71,0,a.Male,2.6,a.High school or less,a.Democrat,0.704947001381295,a.Yes,-1.2803097116638,post,pos,cap,3,1,TRUE
+71,0,a.Male,2.6,a.High school or less,a.Democrat,0.704947001381295,a.Yes,-1.2803097116638,post,pos,tax,6,2,TRUE
+72,1,a.Male,1.9,c.Bachelor's degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,nuc,4,1,FALSE
+72,1,a.Male,1.9,c.Bachelor's degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,ss,1,2,FALSE
+72,1,a.Male,1.9,c.Bachelor's degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,health,1,1,FALSE
+72,1,a.Male,1.9,c.Bachelor's degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,cap,4,1,FALSE
+72,1,a.Male,1.9,c.Bachelor's degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,tax,7,2,FALSE
+72,1,a.Male,1.9,c.Bachelor's degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,teach,1,2,FALSE
+72,1,a.Male,1.9,c.Bachelor's degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,post,pos,cap,5,1,TRUE
+72,1,a.Male,1.9,c.Bachelor's degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,post,pos,tax,1,2,TRUE
+73,0,a.Male,3.4,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,7,1,FALSE
+73,0,a.Male,3.4,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,5,2,FALSE
+73,0,a.Male,3.4,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,2,1,FALSE
+73,0,a.Male,3.4,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,4,1,FALSE
+73,0,a.Male,3.4,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,2,2,FALSE
+73,0,a.Male,3.4,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,6,2,FALSE
+73,0,a.Male,3.4,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,health,1,1,TRUE
+73,0,a.Male,3.4,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,ss,7,2,TRUE
+74,0,a.Male,1.8,b.Associate's or professional degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,nuc,1,1,FALSE
+74,0,a.Male,1.8,b.Associate's or professional degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,ss,3,2,FALSE
+74,0,a.Male,1.8,b.Associate's or professional degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,health,6,1,FALSE
+74,0,a.Male,1.8,b.Associate's or professional degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,cap,2,1,FALSE
+74,0,a.Male,1.8,b.Associate's or professional degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,tax,4,2,FALSE
+74,0,a.Male,1.8,b.Associate's or professional degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,teach,4,2,FALSE
+74,0,a.Male,1.8,b.Associate's or professional degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,post,pos,nuc,7,1,TRUE
+74,0,a.Male,1.8,b.Associate's or professional degree,e.Other (Please Specify),1.3898955062695,b.No or don't remember,1.20766802589564,post,pos,teach,3,2,TRUE
+75,0,a.Male,2,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,4,1,FALSE
+75,0,a.Male,2,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,ss,6,2,FALSE
+75,0,a.Male,2,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,health,3,1,FALSE
+75,0,a.Male,2,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,cap,4,1,FALSE
+75,0,a.Male,2,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,tax,6,2,FALSE
+75,0,a.Male,2,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,teach,7,2,FALSE
+75,0,a.Male,2,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,nuc,4,1,TRUE
+75,0,a.Male,2,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,teach,2,2,TRUE
+76,0,b.Female,2.9,b.Associate's or professional degree,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,4,1,FALSE
+76,0,b.Female,2.9,b.Associate's or professional degree,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,5,2,FALSE
+76,0,b.Female,2.9,b.Associate's or professional degree,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,1,1,FALSE
+76,0,b.Female,2.9,b.Associate's or professional degree,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,6,1,FALSE
+76,0,b.Female,2.9,b.Associate's or professional degree,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,4,2,FALSE
+76,0,b.Female,2.9,b.Associate's or professional degree,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,3,2,FALSE
+76,0,b.Female,2.9,b.Associate's or professional degree,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,cap,4,1,TRUE
+76,0,b.Female,2.9,b.Associate's or professional degree,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,tax,7,2,TRUE
+77,0,b.Female,3.3,c.Bachelor's degree,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,nuc,5,1,FALSE
+77,0,b.Female,3.3,c.Bachelor's degree,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,ss,5,2,FALSE
+77,0,b.Female,3.3,c.Bachelor's degree,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,health,1,1,FALSE
+77,0,b.Female,3.3,c.Bachelor's degree,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,cap,1,1,FALSE
+77,0,b.Female,3.3,c.Bachelor's degree,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,tax,3,2,FALSE
+77,0,b.Female,3.3,c.Bachelor's degree,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,pre,pos,teach,1,2,FALSE
+77,0,b.Female,3.3,c.Bachelor's degree,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,post,pos,health,2,1,TRUE
+77,0,b.Female,3.3,c.Bachelor's degree,c.Independent,1.3898955062695,b.No or don't remember,1.20766802589564,post,pos,ss,7,2,TRUE
+78,0,b.Female,2.2,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,1,1,FALSE
+78,0,b.Female,2.2,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,1,2,FALSE
+78,0,b.Female,2.2,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,7,1,FALSE
+78,0,b.Female,2.2,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,1,1,FALSE
+78,0,b.Female,2.2,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,5,2,FALSE
+78,0,b.Female,2.2,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,6,2,FALSE
+78,0,b.Female,2.2,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,cap,1,1,TRUE
+78,0,b.Female,2.2,b.Associate's or professional degree,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,tax,7,2,TRUE
+79,0,b.Female,5,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,5,1,FALSE
+79,0,b.Female,5,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,2,2,FALSE
+79,0,b.Female,5,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,4,1,FALSE
+79,0,b.Female,5,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,5,1,FALSE
+79,0,b.Female,5,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,2,2,FALSE
+79,0,b.Female,5,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,2,2,FALSE
+79,0,b.Female,5,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,nuc,2,1,TRUE
+79,0,b.Female,5,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,teach,3,2,TRUE
+80,1,a.Male,2.7,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,4,1,FALSE
+80,1,a.Male,2.7,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,ss,5,2,FALSE
+80,1,a.Male,2.7,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,health,5,1,FALSE
+80,1,a.Male,2.7,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,cap,5,1,FALSE
+80,1,a.Male,2.7,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,tax,4,2,FALSE
+80,1,a.Male,2.7,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,teach,5,2,FALSE
+80,1,a.Male,2.7,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,health,3,1,TRUE
+80,1,a.Male,2.7,c.Bachelor's degree,e.Other (Please Specify),0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,ss,6,2,TRUE
+81,0,a.Male,2,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,nuc,4,1,FALSE
+81,0,a.Male,2,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,ss,4,2,FALSE
+81,0,a.Male,2,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,health,1,1,FALSE
+81,0,a.Male,2,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,cap,7,1,FALSE
+81,0,a.Male,2,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,tax,6,2,FALSE
+81,0,a.Male,2,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,teach,6,2,FALSE
+81,0,a.Male,2,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,health,4,1,TRUE
+81,0,a.Male,2,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,ss,6,2,TRUE
+82,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,2,1,FALSE
+82,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,5,2,FALSE
+82,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,5,1,FALSE
+82,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,2,1,FALSE
+82,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,6,2,FALSE
+82,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,1,2,FALSE
+82,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,cap,6,1,TRUE
+82,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,tax,7,2,TRUE
+83,0,a.Male,2.5,c.Bachelor's degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,3,1,FALSE
+83,0,a.Male,2.5,c.Bachelor's degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,1,2,FALSE
+83,0,a.Male,2.5,c.Bachelor's degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,2,1,FALSE
+83,0,a.Male,2.5,c.Bachelor's degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,5,1,FALSE
+83,0,a.Male,2.5,c.Bachelor's degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,7,2,FALSE
+83,0,a.Male,2.5,c.Bachelor's degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,3,2,FALSE
+83,0,a.Male,2.5,c.Bachelor's degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,health,2,1,TRUE
+83,0,a.Male,2.5,c.Bachelor's degree,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,ss,2,2,TRUE
+84,0,a.Male,3.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,nuc,5,1,FALSE
+84,0,a.Male,3.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,ss,1,2,FALSE
+84,0,a.Male,3.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,health,6,1,FALSE
+84,0,a.Male,3.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+84,0,a.Male,3.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,tax,4,2,FALSE
+84,0,a.Male,3.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+84,0,a.Male,3.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,post,pos,cap,3,1,TRUE
+84,0,a.Male,3.9,c.Master's or doctoral degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,post,pos,tax,7,2,TRUE
+85,1,b.Female,3.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,5,1,FALSE
+85,1,b.Female,3.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,ss,6,2,FALSE
+85,1,b.Female,3.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,health,2,1,FALSE
+85,1,b.Female,3.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+85,1,b.Female,3.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,tax,6,2,FALSE
+85,1,b.Female,3.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,teach,7,2,FALSE
+85,1,b.Female,3.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,nuc,6,1,TRUE
+85,1,b.Female,3.7,c.Master's or doctoral degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,teach,3,2,TRUE
+86,1,a.Male,2.5,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,6,1,FALSE
+86,1,a.Male,2.5,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,1,2,FALSE
+86,1,a.Male,2.5,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,3,1,FALSE
+86,1,a.Male,2.5,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,1,1,FALSE
+86,1,a.Male,2.5,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,6,2,FALSE
+86,1,a.Male,2.5,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,5,2,FALSE
+86,1,a.Male,2.5,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,health,3,1,TRUE
+86,1,a.Male,2.5,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,ss,7,2,TRUE
+87,0,a.Male,3.2,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,nuc,3,1,FALSE
+87,0,a.Male,3.2,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,ss,2,2,FALSE
+87,0,a.Male,3.2,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,health,6,1,FALSE
+87,0,a.Male,3.2,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,cap,6,1,FALSE
+87,0,a.Male,3.2,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,tax,5,2,FALSE
+87,0,a.Male,3.2,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,teach,4,2,FALSE
+87,0,a.Male,3.2,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,nuc,5,1,TRUE
+87,0,a.Male,3.2,a.High school or less,a.Democrat,-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,teach,2,2,TRUE
+88,1,a.Male,3.9,c.Master's or doctoral degree,c.Independent,-0.664950008395122,a.Yes,1.20766802589564,pre,pos,nuc,2,1,FALSE
+88,1,a.Male,3.9,c.Master's or doctoral degree,c.Independent,-0.664950008395122,a.Yes,1.20766802589564,pre,pos,ss,1,2,FALSE
+88,1,a.Male,3.9,c.Master's or doctoral degree,c.Independent,-0.664950008395122,a.Yes,1.20766802589564,pre,pos,health,3,1,FALSE
+88,1,a.Male,3.9,c.Master's or doctoral degree,c.Independent,-0.664950008395122,a.Yes,1.20766802589564,pre,pos,cap,1,1,FALSE
+88,1,a.Male,3.9,c.Master's or doctoral degree,c.Independent,-0.664950008395122,a.Yes,1.20766802589564,pre,pos,tax,3,2,FALSE
+88,1,a.Male,3.9,c.Master's or doctoral degree,c.Independent,-0.664950008395122,a.Yes,1.20766802589564,pre,pos,teach,6,2,FALSE
+88,1,a.Male,3.9,c.Master's or doctoral degree,c.Independent,-0.664950008395122,a.Yes,1.20766802589564,post,pos,cap,2,1,TRUE
+88,1,a.Male,3.9,c.Master's or doctoral degree,c.Independent,-0.664950008395122,a.Yes,1.20766802589564,post,pos,tax,1,2,TRUE
+89,1,a.Male,4.9,c.Bachelor's degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,nuc,1,1,FALSE
+89,1,a.Male,4.9,c.Bachelor's degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,ss,6,2,FALSE
+89,1,a.Male,4.9,c.Bachelor's degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,health,5,1,FALSE
+89,1,a.Male,4.9,c.Bachelor's degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,cap,7,1,FALSE
+89,1,a.Male,4.9,c.Bachelor's degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,tax,1,2,FALSE
+89,1,a.Male,4.9,c.Bachelor's degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,teach,7,2,FALSE
+89,1,a.Male,4.9,c.Bachelor's degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,health,6,1,TRUE
+89,1,a.Male,4.9,c.Bachelor's degree,b.Republican,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,ss,1,2,TRUE
+90,0,b.Female,3.6,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,nuc,3,1,FALSE
+90,0,b.Female,3.6,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,ss,5,2,FALSE
+90,0,b.Female,3.6,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,health,3,1,FALSE
+90,0,b.Female,3.6,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,cap,2,1,FALSE
+90,0,b.Female,3.6,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,tax,6,2,FALSE
+90,0,b.Female,3.6,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,1.20766802589564,pre,pos,teach,2,2,FALSE
+90,0,b.Female,3.6,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,1.20766802589564,post,pos,cap,2,1,TRUE
+90,0,b.Female,3.6,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,1.20766802589564,post,pos,tax,7,2,TRUE
+91,0,a.Male,4.5,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,5,1,FALSE
+91,0,a.Male,4.5,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,1,2,FALSE
+91,0,a.Male,4.5,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,5,1,FALSE
+91,0,a.Male,4.5,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,2,1,FALSE
+91,0,a.Male,4.5,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,5,2,FALSE
+91,0,a.Male,4.5,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,6,2,FALSE
+91,0,a.Male,4.5,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,nuc,3,1,TRUE
+91,0,a.Male,4.5,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,teach,4,2,TRUE
+92,1,b.Female,4,c.Master's or doctoral degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,2,1,FALSE
+92,1,b.Female,4,c.Master's or doctoral degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,3,2,FALSE
+92,1,b.Female,4,c.Master's or doctoral degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,2,1,FALSE
+92,1,b.Female,4,c.Master's or doctoral degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,3,1,FALSE
+92,1,b.Female,4,c.Master's or doctoral degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,4,2,FALSE
+92,1,b.Female,4,c.Master's or doctoral degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,6,2,FALSE
+92,1,b.Female,4,c.Master's or doctoral degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,nuc,5,1,TRUE
+92,1,b.Female,4,c.Master's or doctoral degree,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,teach,2,2,TRUE
+93,0,a.Male,2.4,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,6,1,FALSE
+93,0,a.Male,2.4,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,ss,5,2,FALSE
+93,0,a.Male,2.4,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,health,7,1,FALSE
+93,0,a.Male,2.4,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,cap,6,1,FALSE
+93,0,a.Male,2.4,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,tax,4,2,FALSE
+93,0,a.Male,2.4,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,teach,3,2,FALSE
+93,0,a.Male,2.4,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,health,3,1,TRUE
+93,0,a.Male,2.4,a.High school or less,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,ss,1,2,TRUE
+94,1,b.Female,3.2,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,nuc,2,1,FALSE
+94,1,b.Female,3.2,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,ss,2,2,FALSE
+94,1,b.Female,3.2,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,health,6,1,FALSE
+94,1,b.Female,3.2,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,cap,7,1,FALSE
+94,1,b.Female,3.2,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,tax,4,2,FALSE
+94,1,b.Female,3.2,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,teach,2,2,FALSE
+94,1,b.Female,3.2,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,health,3,1,TRUE
+94,1,b.Female,3.2,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,ss,3,2,TRUE
+95,1,b.Female,2.7,a.High school or less,b.Republican,0.704947001381295,a.Yes,1.20766802589564,pre,pos,nuc,3,1,FALSE
+95,1,b.Female,2.7,a.High school or less,b.Republican,0.704947001381295,a.Yes,1.20766802589564,pre,pos,ss,7,2,FALSE
+95,1,b.Female,2.7,a.High school or less,b.Republican,0.704947001381295,a.Yes,1.20766802589564,pre,pos,health,4,1,FALSE
+95,1,b.Female,2.7,a.High school or less,b.Republican,0.704947001381295,a.Yes,1.20766802589564,pre,pos,cap,6,1,FALSE
+95,1,b.Female,2.7,a.High school or less,b.Republican,0.704947001381295,a.Yes,1.20766802589564,pre,pos,tax,2,2,FALSE
+95,1,b.Female,2.7,a.High school or less,b.Republican,0.704947001381295,a.Yes,1.20766802589564,pre,pos,teach,7,2,FALSE
+95,1,b.Female,2.7,a.High school or less,b.Republican,0.704947001381295,a.Yes,1.20766802589564,post,pos,nuc,1,1,TRUE
+95,1,b.Female,2.7,a.High school or less,b.Republican,0.704947001381295,a.Yes,1.20766802589564,post,pos,teach,5,2,TRUE
+96,0,a.Male,5,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,nuc,6,1,FALSE
+96,0,a.Male,5,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,ss,6,2,FALSE
+96,0,a.Male,5,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,health,1,1,FALSE
+96,0,a.Male,5,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+96,0,a.Male,5,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,tax,7,2,FALSE
+96,0,a.Male,5,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,teach,4,2,FALSE
+96,0,a.Male,5,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,post,pos,cap,1,1,TRUE
+96,0,a.Male,5,a.High school or less,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,post,pos,tax,6,2,TRUE
+97,0,a.Male,2.4,c.Bachelor's degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,nuc,5,1,FALSE
+97,0,a.Male,2.4,c.Bachelor's degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,ss,4,2,FALSE
+97,0,a.Male,2.4,c.Bachelor's degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,health,7,1,FALSE
+97,0,a.Male,2.4,c.Bachelor's degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,cap,3,1,FALSE
+97,0,a.Male,2.4,c.Bachelor's degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,tax,5,2,FALSE
+97,0,a.Male,2.4,c.Bachelor's degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,teach,7,2,FALSE
+97,0,a.Male,2.4,c.Bachelor's degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,nuc,4,1,TRUE
+97,0,a.Male,2.4,c.Bachelor's degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,teach,2,2,TRUE
+98,0,b.Female,4.6,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,1.20766802589564,pre,pos,nuc,2,1,FALSE
+98,0,b.Female,4.6,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,1.20766802589564,pre,pos,ss,4,2,FALSE
+98,0,b.Female,4.6,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,1.20766802589564,pre,pos,health,5,1,FALSE
+98,0,b.Female,4.6,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,1.20766802589564,pre,pos,cap,3,1,FALSE
+98,0,b.Female,4.6,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,1.20766802589564,pre,pos,tax,4,2,FALSE
+98,0,b.Female,4.6,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,1.20766802589564,pre,pos,teach,1,2,FALSE
+98,0,b.Female,4.6,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,1.20766802589564,post,pos,health,3,1,TRUE
+98,0,b.Female,4.6,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,1.20766802589564,post,pos,ss,4,2,TRUE
+99,1,a.Male,3.5,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,7,1,FALSE
+99,1,a.Male,3.5,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,5,2,FALSE
+99,1,a.Male,3.5,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,4,1,FALSE
+99,1,a.Male,3.5,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,3,1,FALSE
+99,1,a.Male,3.5,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,3,2,FALSE
+99,1,a.Male,3.5,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,2,2,FALSE
+99,1,a.Male,3.5,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,cap,5,1,TRUE
+99,1,a.Male,3.5,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,tax,7,2,TRUE
+100,1,b.Female,4.4,c.Bachelor's degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+100,1,b.Female,4.4,c.Bachelor's degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,ss,6,2,FALSE
+100,1,b.Female,4.4,c.Bachelor's degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,health,2,1,FALSE
+100,1,b.Female,4.4,c.Bachelor's degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,cap,2,1,FALSE
+100,1,b.Female,4.4,c.Bachelor's degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,tax,3,2,FALSE
+100,1,b.Female,4.4,c.Bachelor's degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,pre,pos,teach,1,2,FALSE
+100,1,b.Female,4.4,c.Bachelor's degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,post,pos,cap,4,1,TRUE
+100,1,b.Female,4.4,c.Bachelor's degree,b.Republican,1.3898955062695,a.Yes,-0.0363208428840793,post,pos,tax,2,2,TRUE
+101,1,a.Male,2.9,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,6,1,FALSE
+101,1,a.Male,2.9,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,ss,1,2,FALSE
+101,1,a.Male,2.9,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,health,6,1,FALSE
+101,1,a.Male,2.9,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,cap,7,1,FALSE
+101,1,a.Male,2.9,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,tax,5,2,FALSE
+101,1,a.Male,2.9,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+101,1,a.Male,2.9,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,health,7,1,TRUE
+101,1,a.Male,2.9,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,ss,5,2,TRUE
+102,0,a.Male,2.8,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,5,1,FALSE
+102,0,a.Male,2.8,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,ss,6,2,FALSE
+102,0,a.Male,2.8,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,health,3,1,FALSE
+102,0,a.Male,2.8,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,cap,7,1,FALSE
+102,0,a.Male,2.8,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,tax,3,2,FALSE
+102,0,a.Male,2.8,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+102,0,a.Male,2.8,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,health,2,1,TRUE
+102,0,a.Male,2.8,c.Bachelor's degree,b.Republican,-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,ss,6,2,TRUE
+103,0,a.Male,4.7,b.Associate's or professional degree,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,nuc,1,1,FALSE
+103,0,a.Male,4.7,b.Associate's or professional degree,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,ss,7,2,FALSE
+103,0,a.Male,4.7,b.Associate's or professional degree,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,health,3,1,FALSE
+103,0,a.Male,4.7,b.Associate's or professional degree,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,cap,4,1,FALSE
+103,0,a.Male,4.7,b.Associate's or professional degree,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,tax,4,2,FALSE
+103,0,a.Male,4.7,b.Associate's or professional degree,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,teach,7,2,FALSE
+103,0,a.Male,4.7,b.Associate's or professional degree,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,nuc,7,1,TRUE
+103,0,a.Male,4.7,b.Associate's or professional degree,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,teach,5,2,TRUE
+104,0,a.Male,3.8,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,nuc,5,1,FALSE
+104,0,a.Male,3.8,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,ss,2,2,FALSE
+104,0,a.Male,3.8,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,health,5,1,FALSE
+104,0,a.Male,3.8,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,cap,1,1,FALSE
+104,0,a.Male,3.8,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,tax,2,2,FALSE
+104,0,a.Male,3.8,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,teach,1,2,FALSE
+104,0,a.Male,3.8,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,cap,7,1,TRUE
+104,0,a.Male,3.8,a.High school or less,c.Independent,0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,tax,5,2,TRUE
+105,1,a.Male,1.9,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,nuc,3,1,FALSE
+105,1,a.Male,1.9,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,ss,6,2,FALSE
+105,1,a.Male,1.9,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,health,4,1,FALSE
+105,1,a.Male,1.9,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,cap,1,1,FALSE
+105,1,a.Male,1.9,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,tax,7,2,FALSE
+105,1,a.Male,1.9,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,-1.2803097116638,pre,pos,teach,5,2,FALSE
+105,1,a.Male,1.9,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,-1.2803097116638,post,pos,nuc,6,1,TRUE
+105,1,a.Male,1.9,c.Bachelor's degree,c.Independent,1.3898955062695,a.Yes,-1.2803097116638,post,pos,teach,6,2,TRUE
+106,0,b.Female,2.1,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,nuc,6,1,FALSE
+106,0,b.Female,2.1,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,ss,4,2,FALSE
+106,0,b.Female,2.1,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,health,3,1,FALSE
+106,0,b.Female,2.1,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,cap,3,1,FALSE
+106,0,b.Female,2.1,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,tax,3,2,FALSE
+106,0,b.Female,2.1,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,teach,5,2,FALSE
+106,0,b.Female,2.1,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,health,6,1,TRUE
+106,0,b.Female,2.1,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,ss,3,2,TRUE
+107,0,a.Male,3.9,c.Master's or doctoral degree,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,nuc,6,1,FALSE
+107,0,a.Male,3.9,c.Master's or doctoral degree,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,ss,3,2,FALSE
+107,0,a.Male,3.9,c.Master's or doctoral degree,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,health,1,1,FALSE
+107,0,a.Male,3.9,c.Master's or doctoral degree,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,cap,3,1,FALSE
+107,0,a.Male,3.9,c.Master's or doctoral degree,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,tax,3,2,FALSE
+107,0,a.Male,3.9,c.Master's or doctoral degree,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,teach,1,2,FALSE
+107,0,a.Male,3.9,c.Master's or doctoral degree,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,post,pos,nuc,2,1,TRUE
+107,0,a.Male,3.9,c.Master's or doctoral degree,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,post,pos,teach,6,2,TRUE
+108,1,a.Male,4.1,b.Associate's or professional degree,b.Republican,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,nuc,6,1,FALSE
+108,1,a.Male,4.1,b.Associate's or professional degree,b.Republican,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,ss,7,2,FALSE
+108,1,a.Male,4.1,b.Associate's or professional degree,b.Republican,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,health,1,1,FALSE
+108,1,a.Male,4.1,b.Associate's or professional degree,b.Republican,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,cap,7,1,FALSE
+108,1,a.Male,4.1,b.Associate's or professional degree,b.Republican,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,tax,5,2,FALSE
+108,1,a.Male,4.1,b.Associate's or professional degree,b.Republican,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,teach,6,2,FALSE
+108,1,a.Male,4.1,b.Associate's or professional degree,b.Republican,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,nuc,1,1,TRUE
+108,1,a.Male,4.1,b.Associate's or professional degree,b.Republican,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,teach,4,2,TRUE
+109,1,a.Male,2.5,b.Associate's or professional degree,c.Independent,-1.34989851328333,a.Yes,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+109,1,a.Male,2.5,b.Associate's or professional degree,c.Independent,-1.34989851328333,a.Yes,-0.0363208428840793,pre,pos,ss,3,2,FALSE
+109,1,a.Male,2.5,b.Associate's or professional degree,c.Independent,-1.34989851328333,a.Yes,-0.0363208428840793,pre,pos,health,7,1,FALSE
+109,1,a.Male,2.5,b.Associate's or professional degree,c.Independent,-1.34989851328333,a.Yes,-0.0363208428840793,pre,pos,cap,4,1,FALSE
+109,1,a.Male,2.5,b.Associate's or professional degree,c.Independent,-1.34989851328333,a.Yes,-0.0363208428840793,pre,pos,tax,3,2,FALSE
+109,1,a.Male,2.5,b.Associate's or professional degree,c.Independent,-1.34989851328333,a.Yes,-0.0363208428840793,pre,pos,teach,5,2,FALSE
+109,1,a.Male,2.5,b.Associate's or professional degree,c.Independent,-1.34989851328333,a.Yes,-0.0363208428840793,post,pos,cap,1,1,TRUE
+109,1,a.Male,2.5,b.Associate's or professional degree,c.Independent,-1.34989851328333,a.Yes,-0.0363208428840793,post,pos,tax,5,2,TRUE
+110,0,a.Male,4.7,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,1,1,FALSE
+110,0,a.Male,4.7,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,2,2,FALSE
+110,0,a.Male,4.7,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,3,1,FALSE
+110,0,a.Male,4.7,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,6,1,FALSE
+110,0,a.Male,4.7,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,7,2,FALSE
+110,0,a.Male,4.7,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,6,2,FALSE
+110,0,a.Male,4.7,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,cap,4,1,TRUE
+110,0,a.Male,4.7,b.Associate's or professional degree,c.Independent,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,tax,4,2,TRUE
+111,0,b.Female,1.8,c.Master's or doctoral degree,b.Republican,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,nuc,7,1,FALSE
+111,0,b.Female,1.8,c.Master's or doctoral degree,b.Republican,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,ss,1,2,FALSE
+111,0,b.Female,1.8,c.Master's or doctoral degree,b.Republican,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,health,4,1,FALSE
+111,0,b.Female,1.8,c.Master's or doctoral degree,b.Republican,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,cap,3,1,FALSE
+111,0,b.Female,1.8,c.Master's or doctoral degree,b.Republican,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,tax,2,2,FALSE
+111,0,b.Female,1.8,c.Master's or doctoral degree,b.Republican,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,teach,6,2,FALSE
+111,0,b.Female,1.8,c.Master's or doctoral degree,b.Republican,-1.34989851328333,a.Yes,1.20766802589564,post,pos,nuc,2,1,TRUE
+111,0,b.Female,1.8,c.Master's or doctoral degree,b.Republican,-1.34989851328333,a.Yes,1.20766802589564,post,pos,teach,4,2,TRUE
+112,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+112,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,ss,2,2,FALSE
+112,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,health,1,1,FALSE
+112,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,cap,7,1,FALSE
+112,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,tax,2,2,FALSE
+112,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+112,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,health,7,1,TRUE
+112,1,b.Female,2,c.Master's or doctoral degree,a.Democrat,-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,ss,2,2,TRUE
+113,1,b.Female,4.4,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,nuc,2,1,FALSE
+113,1,b.Female,4.4,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,ss,2,2,FALSE
+113,1,b.Female,4.4,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,health,7,1,FALSE
+113,1,b.Female,4.4,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,cap,5,1,FALSE
+113,1,b.Female,4.4,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,tax,6,2,FALSE
+113,1,b.Female,4.4,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,teach,3,2,FALSE
+113,1,b.Female,4.4,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,nuc,7,1,TRUE
+113,1,b.Female,4.4,c.Master's or doctoral degree,a.Democrat,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,teach,5,2,TRUE
+114,0,a.Male,4,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,nuc,2,1,FALSE
+114,0,a.Male,4,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,ss,6,2,FALSE
+114,0,a.Male,4,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,health,1,1,FALSE
+114,0,a.Male,4,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,cap,7,1,FALSE
+114,0,a.Male,4,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,tax,1,2,FALSE
+114,0,a.Male,4,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,-1.2803097116638,pre,pos,teach,7,2,FALSE
+114,0,a.Male,4,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,cap,6,1,TRUE
+114,0,a.Male,4,a.High school or less,b.Republican,0.0199984964930867,b.No or don't remember,-1.2803097116638,post,pos,tax,3,2,TRUE
+115,0,a.Male,3.5,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,1,1,FALSE
+115,0,a.Male,3.5,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,ss,3,2,FALSE
+115,0,a.Male,3.5,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,health,3,1,FALSE
+115,0,a.Male,3.5,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,cap,4,1,FALSE
+115,0,a.Male,3.5,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,tax,4,2,FALSE
+115,0,a.Male,3.5,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+115,0,a.Male,3.5,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,health,5,1,TRUE
+115,0,a.Male,3.5,b.Associate's or professional degree,a.Democrat,0.0199984964930867,b.No or don't remember,-0.0363208428840793,post,pos,ss,2,2,TRUE
+116,1,b.Female,3.5,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,nuc,7,1,FALSE
+116,1,b.Female,3.5,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,ss,3,2,FALSE
+116,1,b.Female,3.5,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,health,6,1,FALSE
+116,1,b.Female,3.5,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,cap,5,1,FALSE
+116,1,b.Female,3.5,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,tax,5,2,FALSE
+116,1,b.Female,3.5,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,teach,7,2,FALSE
+116,1,b.Female,3.5,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,cap,3,1,TRUE
+116,1,b.Female,3.5,a.High school or less,b.Republican,-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,tax,4,2,TRUE
+117,1,b.Female,2.5,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,nuc,4,1,FALSE
+117,1,b.Female,2.5,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,ss,1,2,FALSE
+117,1,b.Female,2.5,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,health,2,1,FALSE
+117,1,b.Female,2.5,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,cap,1,1,FALSE
+117,1,b.Female,2.5,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,tax,6,2,FALSE
+117,1,b.Female,2.5,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,teach,6,2,FALSE
+117,1,b.Female,2.5,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,health,7,1,TRUE
+117,1,b.Female,2.5,a.High school or less,e.Other (Please Specify),-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,ss,7,2,TRUE
+118,1,a.Male,3.1,c.Master's or doctoral degree,c.Independent,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,nuc,4,1,FALSE
+118,1,a.Male,3.1,c.Master's or doctoral degree,c.Independent,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,ss,2,2,FALSE
+118,1,a.Male,3.1,c.Master's or doctoral degree,c.Independent,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,health,7,1,FALSE
+118,1,a.Male,3.1,c.Master's or doctoral degree,c.Independent,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,cap,4,1,FALSE
+118,1,a.Male,3.1,c.Master's or doctoral degree,c.Independent,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,tax,3,2,FALSE
+118,1,a.Male,3.1,c.Master's or doctoral degree,c.Independent,-1.34989851328333,a.Yes,1.20766802589564,pre,pos,teach,5,2,FALSE
+118,1,a.Male,3.1,c.Master's or doctoral degree,c.Independent,-1.34989851328333,a.Yes,1.20766802589564,post,pos,nuc,7,1,TRUE
+118,1,a.Male,3.1,c.Master's or doctoral degree,c.Independent,-1.34989851328333,a.Yes,1.20766802589564,post,pos,teach,5,2,TRUE
+119,0,a.Male,3.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,nuc,5,1,FALSE
+119,0,a.Male,3.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,ss,4,2,FALSE
+119,0,a.Male,3.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,health,7,1,FALSE
+119,0,a.Male,3.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,cap,5,1,FALSE
+119,0,a.Male,3.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,tax,2,2,FALSE
+119,0,a.Male,3.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,pre,pos,teach,4,2,FALSE
+119,0,a.Male,3.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,nuc,4,1,TRUE
+119,0,a.Male,3.6,a.High school or less,b.Republican,-1.34989851328333,b.No or don't remember,-1.2803097116638,post,pos,teach,6,2,TRUE
+120,1,a.Male,3.1,a.High school or less,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,nuc,4,1,FALSE
+120,1,a.Male,3.1,a.High school or less,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,ss,7,2,FALSE
+120,1,a.Male,3.1,a.High school or less,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,health,1,1,FALSE
+120,1,a.Male,3.1,a.High school or less,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,cap,4,1,FALSE
+120,1,a.Male,3.1,a.High school or less,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,tax,5,2,FALSE
+120,1,a.Male,3.1,a.High school or less,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,teach,1,2,FALSE
+120,1,a.Male,3.1,a.High school or less,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,health,4,1,TRUE
+120,1,a.Male,3.1,a.High school or less,e.Other (Please Specify),1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,ss,3,2,TRUE
+121,1,a.Male,3.4,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,nuc,5,1,FALSE
+121,1,a.Male,3.4,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,ss,6,2,FALSE
+121,1,a.Male,3.4,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,health,2,1,FALSE
+121,1,a.Male,3.4,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,cap,3,1,FALSE
+121,1,a.Male,3.4,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,tax,1,2,FALSE
+121,1,a.Male,3.4,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-1.2803097116638,pre,pos,teach,4,2,FALSE
+121,1,a.Male,3.4,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,cap,2,1,TRUE
+121,1,a.Male,3.4,c.Master's or doctoral degree,c.Independent,1.3898955062695,b.No or don't remember,-1.2803097116638,post,pos,tax,5,2,TRUE
+122,0,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,nuc,4,1,FALSE
+122,0,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,ss,2,2,FALSE
+122,0,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,health,4,1,FALSE
+122,0,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,cap,5,1,FALSE
+122,0,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,tax,1,2,FALSE
+122,0,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,teach,1,2,FALSE
+122,0,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-1.2803097116638,post,pos,cap,6,1,TRUE
+122,0,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,-1.2803097116638,post,pos,tax,6,2,TRUE
+123,0,a.Male,4.5,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,nuc,2,1,FALSE
+123,0,a.Male,4.5,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,ss,3,2,FALSE
+123,0,a.Male,4.5,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,health,7,1,FALSE
+123,0,a.Male,4.5,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,cap,1,1,FALSE
+123,0,a.Male,4.5,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,tax,3,2,FALSE
+123,0,a.Male,4.5,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,teach,3,2,FALSE
+123,0,a.Male,4.5,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,post,pos,health,5,1,TRUE
+123,0,a.Male,4.5,c.Master's or doctoral degree,b.Republican,0.0199984964930867,a.Yes,1.20766802589564,post,pos,ss,7,2,TRUE
+124,1,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,nuc,7,1,FALSE
+124,1,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,ss,1,2,FALSE
+124,1,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,health,5,1,FALSE
+124,1,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,cap,7,1,FALSE
+124,1,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,tax,6,2,FALSE
+124,1,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,a.Yes,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+124,1,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,a.Yes,-0.0363208428840793,post,pos,nuc,6,1,TRUE
+124,1,b.Female,4.7,b.Associate's or professional degree,a.Democrat,0.704947001381295,a.Yes,-0.0363208428840793,post,pos,teach,1,2,TRUE
+125,0,b.Female,2.7,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,7,1,FALSE
+125,0,b.Female,2.7,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,ss,2,2,FALSE
+125,0,b.Female,2.7,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,health,7,1,FALSE
+125,0,b.Female,2.7,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,cap,1,1,FALSE
+125,0,b.Female,2.7,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,tax,7,2,FALSE
+125,0,b.Female,2.7,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,pre,pos,teach,4,2,FALSE
+125,0,b.Female,2.7,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,cap,3,1,TRUE
+125,0,b.Female,2.7,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,-0.0363208428840793,post,pos,tax,3,2,TRUE
+126,1,a.Male,2,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,5,1,FALSE
+126,1,a.Male,2,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,ss,2,2,FALSE
+126,1,a.Male,2,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,health,4,1,FALSE
+126,1,a.Male,2,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,cap,5,1,FALSE
+126,1,a.Male,2,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,tax,4,2,FALSE
+126,1,a.Male,2,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,teach,5,2,FALSE
+126,1,a.Male,2,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,cap,4,1,TRUE
+126,1,a.Male,2,a.High school or less,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,tax,4,2,TRUE
+127,0,a.Male,3.4,a.High school or less,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,nuc,2,1,FALSE
+127,0,a.Male,3.4,a.High school or less,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,ss,2,2,FALSE
+127,0,a.Male,3.4,a.High school or less,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,health,4,1,FALSE
+127,0,a.Male,3.4,a.High school or less,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,cap,3,1,FALSE
+127,0,a.Male,3.4,a.High school or less,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,tax,5,2,FALSE
+127,0,a.Male,3.4,a.High school or less,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,pre,pos,teach,5,2,FALSE
+127,0,a.Male,3.4,a.High school or less,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,post,pos,health,5,1,TRUE
+127,0,a.Male,3.4,a.High school or less,c.Independent,0.704947001381295,b.No or don't remember,-1.2803097116638,post,pos,ss,4,2,TRUE
+128,1,b.Female,2.7,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,2,1,FALSE
+128,1,b.Female,2.7,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,ss,4,2,FALSE
+128,1,b.Female,2.7,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,health,5,1,FALSE
+128,1,b.Female,2.7,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,cap,2,1,FALSE
+128,1,b.Female,2.7,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,tax,4,2,FALSE
+128,1,b.Female,2.7,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,pre,pos,teach,6,2,FALSE
+128,1,b.Female,2.7,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,health,1,1,TRUE
+128,1,b.Female,2.7,c.Master's or doctoral degree,c.Independent,-1.34989851328333,b.No or don't remember,-0.0363208428840793,post,pos,ss,5,2,TRUE
+129,1,b.Female,2.4,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,7,1,FALSE
+129,1,b.Female,2.4,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,5,2,FALSE
+129,1,b.Female,2.4,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,6,1,FALSE
+129,1,b.Female,2.4,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,3,1,FALSE
+129,1,b.Female,2.4,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,4,2,FALSE
+129,1,b.Female,2.4,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,2,2,FALSE
+129,1,b.Female,2.4,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,health,3,1,TRUE
+129,1,b.Female,2.4,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,ss,3,2,TRUE
+130,1,b.Female,2.8,c.Master's or doctoral degree,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,nuc,5,1,FALSE
+130,1,b.Female,2.8,c.Master's or doctoral degree,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,ss,3,2,FALSE
+130,1,b.Female,2.8,c.Master's or doctoral degree,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,health,7,1,FALSE
+130,1,b.Female,2.8,c.Master's or doctoral degree,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,cap,3,1,FALSE
+130,1,b.Female,2.8,c.Master's or doctoral degree,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,tax,7,2,FALSE
+130,1,b.Female,2.8,c.Master's or doctoral degree,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,pre,pos,teach,5,2,FALSE
+130,1,b.Female,2.8,c.Master's or doctoral degree,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,post,pos,cap,1,1,TRUE
+130,1,b.Female,2.8,c.Master's or doctoral degree,b.Republican,-0.664950008395122,a.Yes,-0.0363208428840793,post,pos,tax,5,2,TRUE
+131,1,b.Female,4.2,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,5,1,FALSE
+131,1,b.Female,4.2,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,1,2,FALSE
+131,1,b.Female,4.2,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,6,1,FALSE
+131,1,b.Female,4.2,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,3,1,FALSE
+131,1,b.Female,4.2,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,1,2,FALSE
+131,1,b.Female,4.2,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,6,2,FALSE
+131,1,b.Female,4.2,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,nuc,4,1,TRUE
+131,1,b.Female,4.2,c.Bachelor's degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,teach,6,2,TRUE
+132,1,b.Female,2.7,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,nuc,2,1,FALSE
+132,1,b.Female,2.7,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,ss,4,2,FALSE
+132,1,b.Female,2.7,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,health,7,1,FALSE
+132,1,b.Female,2.7,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,cap,5,1,FALSE
+132,1,b.Female,2.7,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,tax,3,2,FALSE
+132,1,b.Female,2.7,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,pre,pos,teach,2,2,FALSE
+132,1,b.Female,2.7,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,nuc,5,1,TRUE
+132,1,b.Female,2.7,a.High school or less,a.Democrat,-1.34989851328333,b.No or don't remember,1.20766802589564,post,pos,teach,3,2,TRUE
+133,1,a.Male,3.1,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,nuc,2,1,FALSE
+133,1,a.Male,3.1,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,ss,5,2,FALSE
+133,1,a.Male,3.1,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,health,5,1,FALSE
+133,1,a.Male,3.1,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,cap,5,1,FALSE
+133,1,a.Male,3.1,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,tax,1,2,FALSE
+133,1,a.Male,3.1,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,pre,pos,teach,4,2,FALSE
+133,1,a.Male,3.1,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,post,pos,cap,2,1,TRUE
+133,1,a.Male,3.1,b.Associate's or professional degree,c.Independent,0.0199984964930867,a.Yes,1.20766802589564,post,pos,tax,7,2,TRUE
+134,1,a.Male,2.2,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,7,1,FALSE
+134,1,a.Male,2.2,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,5,2,FALSE
+134,1,a.Male,2.2,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,4,1,FALSE
+134,1,a.Male,2.2,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,2,1,FALSE
+134,1,a.Male,2.2,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,6,2,FALSE
+134,1,a.Male,2.2,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,4,2,FALSE
+134,1,a.Male,2.2,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,health,4,1,TRUE
+134,1,a.Male,2.2,a.High school or less,e.Other (Please Specify),0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,ss,2,2,TRUE
+135,1,a.Male,3,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,nuc,6,1,FALSE
+135,1,a.Male,3,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,ss,2,2,FALSE
+135,1,a.Male,3,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,health,5,1,FALSE
+135,1,a.Male,3,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,cap,4,1,FALSE
+135,1,a.Male,3,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,tax,6,2,FALSE
+135,1,a.Male,3,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,pre,pos,teach,2,2,FALSE
+135,1,a.Male,3,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,health,1,1,TRUE
+135,1,a.Male,3,b.Associate's or professional degree,a.Democrat,0.704947001381295,b.No or don't remember,1.20766802589564,post,pos,ss,2,2,TRUE
+136,1,b.Female,4.6,b.Associate's or professional degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,nuc,4,1,FALSE
+136,1,b.Female,4.6,b.Associate's or professional degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,ss,7,2,FALSE
+136,1,b.Female,4.6,b.Associate's or professional degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,health,4,1,FALSE
+136,1,b.Female,4.6,b.Associate's or professional degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,cap,6,1,FALSE
+136,1,b.Female,4.6,b.Associate's or professional degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,tax,3,2,FALSE
+136,1,b.Female,4.6,b.Associate's or professional degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,pre,pos,teach,5,2,FALSE
+136,1,b.Female,4.6,b.Associate's or professional degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,cap,5,1,TRUE
+136,1,b.Female,4.6,b.Associate's or professional degree,e.Other (Please Specify),-0.664950008395122,b.No or don't remember,-0.0363208428840793,post,pos,tax,4,2,TRUE
+137,0,a.Male,2,b.Associate's or professional degree,c.Independent,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,nuc,2,1,FALSE
+137,0,a.Male,2,b.Associate's or professional degree,c.Independent,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,ss,1,2,FALSE
+137,0,a.Male,2,b.Associate's or professional degree,c.Independent,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,health,2,1,FALSE
+137,0,a.Male,2,b.Associate's or professional degree,c.Independent,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,cap,1,1,FALSE
+137,0,a.Male,2,b.Associate's or professional degree,c.Independent,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,tax,2,2,FALSE
+137,0,a.Male,2,b.Associate's or professional degree,c.Independent,-0.664950008395122,b.No or don't remember,1.20766802589564,pre,pos,teach,3,2,FALSE
+137,0,a.Male,2,b.Associate's or professional degree,c.Independent,-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,nuc,7,1,TRUE
+137,0,a.Male,2,b.Associate's or professional degree,c.Independent,-0.664950008395122,b.No or don't remember,1.20766802589564,post,pos,teach,2,2,TRUE
