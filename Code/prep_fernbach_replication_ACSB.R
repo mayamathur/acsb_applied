@@ -96,11 +96,6 @@ dr = droplevels(dr)
 #expect_equal(nrow(dr), 110)
 
 
-# # rescale or recode for interpretability
-# d$age10y = d$age/10
-# d$pDem10 = d$pDem/.10
-# d$female = d$sex == "a.Female"
-
 
 # RECODE VARIABLES  -------------------------------------------------
 
@@ -113,6 +108,33 @@ d[d==""] = NA
 
 # subject ID
 d$id = 1:nrow(d)
+
+
+# rescale or recode for interpretability
+
+#***only for Qualtrics test data!
+d$age = round(runif(n= nrow(d), min = 18, max = 50))
+d$age10y = d$age/10
+
+# convert variables to numeric
+to_num = c("attention_birth_year")
+d = d %>% mutate_at(.vars = to_num, .funs  = as.numeric) 
+
+# ~ Make attention_pass variables  -------------------------------------------------
+
+d$expected_birth_year = 2024 - d$age
+d$attention_pass_birth_year = abs(d$attention_birth_year - d$expected_birth_year) <= 1
+
+d$attention_pass_ideology = (d$attention_ideology == "Somewhat Liberal")
+
+#@@check this one; make sure I wrote the string correctly
+d$attention_pass_news = (d$attention_news == "The Drudge Report,ABC News website")
+
+# indicator for passing all checks
+d$R_all = d$attention_pass_birth_year * d$attention_pass_ideology * d$attention_pass_news
+
+# indicator for passing at least one
+d$R_one = ( (d$attention_pass_birth_year + d$attention_pass_ideology + d$attention_pass_news) > 0 )
 
 
 # ~ Make extremity variables  -------------------------------------------------
@@ -148,16 +170,17 @@ for (.varname in pre_pos_vars) d = make_extremity_var(dat = d, varname = .varnam
 
 for (.varname in post_pos_vars) d = make_extremity_var(dat = d, varname = .varname)
 
-### IMPORTANT: Remove pre-variables for which there is no corresponding post-variable 
-#  since subjects answered only a random subset of questions
-#***shouldn't need this for mixed model, but think RANOVA might need it?
-# only doing this for pos variables for now
-d$pre_pos_nuc[ is.na(d$post_pos_nuc) ] = NA
-d$pre_pos_ss[ is.na(d$post_pos_ss) ] = NA
-d$pre_pos_health[ is.na(d$post_pos_health) ] = NA
-d$pre_pos_cap[ is.na(d$post_pos_cap) ] = NA
-d$pre_pos_tax[ is.na(d$post_pos_tax) ] = NA
-d$pre_pos_teach[ is.na(d$post_pos_teach) ] = NA
+
+# #***shouldn't need this for mixed model, but think RANOVA might need it?
+# ### IMPORTANT: Remove pre-variables for which there is no corresponding post-variable 
+# #  since subjects answered only a random subset of questions
+# # only doing this for pos variables for now
+# d$pre_pos_nuc[ is.na(d$post_pos_nuc) ] = NA
+# d$pre_pos_ss[ is.na(d$post_pos_ss) ] = NA
+# d$pre_pos_health[ is.na(d$post_pos_health) ] = NA
+# d$pre_pos_cap[ is.na(d$post_pos_cap) ] = NA
+# d$pre_pos_tax[ is.na(d$post_pos_tax) ] = NA
+# d$pre_pos_teach[ is.na(d$post_pos_teach) ] = NA
 
 
 
@@ -169,11 +192,12 @@ d$pre_pos_teach[ is.na(d$post_pos_teach) ] = NA
 # smaller toy dataset
 s = d %>% select( c("id", "condition_expl", names_with("pos_", d) ) )
 
-# I think is basically what I want!!
 # https://stackoverflow.com/questions/57533341/reshape-wide-to-long-based-on-part-of-column-name
 s2 = s %>%
   gather(key, value, -c(id, condition_expl)) %>%
   separate(key, into = c("time", "var", "issue_name"), sep = "_")
+
+#**Save this reshape code!
 
 # expect 1 row per subject, issue, and time combination
 expect_equal( nrow(s2), nrow(d)*6*2 )
@@ -213,7 +237,7 @@ expect_equal(nrow(dl), nrow(d)*(6+2)) # they only rate 6 issues (pre) + 2 issues
 
 dat = dl
 
-# simulate data because models below don't fit with real data
+# simulate data because models below don't fit with Qualtrics fake data (b/c no variation in random intercepts)
 if ( FALSE ){
   n=100
   condition = rbinom(n = n, size = 1, prob = 0.5)
