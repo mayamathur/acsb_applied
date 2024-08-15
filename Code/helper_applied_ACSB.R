@@ -11,9 +11,9 @@
 # uses a lot of global vars, like study
 # missMethod: "MI" or "CC"
 # control_covars: should we control for covariates listed in demo.raw (global var)?
-analyze_all_outcomes = function(missMethod,
-                                control_covars = FALSE,
-                                drop_inattentives = FALSE ) {
+analyze_all_outcomes_meat = function(missMethod,
+                                     control_covars = FALSE,
+                                     drop_inattentives = FALSE ) {
   
   
   if ( drop_inattentives == TRUE ) d = d %>% filter(passCheck == TRUE)
@@ -169,85 +169,6 @@ analyze_all_outcomes = function(missMethod,
   if ( missMethod == "CC") write.csv(res.nice, "pretty_ate_estimates_all_outcomes_cc_pretty.csv")
   
   
-  # ##### One-Off Stats for Paper: Main Estimates #####
-  # analysis.string = paste( "mainY", missMethod, sep = " ")
-  # 
-  # update_result_csv( name = paste( "mainY diff", missMethod ),
-  #                    value = round( res.raw$est[ res.raw$analysis == analysis.string], 2 ) )
-  # 
-  # update_result_csv( name = paste( "mainY diff lo", missMethod ),
-  #                    value = round( res.raw$lo[ res.raw$analysis == analysis.string], 2 ) )
-  # 
-  # update_result_csv( name = paste( "mainY diff hi", missMethod ),
-  #                    value = round( res.raw$hi[ res.raw$analysis == analysis.string], 2 ) )
-  # 
-  # 
-  # update_result_csv( name = paste( "mainY diff pval", missMethod ),
-  #                    value = format_pval( res.raw$pval[ res.raw$analysis == analysis.string], 2 ) )
-  # 
-  # update_result_csv( name = paste( "mainY diff g", missMethod ),
-  #                    value = round( res.raw$g[ res.raw$analysis == analysis.string], 2 ) )
-  # 
-  # update_result_csv( name = paste( "mainY diff g lo", missMethod ),
-  #                    value = round( res.raw$g.lo[ res.raw$analysis == analysis.string], 2 ) )
-  # 
-  # update_result_csv( name = paste( "mainY diff g hi", missMethod ),
-  #                    value = round( res.raw$g.hi[ res.raw$analysis == analysis.string], 2 ) )
-  # 
-  # ##### One-Off Stats for Study 3 Only: Main Estimate Among Target Demographic #####
-  # 
-  # if ( study == 3 ) {
-  #   analysis.string2 = paste( "mainY targetDemoSimple-subset", missMethod, sep = " ")
-  #   
-  #   update_result_csv( name = paste( "mainY targetDemoSimple-subset diff", missMethod ),
-  #                      value = round( res.raw$est[ res.raw$analysis == analysis.string2], 2 ) )
-  #   
-  #   update_result_csv( name = paste( "mainY targetDemoSimple-subset diff lo", missMethod ),
-  #                      value = round( res.raw$lo[ res.raw$analysis == analysis.string2], 2 ) )
-  #   
-  #   update_result_csv( name = paste( "mainY targetDemoSimple-subset diff hi", missMethod ),
-  #                      value = round( res.raw$hi[ res.raw$analysis == analysis.string2], 2 ) )
-  #   
-  #   
-  #   update_result_csv( name = paste( "mainY targetDemoSimple-subset diff pval", missMethod ),
-  #                      value = format_pval( res.raw$pval[ res.raw$analysis == analysis.string2], 2 ) )
-  #   
-  #   update_result_csv( name = paste( "mainY targetDemoSimple-subset diff g", missMethod ),
-  #                      value = round( res.raw$g[ res.raw$analysis == analysis.string2], 2 ) )
-  #   
-  #   update_result_csv( name = paste( "mainY targetDemoSimple-subset diff g lo", missMethod ),
-  #                      value = round( res.raw$g.lo[ res.raw$analysis == analysis.string2], 2 ) )
-  #   
-  #   update_result_csv( name = paste( "mainY targetDemoSimple-subset diff g hi", missMethod ),
-  #                      value = round( res.raw$g.hi[ res.raw$analysis == analysis.string2], 2 ) )
-  #   
-  # }
-  # 
-  # ##### One-Off Stats for Paper: Various Multiple-Testing Metrics for Secondary Outcomes #####
-  # update_result_csv( name = paste( "Bonferroni alpha secY", missMethod ),
-  #                    value = round( alpha2, 4 ) )
-  # 
-  # update_result_csv( name = paste( "Bonferroni number secY", missMethod ),
-  #                    value = n.secY )
-  # 
-  # update_result_csv( name = paste( "Number secY pass Bonf", missMethod ),
-  #                    value = sum( res.raw$pvalBonf[ res.raw$group == "secY" ] < 0.05 ) )
-  # 
-  # # harmonic mean p-values by subsets of effect modifiers
-  # update_result_csv( name = paste( "HMP all secY", missMethod ),
-  #                    value = format_pval( p.hmp( p = res.raw$pval[ res.raw$group == "secY" ],
-  #                                                L = sum(res.raw$group == "secY") ), 2 ) )
-  # 
-  # update_result_csv( name = paste("HMP food secY", missMethod ),
-  #                    value = format_pval( p.hmp( p = res.raw$pval[ res.raw$group.specific == "secY food" ],
-  #                                                L = sum(res.raw$group.specific == "secY food") ), 2 ) )
-  # 
-  # update_result_csv( name = paste( "HMP psych secY", missMethod ),
-  #                    value = format_pval( p.hmp( p = res.raw$pval[ res.raw$group.specific == "secY psych" ],
-  #                                                L = sum(res.raw$group.specific == "secY psych") ), 2 ) )
-  
-  
-  
   return( list(res.nice = res.nice,
                res.raw = res.raw) )
 }
@@ -386,9 +307,24 @@ stat_CI = function(est, lo, hi){
 
 # DATA PREP FNS FOR FERNBACH REPLICATION  -------------------------------------------------
 
+recode_understanding_var = function(dat, varname) {
+  
+  x = tolower(dat[[varname]])
+  
+  x2 = x
+  x2[x == "1 - vague understanding"] = "1"
+  x2[x == "7 - thorough understanding"] = "7"
+  
+  x2 = as.numeric(x2) 
+  
+  dat[[varname]] = x2
+  return(dat)
+}
+
+
 # recodes position ("_pos_") variable to numeric (1-7) and makes extremity variable
 make_extremity_var = function(dat, varname){
-
+  
   x = tolower(dat[[varname]])
   x2 = NA
   
@@ -575,8 +511,112 @@ report_gee_table = function(dat,
   
   
   if ( return.gee.model == FALSE ) return(res) else return( list(res = res, mod = mod) )
+}
+
+
+
+
+# drop_inattentives can be: "no", "passed_one", "passed_all"
+# .dl = long data for outcome of interest
+analyze_all_outcomes_fernbach = function(control_covars = FALSE,
+                                         drop_inattentives = "no",
+                                         .dl) {
   
   
+  # TEST ONLY
+  if (FALSE) {
+    control_covars = FALSE
+    drop_inattentives = "no"
+    .dl = dl
+  }
+  
+  if ( drop_inattentives == "passed_one" ) .dl = .dl %>% filter(R_one == TRUE)
+  if ( drop_inattentives == "passed_all" ) .dl = .dl %>% filter(R_all == TRUE)
+  
+  
+  ##### Analyze Each Outcome (Including Primary) #####
+  
+  if (exists("res.raw")) suppressWarnings( rm(res.raw) )
+  
+  # loop over outcomes
+  toAnalyze = c("extr", "underst")
+  
+  for ( outcome in toAnalyze ) {
+    
+    
+    # don't control for any covariates
+    if ( control_covars == FALSE ){
+      
+      m = lmer(.dl[[outcome]] ~ condition_expl * time_post * issue_num + (1|id), data = .dl)
+      
+      # check for singular fit
+      messages = attr(m, "optinfo")$conv$lme4$messages
+      
+      stats = tidy(m, conf.int = TRUE)
+      
+      # remove the random effect estimatse
+      stats = stats %>% filter( !(term %in% c("sd__(Intercept)", "sd__Observation")) )
+    }
+    
+    # control covariates
+    if ( control_covars == TRUE ) {
+      
+      string = paste( c(".dl[[outcome]] ~ condition_expl * time_post * issue_num + (1|id)",
+                        demo_vars_analysis,
+                        interest_vars_analysis),
+                      collapse = " + ")
+      m = lmer( eval( parse(text = string) ), data = .dl)
+      
+      # check for singular fit
+      messages = attr(m, "optinfo")$conv$lme4$messages
+      stats = tidy(m, conf.int = TRUE)
+      
+      stats = stats %>% filter( !(term %in% c("sd__(Intercept)", "sd__Observation")) )
+    }
+    
+    if (is.null(messages)) messages = ""
+    
+    new.row = data.frame( outcome = outcome,
+                          coef_name = stats$term, 
+                          est = stats$estimate,
+                          lo = stats$conf.low,
+                          hi = stats$conf.high,
+                          pval = stats$p.value,
+                          nobs = nuni(.dl$id),  # number of subjects
+                          note = messages )
+    
+    if ( !exists("res.raw") ) res.raw = new.row else res.raw = bind_rows(res.raw, new.row)
+  }  # end loop over all outcomes to be analyzed
+  
+  
+  ##### Save Both Raw and Cleaned-Up Results Tables #####
+  
+  # in order to have the unrounded values
+  setwd(results.dir)
+  write.csv(res.raw, "raw_estimates_all_outcomes.csv")
+  
+  # cleaned-up version
+  # round it
+  res.nice = res.raw %>%
+    mutate_at( names(res.raw)[ !names(res.raw) %in% c("outcome", "coef_name", "note" ) ],
+               function(x) round(x,2) )
+  
+  res.nice$outcome[ res.nice$outcome == "extr" ] = "Position extremity"
+  res.nice$outcome[ res.nice$outcome == "underst" ] = "Self-reported understanding"
+
+  # make nice CI string
+  res.nice$est = stat_CI( res.nice$est, res.nice$lo, res.nice$hi)
+  
+  #res.raw = res.raw %>% select(-c(lo, hi))
+  
+  # also remove all but the coefficient of interest
+  res.nice = res.nice %>% filter(coef_name == "condition_expl:time_postTRUE")
+  
+  setwd(results.dir)
+  write.csv(res.nice, "pretty_estimates_all_outcomes.csv")
+  
+  return( list(res.nice = res.nice,
+               res.raw = res.raw) )
 }
 
 

@@ -304,7 +304,7 @@ update_result_csv(name = paste( "Applied n inattentive" ),
 
 # number inattentive
 update_result_csv(name = paste( "Perc n inattentive" ),
-                  value = mean(d$passCheck == 0, na.rm = TRUE),
+                  value = 100*mean(d$passCheck == 0, na.rm = TRUE),
                   .results.dir = results.dir,
                   .overleaf.dir = overleaf.dir)
 

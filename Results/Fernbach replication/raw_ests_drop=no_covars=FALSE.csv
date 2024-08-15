@@ -1,0 +1,17 @@
+outcome,coef_name,est,pval,nobs,note
+extr,(Intercept),1.61052631578947,0.00000000000000000000000000000163940901943501,200,boundary (singular) fit: see help('isSingular')
+extr,condition_expl,0.103759398496241,0.58422805320495,200,boundary (singular) fit: see help('isSingular')
+extr,time_postTRUE,-0.0315789473684204,0.908498904517241,200,boundary (singular) fit: see help('isSingular')
+extr,issue_num,0.108771929824562,0.210727019015039,200,boundary (singular) fit: see help('isSingular')
+extr,condition_expl:time_postTRUE,0.336340852130325,0.375159426120797,200,boundary (singular) fit: see help('isSingular')
+extr,condition_expl:issue_num,-0.118295739348371,0.323965730027043,200,boundary (singular) fit: see help('isSingular')
+extr,time_postTRUE:issue_num,-0.00350877192982493,0.983890560176894,200,boundary (singular) fit: see help('isSingular')
+extr,condition_expl:time_postTRUE:issue_num,-0.196491228070175,0.412670305101385,200,boundary (singular) fit: see help('isSingular')
+underst,(Intercept),3.7263157894737,0.0000000000000000000000000000000000000000033475274250123,200,""
+underst,condition_expl,-0.192982456140368,0.598624253099364,200,""
+underst,time_postTRUE,0.273684210526282,0.606313036045727,200,""
+underst,issue_num,0.140350877192971,0.403347477173299,200,""
+underst,condition_expl:time_postTRUE,0.48822055137848,0.505357551931382,200,""
+underst,condition_expl:issue_num,0.212030075187979,0.36034807460893,200,""
+underst,time_postTRUE:issue_num,-0.192982456140331,0.565593884583561,200,""
+underst,condition_expl:time_postTRUE:issue_num,-0.245112781954908,0.596969453841308,200,""

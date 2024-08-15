@@ -1,0 +1,39 @@
+outcome,coef_name,est,pval,nobs,note
+extr,(Intercept),1.29838084673743,0.0000000728272340240834,126,boundary (singular) fit: see help('isSingular')
+extr,condition_expl,0.223783873037541,0.358891239080069,126,boundary (singular) fit: see help('isSingular')
+extr,time_postTRUE,-0.338983050847457,0.340035143246753,126,boundary (singular) fit: see help('isSingular')
+extr,issue_num,0.175141242937851,0.119175226266307,126,boundary (singular) fit: see help('isSingular')
+extr,femaleb.Female,-0.0840673390364649,0.223573931019321,126,boundary (singular) fit: see help('isSingular')
+extr,age10y,0.0650558815634066,0.0806024462998404,126,boundary (singular) fit: see help('isSingular')
+extr,educ2b.Associate's or professional degree,0.0913050401877706,0.346715123599648,126,boundary (singular) fit: see help('isSingular')
+extr,educ2c.Bachelor's degree,0.180253598406527,0.134737135248546,126,boundary (singular) fit: see help('isSingular')
+extr,educ2c.Master's or doctoral degree,0.0429529237644893,0.607401127946397,126,boundary (singular) fit: see help('isSingular')
+extr,partyb.Republican,-0.0404877144068893,0.667321476962613,126,boundary (singular) fit: see help('isSingular')
+extr,partyc.Independent,0.00148426157881802,0.98875143213047,126,boundary (singular) fit: see help('isSingular')
+extr,partye.Other (Please Specify),-0.0446416820014449,0.64836710046736,126,boundary (singular) fit: see help('isSingular')
+extr,interest_politics2,0.0252820019212299,0.471844124246949,126,boundary (singular) fit: see help('isSingular')
+extr,interest_voted_2020_2b.No or don't remember,-0.0257968447266225,0.761399395467902,126,boundary (singular) fit: see help('isSingular')
+extr,interest_news2,0.052945570903674,0.141093869551562,126,boundary (singular) fit: see help('isSingular')
+extr,condition_expl:time_postTRUE,0.637490513534023,0.190828222950009,126,boundary (singular) fit: see help('isSingular')
+extr,condition_expl:issue_num,-0.214942237962727,0.163112697902178,126,boundary (singular) fit: see help('isSingular')
+extr,time_postTRUE:issue_num,0.129943502824858,0.563017878000575,126,boundary (singular) fit: see help('isSingular')
+extr,condition_expl:time_postTRUE:issue_num,-0.269246985411922,0.382236960878131,126,boundary (singular) fit: see help('isSingular')
+underst,(Intercept),3.19567007762988,0.0000000000234300342767691,126,""
+underst,condition_expl,0.200287847828323,0.667101993215778,126,""
+underst,time_postTRUE,0.84745762711865,0.21033456036777,126,""
+underst,issue_num,0.175141242937863,0.412865659794305,126,""
+underst,femaleb.Female,0.00581337575533956,0.966084625243719,126,""
+underst,age10y,0.0607244801424171,0.410498844602054,126,""
+underst,educ2b.Associate's or professional degree,-0.0552019687145452,0.773868152716703,126,""
+underst,educ2c.Bachelor's degree,0.160097383306286,0.502481646002751,126,""
+underst,educ2c.Master's or doctoral degree,0.0202362317893199,0.902702846528457,126,""
+underst,partyb.Republican,-0.0282378614327165,0.87966543349153,126,""
+underst,partyc.Independent,0.0540105436285638,0.795597706477016,126,""
+underst,partye.Other (Please Specify),0.149607348860214,0.440802610530019,126,""
+underst,interest_politics2,-0.026726628673012,0.700950746076962,126,""
+underst,interest_voted_2020_2b.No or don't remember,0.154767407782367,0.358467027800872,126,""
+underst,interest_news2,-0.0244591569643154,0.731255833246147,126,""
+underst,condition_expl:time_postTRUE,-0.708154144531588,0.445161520498183,126,""
+underst,condition_expl:issue_num,0.0288388565646264,0.921661645336044,126,""
+underst,time_postTRUE:issue_num,-0.531073446327687,0.214535319038539,126,""
+underst,condition_expl:time_postTRUE:issue_num,0.401720212496843,0.49344139939221,126,""

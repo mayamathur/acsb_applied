@@ -1,0 +1,37 @@
+"x"
+"1" "% latex table generated in R 4.3.3 by xtable 1.8-4 package
+% Thu Aug 15 14:08:38 2024
+\begin{table}[ht]
+\centering
+\begin{tabular}{rllr}
+  \hline
+ & outcome & est & pval \\ 
+  \hline
+1 & No exclusion; unadjusted &  &  \\ 
+  2 & Position extremity & 0.34 [-0.41, 1.08] & 0.38 \\ 
+  3 & Self-reported understanding & 0.49 [-0.95, 1.93] & 0.51 \\ 
+  4 &  &  &  \\ 
+  5 & No exclusion; adjusted &  &  \\ 
+  6 & Position extremity & 0.34 [-0.41, 1.08] & 0.38 \\ 
+  7 & Self-reported understanding & 0.49 [-0.95, 1.93] & 0.51 \\ 
+  8 &  &  &  \\ 
+  9 & Excluding inattentive (passed one); unadjusted &  &  \\ 
+  10 & Position extremity & 0.28 [-0.5, 1.05] & 0.48 \\ 
+  11 & Self-reported understanding & 0.23 [-1.26, 1.72] & 0.76 \\ 
+  12 &  &  &  \\ 
+  13 & Excluding inattentive (passed one); adjusted &  &  \\ 
+  14 & Position extremity & 0.28 [-0.5, 1.05] & 0.48 \\ 
+  15 & Self-reported understanding & 0.23 [-1.26, 1.72] & 0.76 \\ 
+  16 &  &  &  \\ 
+  17 & Excluding inattentive (passed all); unadjusted &  &  \\ 
+  18 & Position extremity & 0.64 [-0.32, 1.59] & 0.19 \\ 
+  19 & Self-reported understanding & -0.71 [-2.53, 1.11] & 0.45 \\ 
+  20 &  &  &  \\ 
+  21 & Excluding inattentive (passed all); adjusted &  &  \\ 
+  22 & Position extremity & 0.64 [-0.32, 1.59] & 0.19 \\ 
+  23 & Self-reported understanding & -0.71 [-2.53, 1.11] & 0.45 \\ 
+  24 &  &  &  \\ 
+   \hline
+\end{tabular}
+\end{table}
+"

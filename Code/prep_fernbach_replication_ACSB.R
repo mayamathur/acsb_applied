@@ -176,8 +176,6 @@ d = d %>% mutate_at(.vars = to_num, .funs  = as.numeric)
 
 
 
-
-
 # ~ Make attention_pass indicator variables  -------------------------------------------------
 
 d$expected_birth_year = 2024 - d$age
@@ -249,6 +247,14 @@ for (.varname in post_pos_vars) d = make_extremity_var(dat = d, varname = .varna
 # d$pre_pos_teach[ is.na(d$post_pos_teach) ] = NA
 
 
+# recode all understanding variables
+# this chunk needs to stay here, after merging understanding vars
+#bm: figure out why there are NAs in here
+# then try to merge long dats for extremity and understanding
+# then back to the bm in helper code :)
+( underst_vars = names_with(pattern = "underst", dat = d) )
+for (var in underst_vars) d = recode_understanding_var(dat = d, varname = var)
+
 
 
 # LOOK AT VARIABLES  -------------------------------------------------
@@ -272,9 +278,11 @@ interest_vars_analysis = c("interest_politics2",
                       "interest_voted_2020_2",
                       "interest_news2") 
 
+R_vars = c("R_one", "R_all")
+
 
 CreateTableOne(dat = d,
-               vars = c(demo_vars_analysis, interest_vars_analysis),
+               vars = c(demo_vars_analysis, interest_vars_analysis, R_vars),
                strata = "condition_expl")
 
 
@@ -290,11 +298,15 @@ CreateTableOne(dat = d,
 static_vars = c("id",
                 "condition_expl", 
                 demo_vars_analysis, 
-                interest_vars_analysis)
+                interest_vars_analysis,
+                R_vars)
 
 
-# smaller dataset with just the pos_ outcome variables
-s = d %>% select( c(static_vars, names_with("pos_", d) ) )
+
+# Extremity variables  -------------------------------------------------
+
+# smaller dataset with just the extr_ outcome variables
+s = d %>% select( c(static_vars, names_with("extr_", d) ) )
 
 # https://stackoverflow.com/questions/57533341/reshape-wide-to-long-based-on-part-of-column-name
 s2 = s %>%
@@ -307,25 +319,76 @@ head(s2)
 expect_equal( nrow(s2), nrow(d)*6*2 )
 
 # sanity check: look at one participant
-# all "pre_pos" variables will be observed (it's a matrix question with all 6 issues),
-#   but only 2 of 6 "post_pos" variables will be observed
+# all "pre_extr" variables will be observed (it's a matrix question with all 6 issues),
+#   but only 2 of 6 "post_extr" variables will be observed
 View(s2 %>% filter(id == 1))
+
+# # add issue number variable
+# # within each 2-issue set, the order is held constant
+# s2$issue_num = NA
+# s2$issue_num[s2$issue_name %in% c("health", "nuc", "cap")] = 1
+# s2$issue_num[s2$issue_name %in% c("ss", "teach", "tax")] = 2
+# expect_equal( any(is.na(s2$issue_num) ), FALSE )
+# 
+# s2$time_post = ( s2$time == "post" )
+# 
+# dl = s2 %>% filter(!is.na(rating)) %>%
+#   arrange(id)
+# # this test will FAIL if you used the "IMPORTANT" block above:
+# expect_equal(nrow(dl), nrow(d)*(6+2)) # they only rate 6 issues (pre) + 2 issues (post)
+# 
+
+
+# Understanding variables  -------------------------------------------------
+
+# smaller dataset with just the underst_ outcome variables
+s = d %>% select( c(static_vars, names_with("underst_", d) ) )
+
+# https://stackoverflow.com/questions/57533341/reshape-wide-to-long-based-on-part-of-column-name
+s3 = s %>%
+  gather(key = "key", value = "rating", -static_vars) %>%
+  separate(key, into = c("time", "var", "issue_name"), sep = "_")
+
+head(s3)
+
+# expect 1 row per subject, issue, and time combination
+expect_equal( nrow(s3), nrow(d)*6*2 )
+
+# sanity check: look at one participant
+# all "pre_extr" variables will be observed (it's a matrix question with all 6 issues),
+#   but only 2 of 6 "post_extr" variables will be observed
+View(s3 %>% filter(id == 1))
+
+
+# Merged long dataset  -------------------------------------------------
+
+dl = merge(s2, s3, by = c("id", "condition_expl", "time", "issue_name", static_vars))
+head(dl)
+
+#**be careful with this step! 
+dl = dl %>% rename(extr = rating.x, underst = rating.y)
+dl = dl %>% select( -c("var.x", "var.y") )
+
 
 # add issue number variable
 # within each 2-issue set, the order is held constant
-s2$issue_num = NA
-s2$issue_num[s2$issue_name %in% c("health", "nuc", "cap")] = 1
-s2$issue_num[s2$issue_name %in% c("ss", "teach", "tax")] = 2
-expect_equal( any(is.na(s2$issue_num) ), FALSE )
+dl$issue_num = NA
+dl$issue_num[dl$issue_name %in% c("health", "nuc", "cap")] = 1
+dl$issue_num[dl$issue_name %in% c("ss", "teach", "tax")] = 2
+expect_equal( any(is.na(dl$issue_num) ), FALSE )
 
-s2$time_post = ( s2$time == "post" )
+dl$time_post = ( dl$time == "post" )
 
-dl = s2 %>% filter(!is.na(rating)) %>%
+# sanity check: extr and underst should always be observed or missing together
+table( is.na(dl$extr), is.na(dl$underst), useNA = "ifany" )
+
+# remove the NA rows (which happen when a participant didn't rate a given issue)
+dl = dl %>% filter(!is.na(extr)) %>%
   arrange(id)
-# this test will FAIL if you used the "IMPORTANT" block above:
-expect_equal(nrow(dl), nrow(d)*(6+2)) # they only rate 6 issues (pre) + 2 issues (post)
 
-# need similar datasets for understanding and extremity vars
+# they only rate 6 issues (pre) + 2 issues (post)
+expect_equal(nrow(dl), nrow(d)*(6+2)) 
+
 
 
 # WRITE PREPPED DATA -------------------------------------------------
@@ -333,7 +396,7 @@ expect_equal(nrow(dl), nrow(d)*(6+2)) # they only rate 6 issues (pre) + 2 issues
 setwd(data.dir)
 fwrite(d, "fernbach_prepped_wide.csv")
 
-fwrite(dl, "fernbach_prepped_long_position_vars.csv")
+fwrite(dl, "fernbach_prepped_long.csv")
 
 
 

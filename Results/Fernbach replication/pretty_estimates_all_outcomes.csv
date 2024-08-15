@@ -1,0 +1,3 @@
+"","outcome","coef_name","est","lo","hi","pval","nobs","note"
+"1","Position extremity","condition_expl:time_postTRUE","0.64 [-0.32, 1.59]",-0.32,1.59,0.19,126,"boundary (singular) fit: see help('isSingular')"
+"2","Self-reported understanding","condition_expl:time_postTRUE","-0.71 [-2.53, 1.11]",-2.53,1.11,0.45,126,""
