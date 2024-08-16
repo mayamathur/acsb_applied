@@ -1,4 +1,6 @@
 
+#bm: just re-ran this. does overleaf update?
+
 # Can use wr() to wipe results file and vr() to view it
 
 # PRELIMINARIES ---------------------------------------------------------------
@@ -57,12 +59,12 @@ data.dir = here("Data/Mathur documentary")
 # check that it's set correctly
 setwd(data.dir)
 
-results.dir = here("Results") 
+results.dir = here("Results/Mathur documentary") 
 # check that it's set correctly
 setwd(results.dir)
 
 
-overleaf.dir = "/Users/mmathur/Dropbox/Apps/Overleaf/Attention checks selection bias (ACSB) Overleaf/R_objects"
+overleaf.dir = "/Users/mmathur/Dropbox/Apps/Overleaf/Attention checks selection bias (ACSB) Overleaf/R_objects/meat_stats"
 setwd(overleaf.dir)
 
 
@@ -103,17 +105,17 @@ d$female = d$sex == "a.Female"
 study = 1
 
 # from EatingVeg helper_analysis.R
-meats <<- c("chicken", "turkey", "fish", "pork", "beef", "otherMeat")
-animProds <<- c("dairy", "eggs")
-decoy <<- c("refined", "beverages")
-goodPlant <<- c("leafyVeg", "otherVeg", "fruit", "wholeGrain", "legumes")
-allFoods <<- c(meats, animProds, decoy, goodPlant)
+meats = c("chicken", "turkey", "fish", "pork", "beef", "otherMeat")
+animProds = c("dairy", "eggs")
+decoy = c("refined", "beverages")
+goodPlant = c("leafyVeg", "otherVeg", "fruit", "wholeGrain", "legumes")
+allFoods = c(meats, animProds, decoy, goodPlant)
 
-foodVars <<- c( names(d)[ grepl(pattern = "Freq", names(d) ) ],
+foodVars = c( names(d)[ grepl(pattern = "Freq", names(d) ) ],
                 names(d)[ grepl(pattern = "Ounces", names(d) ) ] )
 
 # exploratory psych variables
-psychY <<- c("importHealth",
+psychY = c("importHealth",
              "importEnviro",
              "importAnimals",
              "activ",
@@ -121,14 +123,14 @@ psychY <<- c("importHealth",
              "dom")
 
 # secondary food outcomes
-secFoodY <<- c("totalMeat",
+secFoodY = c("totalMeat",
                "totalAnimProd",
                meats,
                animProds,
                "totalGood")
 
 
-demo.raw <<- c("female",
+demo.raw = c("female",
                "age10y",
                "educ",
                "cauc",
@@ -172,12 +174,12 @@ demo.raw <<- c("female",
 ### run all outcomes
 
 # reproduce results in manuscript (retain all participants; don't control covars)
-x1 = analyze_all_outcomes(missMethod = "CC",
+x1 = analyze_all_outcomes_meat(missMethod = "CC",
                           control_covars = FALSE)
 View(x1$res.nice)
 
 # control for demographics, but still retain all participants
-x2 = analyze_all_outcomes(missMethod = "CC",
+x2 = analyze_all_outcomes_meat(missMethod = "CC",
                           control_covars = TRUE)
 View(x2$res.nice)
 
@@ -201,7 +203,7 @@ for ( .drop in c(FALSE, TRUE) ) {
   for ( .covars in c(FALSE, TRUE) ) {
     
     
-    x = analyze_all_outcomes(missMethod = "CC",
+    x = analyze_all_outcomes_meat(missMethod = "CC",
                              drop_inattentives = .drop,
                              control_covars = .covars)
     
@@ -264,13 +266,13 @@ write.table( print( xtable( rs,
 ### Sanity checks
 # simple exclusion
 # drop inattentives; don't control covariates
-x3 = analyze_all_outcomes(missMethod = "CC",
+x3 = analyze_all_outcomes_meat(missMethod = "CC",
                           drop_inattentives = TRUE)
 View(x3$res.nice)
 
 
 # drop inattentives; control covariates
-x4 = analyze_all_outcomes(missMethod = "CC",
+x4 = analyze_all_outcomes_meat(missMethod = "CC",
                           drop_inattentives = TRUE,
                           control_covars = TRUE)
 View(x4$res.nice)
@@ -388,25 +390,7 @@ rs
 # for a merged table
 col2 = stat_CI( round(rs$est, 2), round(rs$lo, 2), round(rs$hi, 2) )
 
-# one-off stats
-update_result_csv( name = paste("Mean diff for mainY ", row.names(rs), sep = ""),
-                   value = rs$est,
-                   .results.dir = results.dir,
-                   .overleaf.dir = overleaf.dir,
-                   print = FALSE)
 
-update_result_csv( name = paste("Mean diff lo for mainY ", row.names(rs), sep = ""),
-                   value = rs$lo,
-                   .results.dir = results.dir,
-                   .overleaf.dir = overleaf.dir,
-                   print = FALSE)
-
-
-update_result_csv( name = paste("Mean diff hi for mainY ", row.names(rs), sep = ""),
-                   value = rs$hi,
-                   .results.dir = results.dir,
-                   .overleaf.dir = overleaf.dir,
-                   print = FALSE)
 
 # ~ Merged table: covariate associations with both R and Y  -------------------------------------------------
 

@@ -80,7 +80,6 @@ options(scipen=999)
 
 setwd(data.dir)
 d = read.csv("fernbach_prepped_wide.csv")
-
 dl = read.csv("fernbach_prepped_long.csv")
 
 
