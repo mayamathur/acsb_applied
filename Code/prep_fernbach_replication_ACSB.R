@@ -84,17 +84,12 @@ source("helper_applied_ACSB.R")
 # no sci notation
 options(scipen=999)
 
-# should we use fake Qualtrics data to test the code?
-# doing so requires a few variables to be regenerated
-use_fake_data = TRUE
-
 
 
 # LOAD DATA ---------------------------------------------------------------
 
 setwd(data.dir)
-
-if ( use_fake_data ) dr = read.csv("fake_raw_data.csv", header = TRUE)
+dr = read.csv("2024-08-20_raw_data.csv", header = TRUE)
 
 
 # remove extra Qualtrics header rows if they are there
@@ -125,7 +120,9 @@ d$id = 1:nrow(d)
 # only for fake Qualtrics data: regenerate age to be reasonable
 if ( use_fake_data ) d$age = round(runif(n= nrow(d), min = 18, max = 50))
 
+d$age = as.numeric(d$age)
 d$age10y = d$age/10
+summary(d$age)
 
 
 ### Simplify categories of education for analysis
@@ -141,8 +138,8 @@ d$educ2[ d$educ %in% c("e.Doctoral degree",
 table(d$educ, d$educ2)
 
 
+
 ### Standardize the interest variables
-#@@@ will need to as "a.", "b.", etc to var names in the future
 d$interest_politics2 = NA
 d$interest_politics2[d$interest_politics == "a.Far less than average"] = 1
 d$interest_politics2[d$interest_politics == "b.Somewhat less than average"] = 2
@@ -158,7 +155,6 @@ d$interest_voted_2020_2 = "b.No or don't remember"
 d$interest_voted_2020_2[ d$interest_voted_2020 == "c.Yes" ] = "a.Yes"
 table(d$interest_voted_2020, d$interest_voted_2020_2)
   
-#@@@ will need to as "a.", "b.", etc to var names in the future
 d$interest_news2 = NA
 d$interest_news2[d$interest_news == "a.Less than once per week"] = 1
 d$interest_news2[d$interest_news == "b.1-3 times per week"] = 2
@@ -178,26 +174,41 @@ d = d %>% mutate_at(.vars = to_num, .funs  = as.numeric)
 
 # ~ Make attention_pass indicator variables  -------------------------------------------------
 
+
+### Age vs. birth year
 d$expected_birth_year = 2024 - d$age
 d$attention_pass_birth_year = abs(d$attention_birth_year - d$expected_birth_year) <= 1
+mean(d$attention_pass_birth_year)
+# sanity check: look at people who failed
+View( d %>% filter(attention_pass_birth_year == FALSE) %>%
+        select(attention_birth_year, expected_birth_year, age) %>%
+        mutate(birth_year_implied_age = 2024 - attention_birth_year) )
+# a decent number of people failed because they wrote their age in the birth box
+#  this is true for 14% of the failers
+d %>% filter(attention_pass_birth_year == FALSE) %>%
+  summarise( mean(attention_birth_year == age) )
 
+### Ideology (Crawford's original attention check)
 d$attention_pass_ideology = (d$attention_ideology == "Somewhat Liberal")
+mean(d$attention_pass_ideology)
 
-#@@with real data, check this one; make sure I wrote the string correctly
+### News matrix item from Berinsky
 d$attention_pass_news = (d$attention_news == "The Drudge Report,ABC News website")
+mean(d$attention_pass_news)
 
+
+### Attentiveness indicators
 # indicator for passing all checks
 d$R_all = d$attention_pass_birth_year * d$attention_pass_ideology * d$attention_pass_news
+mean(d$R_all)
 
 # indicator for passing at least one
-d$R_one = ( (d$attention_pass_birth_year + d$attention_pass_ideology + d$attention_pass_news) > 0 )
+d$R_one = ( (d$attention_pass_birth_year + d$attention_pass_ideology + d$attention_pass_news) >= 1 )
+mean(d$R_one)
 
-
-# only for fake Qualtrics data: regenerate these indicators to be reasonable
-if ( use_fake_data ) {
-  d$R_one = rbinom(n = nrow(d), size = 1, prob = 0.9)
-  d$R_all = rbinom(n = nrow(d), size = 1, prob = 0.6)
-}
+# indicator for passing at least two
+d$R_two = ( (d$attention_pass_birth_year + d$attention_pass_ideology + d$attention_pass_news) >= 2 )
+mean(d$R_two)
 
 
 
@@ -235,23 +246,8 @@ for (.varname in pre_pos_vars) d = make_extremity_var(dat = d, varname = .varnam
 for (.varname in post_pos_vars) d = make_extremity_var(dat = d, varname = .varname)
 
 
-# #***shouldn't need this for mixed model, but think RANOVA might need it?
-# ### IMPORTANT: Remove pre-variables for which there is no corresponding post-variable 
-# #  since subjects answered only a random subset of questions
-# # only doing this for pos variables for now
-# d$pre_pos_nuc[ is.na(d$post_pos_nuc) ] = NA
-# d$pre_pos_ss[ is.na(d$post_pos_ss) ] = NA
-# d$pre_pos_health[ is.na(d$post_pos_health) ] = NA
-# d$pre_pos_cap[ is.na(d$post_pos_cap) ] = NA
-# d$pre_pos_tax[ is.na(d$post_pos_tax) ] = NA
-# d$pre_pos_teach[ is.na(d$post_pos_teach) ] = NA
-
-
 # recode all understanding variables
 # this chunk needs to stay here, after merging understanding vars
-#bm: figure out why there are NAs in here
-# then try to merge long dats for extremity and understanding
-# then back to the bm in helper code :)
 ( underst_vars = names_with(pattern = "underst", dat = d) )
 for (var in underst_vars) d = recode_understanding_var(dat = d, varname = var)
 
@@ -278,11 +274,14 @@ interest_vars_analysis = c("interest_politics2",
                       "interest_voted_2020_2",
                       "interest_news2") 
 
-R_vars = c("R_one", "R_all")
 
 
+R_vars_table = c("R_one", "R_all", "attention_pass_birth_year", "attention_pass_ideology", "attention_pass_news")
+
+
+# look at raw versions of all variables
 CreateTableOne(dat = d,
-               vars = c(demo_vars_analysis, interest_vars_analysis, R_vars),
+               vars = c(demo_vars_raw, interest_vars_raw, R_vars_table),
                strata = "condition_expl")
 
 
@@ -293,6 +292,7 @@ CreateTableOne(dat = d,
 # all "pos" ratings should be a single variable
 #  and there should also be two new vars: pos_issue (string after the _), pos_issue_number (1 or 2), and time ("pre" or "post" string before the first _)
 
+R_vars = c("R_two", "R_all")
 
 # list of variables to keep in the long dataset
 static_vars = c("id",
@@ -323,21 +323,6 @@ expect_equal( nrow(s2), nrow(d)*6*2 )
 #   but only 2 of 6 "post_extr" variables will be observed
 View(s2 %>% filter(id == 1))
 
-# # add issue number variable
-# # within each 2-issue set, the order is held constant
-# s2$issue_num = NA
-# s2$issue_num[s2$issue_name %in% c("health", "nuc", "cap")] = 1
-# s2$issue_num[s2$issue_name %in% c("ss", "teach", "tax")] = 2
-# expect_equal( any(is.na(s2$issue_num) ), FALSE )
-# 
-# s2$time_post = ( s2$time == "post" )
-# 
-# dl = s2 %>% filter(!is.na(rating)) %>%
-#   arrange(id)
-# # this test will FAIL if you used the "IMPORTANT" block above:
-# expect_equal(nrow(dl), nrow(d)*(6+2)) # they only rate 6 issues (pre) + 2 issues (post)
-# 
-
 
 # Understanding variables  -------------------------------------------------
 
@@ -366,6 +351,7 @@ dl = merge(s2, s3, by = c("id", "condition_expl", "time", "issue_name", static_v
 head(dl)
 
 #**be careful with this step! 
+# renaming depends on the order of s2 and s3 in the merge above
 dl = dl %>% rename(extr = rating.x, underst = rating.y)
 dl = dl %>% select( -c("var.x", "var.y") )
 
@@ -403,75 +389,75 @@ fwrite(dl, "fernbach_prepped_long.csv")
 
 
 
-# PRACTICE ANALYSIS WITH SINGLE OUTCOME -------------------------------------------------
-
-
-# RANOVA with timing (pre/post) and issue number as within-S; condition is between-S; interaction of condition with timing is effect of interest 
-# Fixed: condition x timing, issue number 
-
-# with fake data, model doesn't fit due to 0 random effect variance
-# F-tests for lmer in R: https://www.rdocumentation.org/packages/lmerTest/versions/3.1-3/topics/ranova
-
-dat = dl
-
-# simulate data because models below don't fit with Qualtrics fake data (b/c no variation in random intercepts)
-if ( FALSE ){
-  n=100
-  condition = rbinom(n = n, size = 1, prob = 0.5)
-  # generate subject random intercepts
-  # **THIS IS THE KEY. IF SD=0 (I.E., NO RANDOM EFFECTS), THEN LMM IS SINGULAR.
-  gamma_wide = rnorm(n = n, sd = .5)
-  dat = data.frame( id = rep( c(1:n), each = 4 ),
-                    condition_expl = rep(condition, each = 4),
-                    gamma = rep(gamma_wide, each = 4),
-                    time_post = rep( c(1:2), each = 2),
-                    issue_num = rep( c(1:2), 2 ) )
-  dat$rating = rnorm(n = nrow(dat), mean = dat$gamma)
-  ## END OF SIMULATING DATA
-}
-
-
-# ~ Model 1: LMM :/ -------------------------------------------------
-m1 = lmer(rating ~ condition_expl * time_post * issue_num + (1|id), data = dat) 
-summary(m1)
-
-# sanity check: OLS
-lm(rating ~ condition_expl * time_post * issue_num, data = dat)
-
-
-# ~ Model 2: ANOVA :(  -------------------------------------------------
-
-# try using rstatix::anova_test
-# https://www.r-bloggers.com/2021/04/repeated-measures-of-anova-in-r-complete-tutorial/
-# the model I think we actually want
-m2 = anova_test(dv = rating,
-           wid = c(id),
-           within = c(time_post, issue_num),
-           between = condition_expl,
-           data = dat)
-# quite different from LMM due to the "annoying and dangerous" decomposition property of ANOVA
-
-
-
-# ~ Model 3: GEE :) -------------------------------------------------
-
-# other reasons to prefer GEE:
-# "annoying and dangerous thing about ANOVA" is very relevant due to interactions
-# outcome is a 7-point scale, so normality is questionable
-m3 = report_gee_table(dat = dat,
-                 formulaString = "rating ~ condition_expl * time_post * issue_num",
-                 idString = "as.factor(id)",
-                 subsetString = NA,  # should we subset the data?
-                 analysisVarNames = c("rating", "condition_expl", "time_post", "issue_num"),  # for excluding missing data
-                 analysisLabel = "myAnalysis",  # will become an identifer column in dataset
-                 corstr = "exchangeable",
-                 se.type = "mancl",  # "model" or "mancl"
-                 
-                 return.gee.model = TRUE,
-                 write.dir = NA)
-
-
-View(m3$res)
-# makes perfect sense
-
-
+# # PRACTICE ANALYSIS WITH SINGLE OUTCOME -------------------------------------------------
+# 
+# 
+# # RANOVA with timing (pre/post) and issue number as within-S; condition is between-S; interaction of condition with timing is effect of interest 
+# # Fixed: condition x timing, issue number 
+# 
+# # with fake data, model doesn't fit due to 0 random effect variance
+# # F-tests for lmer in R: https://www.rdocumentation.org/packages/lmerTest/versions/3.1-3/topics/ranova
+# 
+# dat = dl
+# 
+# # simulate data because models below don't fit with Qualtrics fake data (b/c no variation in random intercepts)
+# if ( FALSE ){
+#   n=100
+#   condition = rbinom(n = n, size = 1, prob = 0.5)
+#   # generate subject random intercepts
+#   # **THIS IS THE KEY. IF SD=0 (I.E., NO RANDOM EFFECTS), THEN LMM IS SINGULAR.
+#   gamma_wide = rnorm(n = n, sd = .5)
+#   dat = data.frame( id = rep( c(1:n), each = 4 ),
+#                     condition_expl = rep(condition, each = 4),
+#                     gamma = rep(gamma_wide, each = 4),
+#                     time_post = rep( c(1:2), each = 2),
+#                     issue_num = rep( c(1:2), 2 ) )
+#   dat$rating = rnorm(n = nrow(dat), mean = dat$gamma)
+#   ## END OF SIMULATING DATA
+# }
+# 
+# 
+# # ~ Model 1: LMM :/ -------------------------------------------------
+# m1 = lmer(rating ~ condition_expl * time_post * issue_num + (1|id), data = dat) 
+# summary(m1)
+# 
+# # sanity check: OLS
+# lm(rating ~ condition_expl * time_post * issue_num, data = dat)
+# 
+# 
+# # ~ Model 2: ANOVA :(  -------------------------------------------------
+# 
+# # try using rstatix::anova_test
+# # https://www.r-bloggers.com/2021/04/repeated-measures-of-anova-in-r-complete-tutorial/
+# # the model I think we actually want
+# m2 = anova_test(dv = rating,
+#            wid = c(id),
+#            within = c(time_post, issue_num),
+#            between = condition_expl,
+#            data = dat)
+# # quite different from LMM due to the "annoying and dangerous" decomposition property of ANOVA
+# 
+# 
+# 
+# # ~ Model 3: GEE :) -------------------------------------------------
+# 
+# # other reasons to prefer GEE:
+# # "annoying and dangerous thing about ANOVA" is very relevant due to interactions
+# # outcome is a 7-point scale, so normality is questionable
+# m3 = report_gee_table(dat = dat,
+#                  formulaString = "rating ~ condition_expl * time_post * issue_num",
+#                  idString = "as.factor(id)",
+#                  subsetString = NA,  # should we subset the data?
+#                  analysisVarNames = c("rating", "condition_expl", "time_post", "issue_num"),  # for excluding missing data
+#                  analysisLabel = "myAnalysis",  # will become an identifer column in dataset
+#                  corstr = "exchangeable",
+#                  se.type = "mancl",  # "model" or "mancl"
+#                  
+#                  return.gee.model = TRUE,
+#                  write.dir = NA)
+# 
+# 
+# View(m3$res)
+# # makes perfect sense
+# 
+# 

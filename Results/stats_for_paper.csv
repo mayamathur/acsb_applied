@@ -1,0 +1,7 @@
+name,value,section
+Number attention_pass_birth_year=TRUE,8,NA
+Perc attention_pass_birth_year=TRUE,0.8,NA
+Number attention_pass_ideology=TRUE,9,NA
+Perc attention_pass_ideology=TRUE,0.9,NA
+Number attention_pass_news=TRUE,9,NA
+Perc attention_pass_news=TRUE,0.9,NA

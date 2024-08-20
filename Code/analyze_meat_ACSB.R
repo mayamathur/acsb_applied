@@ -390,7 +390,25 @@ rs
 # for a merged table
 col2 = stat_CI( round(rs$est, 2), round(rs$lo, 2), round(rs$hi, 2) )
 
+# one-off stats
+update_result_csv( name = paste("Mean diff for mainY ", row.names(rs), sep = ""),
+                   value = rs$est,
+                   .results.dir = results.dir,
+                   .overleaf.dir = overleaf.dir,
+                   print = FALSE)
 
+update_result_csv( name = paste("Mean diff lo for mainY ", row.names(rs), sep = ""),
+                   value = rs$lo,
+                   .results.dir = results.dir,
+                   .overleaf.dir = overleaf.dir,
+                   print = FALSE)
+
+
+update_result_csv( name = paste("Mean diff hi for mainY ", row.names(rs), sep = ""),
+                   value = rs$hi,
+                   .results.dir = results.dir,
+                   .overleaf.dir = overleaf.dir,
+                   print = FALSE)
 
 # ~ Merged table: covariate associations with both R and Y  -------------------------------------------------
 

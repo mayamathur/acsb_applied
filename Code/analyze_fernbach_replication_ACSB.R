@@ -104,8 +104,36 @@ interest_vars_analysis = c("interest_politics2",
                            "interest_voted_2020_2",
                            "interest_news2") 
 
-R_vars = c("R_one", "R_all")
+# changed to R_two given that R_one was almost always passed
+R_vars = c("R_two", "R_all")
 
+
+# DESCRIPTIVE STATS FOR PAPER  -------------------------------------------------
+
+
+# number and percent passing each check
+
+for ( var in names_with("attention_pass", d) ) {
+  update_result_csv(name = paste( "Number ", var, "=TRUE", sep = "" ),
+                    value = sum(d[[var]]),
+                    .results.dir = results.dir,
+                    .overleaf.dir = overleaf.dir)
+  
+  update_result_csv(name = paste( "Perc ", var, "=TRUE", sep = "" ),
+                    value = mean(d[[var]]),
+                    .results.dir = results.dir,
+                    .overleaf.dir = overleaf.dir)
+}
+
+
+
+
+
+# number inattentive
+update_result_csv(name = paste( "Perc n inattentive" ),
+                  value = 100*mean(d$passCheck == 0, na.rm = TRUE),
+                  .results.dir = results.dir,
+                  .overleaf.dir = overleaf.dir)
 
 
 
